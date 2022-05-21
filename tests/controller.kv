@@ -1,0 +1,32 @@
+#:kivy 1.0
+
+<Controller>:
+    label_wid: my_custom_label
+    label_wid2: l2
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        Button:
+            text: 'My controller info is: ' + root.info
+            on_press: root.do_action()
+
+        Label:
+            id: my_custom_label
+            text: 'My label before button press'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 20
+
+            Button:
+                id: l1
+                text: 'l1'
+                on_press: root.do_action2()
+            Button:
+                id: l2
+                text: 'l2'
+            Button:
+                id: l3
+                text: 'l3'
