@@ -7,7 +7,7 @@ Install miniconda (Python environment handler)
 ```sh
     wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Linux-x86_64.sh
     bash Miniconda3-py38_4.11.0-Linux-x86_64.sh
-    conda create -n kivy python=3.8 # kivy=2.1.0
+    conda create -n kivy python=3.8     # kivy=2.1.0
     conda activate kivy
 ```
 
