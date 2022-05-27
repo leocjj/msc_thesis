@@ -1,0 +1,40 @@
+#:kivy 1.4
+
+GridLayout:
+    cols: 1
+    GridLayout:
+        rows: 1
+        Spinner:
+            text: "Puntos"
+            values: "Conceptos", "Línea recta", "2 líneas rectas", "3 líneas rectas"
+            size_hint: (1, 0.3)
+        Spinner:
+            text: "Polígonos"
+            values: "3 lados", "4 lados", "Más lados"
+            size_hint: (1, 0.3)
+        Spinner:
+            text: "Líneas curvas"
+            values: "Cerradas", "Círculos", "Abiertas"
+            size_hint: (1, 0.3)
+        Spinner:
+            text: "Conceptos 3D"
+            values: "Puntos", "Líneas", "Polígonos", "Planos", "Sólidos"
+            size_hint: (1, 0.3)
+        Button:
+            text: "Home"
+            size_hint: (1, 0.3)
+    Label:
+        text: "Home"
+        size_hint: (1, 0.5)
+    GridLayout:
+        cols: 2
+        Label:
+            text: "Canvas"
+            size_hint: (1, 10)
+        Slider:
+            orientation: 'vertical'
+            #on_value: slider.value = self.value
+		    size_hint: (0.1, 10)
+    Button:
+        text: "Slide"
+        size_hint: (0.1, 5)

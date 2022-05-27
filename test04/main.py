@@ -19,7 +19,7 @@ class RootWidget(BoxLayout):
     container = ObjectProperty(None)
 
 
-class EzsApp(App):
+class GEuclid(App):
     '''This is the app itself'''
     def build(self):
         '''This method loads the root.kv file automatically
@@ -42,4 +42,6 @@ class EzsApp(App):
 
 
 if __name__ == '__main__':
-    EzsApp().run()
+    GEuclid().run()
+
+
