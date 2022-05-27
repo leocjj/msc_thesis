@@ -38,8 +38,15 @@ Install buildozer
 Run buildozer
 
 ```sh
+    cd <project_folder>
+    buildozer init
+    # update config file
+    nano buildozer.spec
     # plug in your android device and run:
     buildozer android debug deploy run
+    buildozer android debug deploy
+    buildozer android debug
+    buildozer android release
 ```
 
 ## **Development and deployment alternative paths**
