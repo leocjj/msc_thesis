@@ -40,13 +40,19 @@ Run buildozer
 ```sh
     cd <project_folder>
     buildozer init
-    # update config file
+    # Update data in buildozer.spec
     nano buildozer.spec
     # plug in your android device and run:
     buildozer android debug deploy run
     buildozer android debug deploy
     buildozer android debug
     buildozer android release
+```
+
+VS Code extensions
+```
+    Monk3yDev.kvlang
+    haddiebakrie.material-kv
 ```
 
 ## **Development and deployment alternative paths**

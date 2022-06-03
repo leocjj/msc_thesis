@@ -1,0 +1,37 @@
+#:kivy 2.1.0
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        Label:
+            text: 'canvas'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 0
+            spacing: 1
+            size_hint: 1, 0.1
+
+            Label:
+                text: '1 PUNTOS'
+
+            Button:
+                size_hint_x: None
+                width: self.height
+                text: 'back'
+                on_release: app.next_screen('1.1')
+
+            Button:
+                size_hint_x: None
+                width: self.height
+                text: 'next'
+                on_release: app.next_screen('1.2')
+
