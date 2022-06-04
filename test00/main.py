@@ -32,6 +32,7 @@ class EzsApp(App):
         '''Clear container and load the given screen object from file in kv folder.
         :param screen: str name of the screen object made from the loaded .kv file
         '''
+        # Extract the filename from the first part of the text received (screen).
         filename = screen.split(' ')[0] + '.kv'
         # unload the content of the .kv file, it could have data from previous calls
         Builder.unload_file('kv/' + filename)

@@ -12,10 +12,11 @@ RootWidget:
         spacing: 2
 
         Label:
-            text: 'canvas'
-        RstDocument:
-            text: ".. _top:\n\nHello world\n===========\n\nThis is an **emphased text**, some ``interpreted text``.\n.. _top:\n\nHello world\n===========\n\nThis is an **emphased text**, some ``interpreted text``.\n.. _top:\n\nHello world\n===========\n\nThis is an **emphased text**, some ``interpreted text``.\n.. _top:\n\nHello world\n===========\n\nThis is an **emphased text**, some ``interpreted text``.\n.. _top:\n\nHello world\n===========\n\nThis is an **emphased text**, some ``interpreted text``.\n.. _top:\n\nHello world\n===========\n\nThis is an **emphased text**, some ``interpreted text``.\n"
+            text: 'canvas4'
+        Label:
+            text: 'texto4'
 
+        # Footer
         BoxLayout:
             orientation: 'horizontal'
             padding: 0
@@ -28,19 +29,16 @@ RootWidget:
                 Rectangle:
                     pos: self.pos
                     size: self.size
-
             Label:
                 text: '1.4 Tres líneas rectas'
-
             Button:
                 size_hint_x: None
                 width: self.height
                 text: '<--'
-                on_release: app.next_screen('1.3')
-
+                on_release: app.next_screen('1-3')
             Button:
                 size_hint_x: None
                 width: self.height
                 text: '-->'
-                # on_release: app.next_screen('1.4')
+                # on_release: app.next_screen('1-4')
 

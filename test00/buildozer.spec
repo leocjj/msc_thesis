@@ -1,10 +1,10 @@
 [app]
 
 ## (str) Title of your application
-title = Test 04
+title = Test 06
 
 ## (str) Package name
-package.name = test04
+package.name = test06
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -73,7 +73,7 @@ osx.kivy_version = 2.1.0
 #
 
 ## (bool) Indicate if the application should be fullscreen or not
-fullscreen = True
+fullscreen = False
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:

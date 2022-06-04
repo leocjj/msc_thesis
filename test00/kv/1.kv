@@ -14,24 +14,29 @@ RootWidget:
         Label:
             text: 'canvas'
 
+        # Footer
         BoxLayout:
             orientation: 'horizontal'
             padding: 0
             spacing: 1
-            size_hint: 1, 0.1
-
+            size_hint_y: None
+            height: '36dp'
+            canvas.before:
+                Color:
+                    rgba: 0.3, 0.3, 0.5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
             Label:
-                text: '1 PUNTOS'
-
+                text: '1. PUNTOS'
             Button:
                 size_hint_x: None
                 width: self.height
                 text: 'back'
-                on_release: app.next_screen('1.1')
-
+                on_release: app.next_screen('1')
             Button:
                 size_hint_x: None
                 width: self.height
                 text: 'next'
-                on_release: app.next_screen('1.2')
+                on_release: app.next_screen('1-1')
 
