@@ -17,13 +17,13 @@ RootWidget:
             padding: 0
             spacing: 2
             size_hint_y: None
-            height: '36dp'
+            height: '40dp'
 
             Button:
                 size_hint_x: None
                 width: self.height
                 text: " ? "
-                on_release: app.next_screen('1')
+                on_release: app.next_screen('00')
 
             # Display selectors for sections and sub-sections
             # The number will be used to open the corresponding file
@@ -61,7 +61,7 @@ RootWidget:
         BoxLayout:
             canvas.before:
                 Color:
-                    rgba: 0.0, 0.0, 1, 1
+                    rgba: 0.0, 0.9, 1, 1
                 Rectangle:
                     pos: self.pos
                     size: self.size
