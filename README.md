@@ -26,7 +26,7 @@ Test kivy
 
 ## **Deployment requirements (Ubuntu)**
 
-Requires a USB port available to connect a mobile
+Requires a USB port available to connect a mobile or a bluetooth connection.
 
 Install buildozer
 
@@ -42,11 +42,19 @@ Run buildozer
     buildozer init
     # Update data in buildozer.spec
     nano buildozer.spec
-    # plug in your android device and run:
+
+    # Option 1
+    # Plug in your android device by USB cable and run:
     buildozer android debug deploy run
+    # or
     buildozer android debug deploy
+
+    # Option 2:
     buildozer android debug
+    # or
     buildozer android release
+    # And then copy the file created in /bin/ folder into the smartphone
+    # by using bluetooth or USB cable.
 ```
 
 VS Code extensions

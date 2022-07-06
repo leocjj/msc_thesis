@@ -1,0 +1,51 @@
+=============================
+Virtual_ Euclides_
+=============================
+
+**Proyecto de Grado**
+
+**Maestría en Enseñanza de la Matemática**
+
+**Universidad Tecnológica de Pereira**
+
+
+
+Laboratorio Virtual de Geometría
+======================================
+
+Aplicación móvil para la enseñanza de los fundamentos de la geometría Euclidiana mediante la interacción con elementos geométricos, permitiendo la contrastación de los conceptos teóricos con la visualización de los resultados en pantalla.
+
+
+Ayuda
+======================================
+
+#. Usar las flechas del menú superior para navegar en los **capítulos**.
+#. Presionar en el capítulo deseado para ver las **secciones** que contiene.
+#. Presionar en la sección deseada.
+#. Usar las flechas del menú inferior para navegar en las **páginas** de cada sección.
+
+
+
+Créditos
+--------
+ **Autor:** Leonardo Calderon Jaramillo, leonardocj@gmail.com
+
+ **Director de tésis:**  Prof. Remigio Delgado Escobar
+ 
+ **Director Maestría:**  Prof. José Rodrígo Gonzalez Granada
+
+Desarrollado en:
+----------------
+ * Python 3.8
+ * Kivy 2.1 - Open source Python library
+
+Código fuente
+----------------
+ https://github.com/leocjj/msc_thesis
+
+
+--------
+
+**Version:** 0.1.0
+
+**Fecha:** 05-Jul-2022

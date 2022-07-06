@@ -1,0 +1,73 @@
+#:kivy 2.1.0
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 2
+
+        GridLayout:
+            cols: 2
+            #size_hint: (1, 2)
+            canvas.before:
+                Color:
+                    rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris claro
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            canvas:
+                Color:
+                    rgba: .1, 1, .1, .9
+                Line:
+                    width: 1.
+                    circle:
+                        (self.center_x, self.center_y, min(self.width, self.height) / 2)
+            Label:
+                center: root.center
+                text: 'Circle'
+            Slider:
+                orientation: 'vertical'
+                size_hint: (0.075, 1)
+            Slider:
+                size_hint: (1, 0.075)
+
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: 'pages/1-1.rst'
+
+        # Footer
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 0
+            spacing: 1
+            size_hint_y: None
+            height: '36dp'
+            canvas.before:
+                Color:
+                    rgba: 0.430, 0.305, 0.223, 1  # 110,78,57  0x6E4E39 Café oscuro
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: '1-1 Conceptos'
+            Button:
+                size_hint_x: None
+                width: self.height
+                text: '<--'
+                on_release: app.next_screen('1-0')
+            Button:
+                size_hint_x: None
+                width: self.height
+                text: '-->'
+                on_release: app.next_screen('1-2')
+

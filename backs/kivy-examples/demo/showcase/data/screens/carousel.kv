@@ -1,0 +1,50 @@
+<ColoredLabel@Label>:
+    font_size: '48sp'
+    color: (.6, .6, .6, 1)
+    canvas.before:
+        Color:
+            rgb: (.9, .9, .9)
+        Rectangle:
+            pos: self.x + sp(2), self.y + sp(2)
+            size: self.width - sp(4), self.height - sp(4)
+
+ShowcaseScreen:
+    name: 'Carousel'
+    fullscreen: True
+
+    BoxLayout:
+        size_hint_y: None
+        height: '48dp'
+
+        Carousel:
+            id: carousel
+            loop: False
+
+            Spinner:
+                text: "PUNTOS"
+                values: "PUNTOS", "Conceptos", "Línea recta", "2 líneas rectas", "3 líneas rectas"
+                on_text: app.next_screen(self.text)
+
+            ColoredLabel:
+                text: 'Slide 1'
+
+            ColoredLabel:
+                text: 'Slide 2'
+
+        Label:
+            size_hint_x: None
+            width: self.height
+            text: '{}'.format(carousel.index)
+
+        Button:
+            size_hint_x: None
+            width: self.height
+            text: 'Prev'
+            on_release: carousel.load_previous()
+
+        Button:
+            size_hint_x: None
+            width: self.height
+            text: 'Next'
+            on_release: carousel.load_next()
+

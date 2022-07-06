@@ -1,0 +1,21 @@
+#:kivy 2.1.0
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: 'pages/00.rst'

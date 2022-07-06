@@ -1,0 +1,16 @@
+#:kivy 2.1.0
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        Image:
+            source: 'images/app_logo.png'
+            size: self.texture_size
