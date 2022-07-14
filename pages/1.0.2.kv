@@ -1,5 +1,13 @@
 #:kivy 2.1.0
 
+#:set prev_file '1.0.1'
+#:set this_file '1.0.2'
+#:set next_file ''
+
+#:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
+#:set prev_symbol ' ' if not prev_file else '<--'
+#:set next_symbol ' ' if not next_file else '-->'
+
 RootWidget:
     # import container
     container: container
@@ -14,11 +22,11 @@ RootWidget:
         RstDocument:
             canvas.before:
                 Color:
-                    rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
+                    rgba: amarillo
                 Rectangle:
                     pos: self.pos
                     size: self.size
-            source: 'pages/1-0.rst'
+            source: rst_files_folder + this_file + ".rst"
 
         # Footer
         BoxLayout:
@@ -26,23 +34,22 @@ RootWidget:
             padding: 0
             spacing: 1
             size_hint_y: None
-            height: '36dp'
+            height: footer_height
             canvas.before:
                 Color:
-                    rgba: 0.430, 0.305, 0.223, 1  # 110,78,57  0x6E4E39 Café oscuro
+                    rgba: azul
                 Rectangle:
                     pos: self.pos
                     size: self.size
             Label:
-                text: '1-0 PUNTOS Y RECTAS'
+                text: cap1_sec0 + ' - pág. ' + page
             Button:
                 size_hint_x: None
                 width: self.height
-                text: ' '
-                # on_release: app.next_screen('1-0')
+                text: prev_symbol
+                on_release: app.next_screen(prev_file)
             Button:
                 size_hint_x: None
                 width: self.height
-                text: '-->'
-                on_release: app.next_screen('1-1')
-
+                text: next_symbol
+                on_release: app.next_screen(next_file)

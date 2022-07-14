@@ -1,16 +1,48 @@
 #:kivy 2.1.0
 
+#:set rst_files_folder "text/"
+
 # Paleta de colores
-# rgba: 0.430, 0.305, 0.223, 1  # 110,78,57  0x6E4E39 Café oscuro
-# rgba: 0.684, 0.473, 0.293, 1  # 175,121,75 0xAF794B Café
-# rgba: 0.848, 0.645, 0.375, 1  # 217,165,96 0xD9A560 Café claro
-# rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
-# rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris claro
-# rgba: 0.203, 0.395, 0.641, 1  # 52,101,164 0x3465A4 Azul para el texto
+#:set cafe_oscuro   (0.430, 0.305, 0.223, 1)  # rgba: 0.430, 0.305, 0.223, 1  # 110,78,57  0x6E4E39 Café oscuro
+#:set cafe          (0.684, 0.473, 0.293, 1)  # rgba: 0.684, 0.473, 0.293, 1  # 175,121,75 0xAF794B Café
+#:set cafe_claro    (0.848, 0.645, 0.375, 1)  # rgba: 0.848, 0.645, 0.375, 1  # 217,165,96 0xD9A560 Café claro
+#:set amarillo      (0.988, 0.914, 0.789, 1)  # rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
+#:set gris          (0.945, 0.945, 0.938, 1)  # rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris claro
+#:set azul          (0.203, 0.395, 0.641, 1)  # rgba: 0.203, 0.395, 0.641, 1  # 52,101,164 0x3465A4 Azul
 
 # Texto
 # https://docutils.sourceforge.io/rst.html
 # https://docutils.sourceforge.io/docs/user/rst/quickref.html
+
+# Estructura del contenido
+# CAP.N - Capítulo: no está asociado a un archivo, solo es indicativo.
+# n.m   - Sección de capítulo: tiene dos archivos asociados 'n.m.kv' (estructura) y 'n.m.rst' (contenido)
+# n.m.l - Página de sección: tiene dos archivos asociados 'n.m.l.kv' (estructura) y 'n.m.l.rst' (contenido)
+#:set cap1      "CAP.1 - PUNTOS Y RECTAS"
+#:set cap1_sec0 "1.0 Introducción"
+#:set cap1_sec1 "1.1 Concepto de punto"
+#:set cap1_sec2 "1.2 Línea recta"
+#:set cap1_sec3 "1.3 Dos líneas rectas"
+#:set cap1_sec4 "1.4 Tres líneas rectas"
+#:set cap2      "CAP.2 POLÍGONOS"
+#:set cap2_sec0 "2.0 Introducción"
+#:set cap2_sec1 "2.1 De tres lados"
+#:set cap2_sec2 "2.2 De cuatro lados"
+#:set cap2_sec3 "2.3 De más lados"
+#:set cap3      "CAP.3 LÍNEAS CURVAS"
+#:set cap3_sec0 "3.0 Introducción"
+#:set cap3_sec1 "3.1 Cerradas"
+#:set cap3_sec2 "3.2 Círculos"
+#:set cap3_sec3 "3.3 Abiertas"
+#:set cap4      "CAP.4 CONCEPTOS 3D"
+#:set cap4_sec0 "4.0 Introducción"
+#:set cap4_sec1 "4.1 Puntos"
+#:set cap4_sec2 "4.2 Líneas"
+#:set cap4_sec3 "4.3 Polígonos"
+#:set cap4_sec4 "4.4 Planos"
+#:set cap4_sec5 "4.5 Sólidos"
+
+#:set footer_height '36dp'
 
 RootWidget:
     # import container
@@ -35,7 +67,7 @@ RootWidget:
                 size_hint_x: None
                 width: self.height
                 text: " ? "
-                on_release: app.next_screen('00')
+                on_release: app.next_screen('ayuda')
 
             # Display selectors for sections and sub-sections
             # The number will be used to open the corresponding file
@@ -43,23 +75,20 @@ RootWidget:
                 id: carousel
                 loop: False
                 Spinner:
-                    text: "Capítulos"
+                    text: cap1
+                    values: cap1, cap1_sec0, cap1_sec1, cap1_sec2, cap1_sec3, cap1_sec4
                     on_text: app.next_screen(self.text)
                 Spinner:
-                    text: "Capítulo 1"
-                    values: "1-0 PUNTOS Y RECTAS", "1-1 Conceptos", "1-2 Línea recta", "1-3 Dos líneas rectas", "1-4 Tres líneas rectas"
+                    text: cap2
+                    values: cap2, cap2_sec0, cap2_sec1, cap2_sec2, cap2_sec3
                     on_text: app.next_screen(self.text)
                 Spinner:
-                    text: "Capítulo 2"
-                    values: "2-0 POLÍGONOS", "2-1 De tres lados", "2-2 De cuatro lados", "2-3 De más lados"
+                    text: cap3
+                    values: cap3, cap3_sec0, cap3_sec1, cap3_sec2, cap3_sec3
                     on_text: app.next_screen(self.text)
                 Spinner:
-                    text: "Capítulo 3"
-                    values: "3-0 LÍNEAS CURVAS", "3-1 Cerradas", "3-2 Círculos", "3-3 Abiertas"
-                    on_text: app.next_screen(self.text)
-                Spinner:
-                    text: "Capítulo 4"
-                    values: "4-0 CONCEPTOS 3D", "4-1 Puntos", "4-2 Líneas", "4-3 Polígonos", "4-4 Planos", "4-5 Sólidos"
+                    text: cap4
+                    values: cap4, cap4_sec0, cap4_sec1, cap4_sec2, cap4_sec3, cap4_sec4, cap4_sec5
                     on_text: app.next_screen(self.text)
             Button:
                 size_hint_x: None
@@ -76,7 +105,7 @@ RootWidget:
         BoxLayout:
             canvas.before:
                 Color:
-                    rgba: 0.684, 0.473, 0.293, 1  # 175,121,75 0xAF794B Café
+                    rgba: cafe
                 Rectangle:
                     pos: self.pos
                     size: self.size

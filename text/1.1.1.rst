@@ -1,0 +1,5 @@
+=====================================================
+ The reStructuredText_ Cheat Sheet: Syntax Reminders
+=====================================================
+:Info: See <https://docutils.sourceforge.io/rst.html> for introductory docs.
+:Author: David Goodger <goodger@python.org>

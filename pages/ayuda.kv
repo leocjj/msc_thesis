@@ -1,0 +1,21 @@
+#:kivy 2.1.0
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: amarillo
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: 'text/ayuda.rst'

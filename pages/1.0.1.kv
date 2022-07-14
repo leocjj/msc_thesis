@@ -1,0 +1,55 @@
+#:kivy 2.1.0
+
+#:set prev_file '1.0'
+#:set this_file '1.0.1'
+#:set next_file '1.0.2'
+
+#:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
+#:set prev_symbol ' ' if not prev_file else '<--'
+#:set next_symbol ' ' if not next_file else '-->'
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: amarillo
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: rst_files_folder + this_file + ".rst"
+
+        # Footer
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 0
+            spacing: 1
+            size_hint_y: None
+            height: footer_height
+            canvas.before:
+                Color:
+                    rgba: azul
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: cap1_sec0 + ' - pág. ' + page
+            Button:
+                size_hint_x: None
+                width: self.height
+                text: prev_symbol
+                on_release: app.next_screen(prev_file)
+            Button:
+                size_hint_x: None
+                width: self.height
+                text: next_symbol
+                on_release: app.next_screen(next_file)
