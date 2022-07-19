@@ -2,6 +2,7 @@
 
 #:set prev_file '1.1.1'
 #:set this_file '1.1.2'
+#:set this_cap_sec  cap1_sec1
 #:set next_file ''
 
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
@@ -21,18 +22,26 @@ RootWidget:
         padding: 0
         spacing: 3
 
+        # fill the canvas
         GridLayout:
             rows: 2
             orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
 
-            Slider:
-                id: wm
-                min: 0
-                max: 1
-                value: 1
-                step: 0.01
-                orientation: 'horizontal'
-                size_hint: (1, 0.075)   # Change to (0.075, 1) if orientation is vertical
+            BoxLayout:
+                Label:
+                    size_hint: (0.2, None)  # To leave 20% free at the left
+                    text: ''
+                Slider:
+                    id: wm
+                    min: 0
+                    max: 1
+                    value: 1
+                    step: 0.01
+                    orientation: 'horizontal'
+                    size_hint: (1, 0.075)   # Change to (0.075, 1) if orientation is vertical
+                Label:
+                    size_hint: (0.2, None)    # To leave 20% free at the right
+                    text: ''
             BoxLayout:
                 canvas:
                     Color:
@@ -71,7 +80,7 @@ RootWidget:
                     pos: self.pos
                     size: self.size
             Label:
-                text: cap1_sec0 + ' - pág. ' + page
+                text: this_cap_sec + ' - pág. ' + page
             Button:
                 size_hint_x: None
                 width: self.height

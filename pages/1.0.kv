@@ -2,6 +2,7 @@
 
 #:set prev_file ''
 #:set this_file '1.0'
+#:set this_cap_sec  cap1_sec0
 #:set next_file '1.0.1'
 
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
@@ -42,7 +43,7 @@ RootWidget:
                     pos: self.pos
                     size: self.size
             Label:
-                text: cap1_sec0 + ' - pág. ' + page
+                text: this_cap_sec + ' - pág. ' + page
             Button:
                 size_hint_x: None
                 width: self.height

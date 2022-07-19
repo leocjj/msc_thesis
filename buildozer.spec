@@ -1,19 +1,39 @@
 [app]
 
 ## (str) Title of your application
-title = Test 11
+title = Virtual Euclides
 
 ## (str) Package name
-package.name = test11
+package.name = virtualeuclides
 
-# (str) Package domain (needed for android/ios packaging)
-package.domain = org.test
+## (str) Package domain (needed for android/ios packaging)
+package.domain = co.edu.utp
+
+## (list) Application requirements
+# comma separated e.g. requirements = sqlite3,kivy
+requirements = python3,kivy,docutils
 
 # (str) Source code where the main.py live
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts =
+
+## (str) Presplash of the application
+presplash.filename = %(source.dir)s/images/app_presplash.png
+
+## (str) Icon of the application
+icon.filename = %(source.dir)s/images/app_icon.png
+
+## (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
+orientation = portrait
+
+## (str) Application versioning (method 1)
+version = 0.2
+
+# (str) Application versioning (method 2)
+# version.regex = __version__ = ['"](.*)['"]
+# version.filename = %(source.dir)s/main.py
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -28,29 +48,9 @@ source.include_exts =
 # Do not prefix with './'
 #source.exclude_patterns = license,images/*/*.jpg
 
-## (str) Application versioning (method 1)
-version = 0.1
-
-# (str) Application versioning (method 2)
-# version.regex = __version__ = ['"](.*)['"]
-# version.filename = %(source.dir)s/main.py
-
-## (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,docutils
-
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
-
-## (str) Presplash of the application
-#presplash.filename = %(source.dir)s/data/presplash.png
-
-## (str) Icon of the application
-#icon.filename = %(source.dir)s/data/icon.png
-
-## (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
-orientation = portrait
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
@@ -377,7 +377,7 @@ ios.codesign.allowed = false
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 0
+log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1

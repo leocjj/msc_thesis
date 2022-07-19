@@ -3,12 +3,13 @@
 #:set rst_files_folder "text/"
 
 # Paleta de colores
-#:set cafe_oscuro   (0.430, 0.305, 0.223, 1)  # rgba: 0.430, 0.305, 0.223, 1  # 110,78,57  0x6E4E39 Café oscuro
-#:set cafe          (0.684, 0.473, 0.293, 1)  # rgba: 0.684, 0.473, 0.293, 1  # 175,121,75 0xAF794B Café
-#:set cafe_claro    (0.848, 0.645, 0.375, 1)  # rgba: 0.848, 0.645, 0.375, 1  # 217,165,96 0xD9A560 Café claro
+#:set negro         (0, 0, 0, 1)              # rgba: 0.430, 0.305, 0.223, 1  # 0,0,0       0x000000 Café oscuro
+#:set cafe_oscuro   (0.430, 0.305, 0.223, 1)  # rgba: 0.430, 0.305, 0.223, 1  # 110,78,57   0x6E4E39 Café oscuro
+#:set cafe          (0.684, 0.473, 0.293, 1)  # rgba: 0.684, 0.473, 0.293, 1  # 175,121,75  0xAF794B Café
+#:set cafe_claro    (0.848, 0.645, 0.375, 1)  # rgba: 0.848, 0.645, 0.375, 1  # 217,165,96  0xD9A560 Café claro
 #:set amarillo      (0.988, 0.914, 0.789, 1)  # rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
 #:set gris          (0.945, 0.945, 0.938, 1)  # rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris claro
-#:set azul          (0.203, 0.395, 0.641, 1)  # rgba: 0.203, 0.395, 0.641, 1  # 52,101,164 0x3465A4 Azul
+#:set azul          (0.203, 0.395, 0.641, 1)  # rgba: 0.203, 0.395, 0.641, 1  # 52,101,164  0x3465A4 Azul
 
 # Texto
 # https://docutils.sourceforge.io/rst.html
@@ -105,7 +106,7 @@ RootWidget:
         BoxLayout:
             canvas.before:
                 Color:
-                    rgba: cafe
+                    rgba: cafe_claro
                 Rectangle:
                     pos: self.pos
                     size: self.size
