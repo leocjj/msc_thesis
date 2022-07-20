@@ -53,7 +53,7 @@ RootWidget:
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'
-                    text: 'Tamaño = {}'.format(wm.value if wm.value != 0 else f"{wm.value}\n Esto es un punto")
+                    text: 'Tamaño = {}'.format(int(wm.value*100) if wm.value != 0 else f"{int(wm.value)}\n Esto es un punto")
 
 
         RstDocument:

@@ -9,11 +9,10 @@
 #:set prev_symbol ' ' if not prev_file else '<--'
 #:set next_symbol ' ' if not next_file else '-->'
 
-#:set f 0.7
-
 RootWidget:
     # import container
     container: container
+    # label_wid: my_custom_label
 
     # fill the container
     BoxLayout:
@@ -32,17 +31,16 @@ RootWidget:
             BoxLayout:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
-                    id: hm
+                    on_value: root.cap1_sec1_pag1_y(float(args[1]))  # Send value to .py file
                     min: 0
                     max: 1
-                    value: 1
                     orientation: 'vertical'
             BoxLayout:
                 size_hint: (0.925, 0.075)  # Buttom-right
                 Label:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
-                    id: wm
+                    on_value: root.cap1_sec1_pag1_x(float(args[1]))  # Send value to .py file
                     min: 0
                     max: 1
                     orientation: 'horizontal'
@@ -52,23 +50,19 @@ RootWidget:
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
                     Line:
-                        points: root.width/8*(1+wm.value*5), root.height*10/16, root.width*13/16, root.height*14/16
-                        #root.width/2 - root.width*wm.value, root.height*3/4 - min(root.width,root.height/3)*f*wm.value/2, 500, 500
-                        #pos: root.width/2 - min(root.width,root.height/2)*f*wm.value/2, root.height*3/4 - min(root.width,root.height/2)*f*wm.value/2
-                        #size: min(root.width,root.height/2)*f*wm.value, min(root.width,root.height/2)*f*wm.value
+                        points: root.p_1
                     Line:
-                        points: root.width/8, root.height*(11+hm.value*4)/16, root.width*7/8, root.height*11/16
+                        points: root.p_2
+                    Color:
+                        rgba: azul
                     Ellipse:
-                        pos: (root.width/8)*(28.5+45*wm.value+7*hm.value*(11+10*wm.value))/(12+hm.value*(11+10*wm.value))-5, 500
-                        size: 10,10
-
-                    #x = (root.width/8)*(28.5-45*wm.value+7*hm.value(11-10*wm.value))/(12+hm.value*(11-10*wm.value))
-                    #y = (-1*root.height*hm.value/(3*root.width))*(((root.width/8)*(28.5-45*wm.value+7*hm.value*(11-10*wm.value))/(12+hm.value*(11-10*wm.value))-5) -root.width/8) +h*(11+4*hm.value)/16
+                        pos: root.p_0
+                        size: 6, 6
                 Label:
+                    id: my_custom_label
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'
-                    #text: 'Tamaño = {}'.format(wm.value if wm.value != 0 else f"{wm.value}\n Esto es un punto")
 
 
         RstDocument:
