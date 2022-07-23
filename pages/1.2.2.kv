@@ -1,19 +1,20 @@
 #:kivy 2.1.0
 
-#:set prev_file ''
-#:set this_file '1.2'
+#:set prev_file '1.2.1'
+#:set this_file '1.2.2'
 #:set this_cap_sec  cap1_sec2
-#:set next_file '1.2.1'
+#:set next_file ''
 
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
 #:set prev_symbol ' ' if not prev_file else '<--'
 #:set next_symbol ' ' if not next_file else '-->'
 
-#:set f 0.7
+#:set point_size 6
 
 RootWidget:
     # import container
     container: container
+    label_wid: my_custom_label
 
     # fill the container
     BoxLayout:
@@ -28,37 +29,46 @@ RootWidget:
             orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
 
             BoxLayout:
-                size_hint: (1, 0.075)
+                size_hint: (0.075, 0.075)  # Buttom-left
+            BoxLayout:
+                size_hint: (0.075, 0.925)  # Top-left
+                Slider:
+                    on_value: root.cap1_sec1_pag2_y(float(args[1]))  # Send value to .py file
+                    min: -0.6
+                    max: 0.7
+                    step: 0.01
+                    value: 0
+                    orientation: 'vertical'
+            BoxLayout:
+                size_hint: (0.925, 0.075)  # Buttom-right
                 Label:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
-                    id: wm
-                    min: 0
-                    max: 10
-                    value: 10
-                    step: 1
+                    on_value: root.cap1_sec1_pag2_x(float(args[1]))  # Send value to .py file
+                    min: -0.7
+                    max: 0.7
+                    step: 0.01
+                    value: 0
                     orientation: 'horizontal'
                 Label:
-                    size_hint: (0.2, None)    # To leave 20% free to the right
+                    size_hint: (0.2, None)  # To leave 20% free to the right
             BoxLayout:
-                size_hint: (1, 0.925)
+                size_hint: (0.925, 0.925)  # Top-right
                 canvas:
+                    Line:  # Y-axis
+                        points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
+                    Line:  # X-axis
+                        points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
                     Color:
                         rgba: azul
-                    Line:
-                        width: 1.0
-                        dash_length: 1
-                        dash_offset: wm.value
-                        bezier: (root.width/10, root.height * 3 / 4, root.width / 2 , root.height, root.width*9/10, root.height * 3 / 4)
-                    #Ellipse:
-                    #    pos: root.width/2 - min(root.width,root.height/2)*f*wm.value/2, root.height*3/4 - min(root.width,root.height/2)*f*wm.value/2
-                    #    size: min(root.width,root.height/2)*f*wm.value, min(root.width,root.height/2)*f*wm.value
+                    Ellipse:  # Point
+                        pos: root.p_0
+                        size: point_size, point_size
                 Label:
-                    #center: root.center
+                    id: my_custom_label
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'
-                    text: 'Tamaño = {}'.format(int(wm.value*100) if wm.value != 0 else f"{int(wm.value)}\n Esto es una línea")
 
 
         RstDocument:

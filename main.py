@@ -19,6 +19,7 @@ from kivy.vector import Vector
 from kivy import require
 
 require("2.1.0")
+offset = 3  # Half of the point_size value in .kv files, to drow the points correctly.
 
 
 class RootWidget(BoxLayout):
@@ -48,7 +49,9 @@ class RootWidget(BoxLayout):
         c = (self.p_2[0], self.p_2[1])
         d = (self.p_2[2], self.p_2[3])
         i = Vector.segment_intersection(a, b, c, d)
-        self.p_0 = [i[0] - 3, i[1] - 3] if i else (0, 0)  # Offset and avoid None
+        self.p_0 = (  # Offset added and conditional to avoid None
+            [i[0] - offset, i[1] - offset] if i else (0, 0)
+        )
 
     def cap1_sec1_pag1_y(self, f):
         Clock.schedule_interval(self.update_points, 0.01)
@@ -64,18 +67,20 @@ class RootWidget(BoxLayout):
         c = (self.p_2[0], self.p_2[1])
         d = (self.p_2[2], self.p_2[3])
         i = Vector.segment_intersection(a, b, c, d)
-        self.p_0 = [i[0] - 3, i[1] - 3] if i else (0, 0)  # Offset and avoid None
+        self.p_0 = (  # Offset added and conditional to avoid None
+            [i[0] - offset, i[1] - offset] if i else (0, 0)
+        )
 
     def cap1_sec1_pag2_x(self, f):
         Clock.schedule_interval(self.update_points, 0.01)
         self.slider_ancho = f
         self.slider_alto = self.slider_alto if self.slider_alto else 0
         self.p_0 = [
-            self.width / 2 * (1 + self.slider_ancho),
-            self.height * (3 + self.slider_alto) / 4 + 20,
+            self.width / 2 * (1 + self.slider_ancho) - offset,
+            self.height * (3 + self.slider_alto) / 4 - offset,
         ]
         self.label_wid.text = (
-            f"Coordenadas: ({self.slider_ancho:.2f}, {self.slider_alto:.2f})"
+            f"Coordenadas: ({(self.slider_ancho*10):.1f}, {(self.slider_alto*10):.1f})"
         )
 
     def cap1_sec1_pag2_y(self, f):
@@ -83,11 +88,11 @@ class RootWidget(BoxLayout):
         self.slider_alto = f
         self.slider_ancho = self.slider_ancho if self.slider_ancho else 0
         self.p_0 = [
-            self.width / 2 * (1 + self.slider_ancho),
-            self.height * (3 + self.slider_alto) / 4 + 20,
+            self.width / 2 * (1 + self.slider_ancho) - offset,
+            self.height * (3 + self.slider_alto) / 4 - offset,
         ]
         self.label_wid.text = (
-            f"Coordenadas: ({self.slider_ancho:.2f}, {self.slider_alto:.2f})"
+            f"Coordenadas: ({(self.slider_ancho*10):.1f}, {(self.slider_alto*10):.1f})"
         )
 
     container = ObjectProperty(None)

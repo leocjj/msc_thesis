@@ -9,6 +9,8 @@
 #:set prev_symbol ' ' if not prev_file else '<--'
 #:set next_symbol ' ' if not next_file else '-->'
 
+#:set point_size 6
+
 RootWidget:
     # import container
     container: container
@@ -32,7 +34,7 @@ RootWidget:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
                     on_value: root.cap1_sec1_pag2_y(float(args[1]))  # Send value to .py file
-                    min: -0.7
+                    min: -0.6
                     max: 0.7
                     step: 0.01
                     value: 0
@@ -53,15 +55,15 @@ RootWidget:
             BoxLayout:
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
-                    Line:
-                        points: root.width / 2, root.height * 6/ 10, root.width / 2 , root.height * 9 / 10
-                    Line:
+                    Line:  # Y-axis
+                        points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
+                    Line:  # X-axis
                         points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
                     Color:
                         rgba: azul
-                    Ellipse:
+                    Ellipse:  # Point
                         pos: root.p_0
-                        size: 6, 6
+                        size: point_size, point_size
                 Label:
                     id: my_custom_label
                     text_size: self.size
