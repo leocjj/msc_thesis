@@ -10,11 +10,14 @@
 #:set next_symbol ' ' if not next_file else '-->'
 
 #:set point_size 6
+#:set offset point_size / 2
 
 RootWidget:
     # import container
     container: container
-    label_wid: my_custom_label
+    label_wid: main_message
+    slider_y1: left
+    slider_y2: right
 
     # fill the container
     BoxLayout:
@@ -29,46 +32,46 @@ RootWidget:
             orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
 
             BoxLayout:
-                size_hint: (0.075, 0.075)  # Buttom-left
-            BoxLayout:
-                size_hint: (0.075, 0.925)  # Top-left
-                Slider:
-                    on_value: root.cap1_sec1_pag2_y(float(args[1]))  # Send value to .py file
-                    min: -0.6
-                    max: 0.7
-                    step: 0.01
-                    value: 0
-                    orientation: 'vertical'
-            BoxLayout:
-                size_hint: (0.925, 0.075)  # Buttom-right
+                size_hint: (1, 0.075)
                 Label:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
-                    on_value: root.cap1_sec1_pag2_x(float(args[1]))  # Send value to .py file
-                    min: -0.7
-                    max: 0.7
-                    step: 0.01
+                    id: left
+                    on_value: root.cap1_sec2_pag2()  # Call the code on event
+                    min: -2
+                    max: 0
                     value: 0
+                    step: 0.1
+                    orientation: 'horizontal'
+                Slider:
+                    id: right
+                    on_value: root.cap1_sec2_pag2()  # Call the code on event
+                    min: 0
+                    max: 2
+                    value: 0
+                    step: 0.1
                     orientation: 'horizontal'
                 Label:
-                    size_hint: (0.2, None)  # To leave 20% free to the right
+                    size_hint: (0.2, None)    # To leave 20% free to the right
             BoxLayout:
-                size_hint: (0.925, 0.925)  # Top-right
+                size_hint: (1, 0.925)
                 canvas:
-                    Line:  # Y-axis
-                        points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
-                    Line:  # X-axis
-                        points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
+                    Line:
+                        points: root.p_0  # root.width*(2+left.value)/10, root.height*6/8, root.width*(8+right.value)/10, root.height*3/4
                     Color:
-                        rgba: azul
-                    Ellipse:  # Point
-                        pos: root.p_0
+                        rgba: cafe_claro
+                    Ellipse:  # Left point
+                        pos: root.width * 2 / 10 - offset, root.height * 6 / 8 - offset
+                        size: point_size, point_size
+                    Ellipse:  # Right oint
+                        pos: root.width * 8 / 10 - offset, root.height * 3 / 4 - offset
                         size: point_size, point_size
                 Label:
-                    id: my_custom_label
+                    id: main_message
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'
+
 
 
         RstDocument:

@@ -10,11 +10,15 @@
 #:set next_symbol ' ' if not next_file else '-->'
 
 #:set point_size 6
+#:set offset point_size / 2
 
 RootWidget:
     # import container
     container: container
-    label_wid: my_custom_label
+    # variables to share with root class in the Python file
+    label_wid: main_message
+    slider_y1: y1
+    slider_y2: y2
 
     # fill the container
     BoxLayout:
@@ -29,43 +33,57 @@ RootWidget:
             orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
 
             BoxLayout:
-                size_hint: (0.075, 0.075)  # Buttom-left
+                size_hint: (0.075, 0.075)  # Bottom laceholder
             BoxLayout:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
-                    on_value: root.cap1_sec1_pag2_y(float(args[1]))  # Send value to .py file
-                    min: -0.6
-                    max: 0.7
-                    step: 0.01
-                    value: 0
+                    id: y2
+                    on_value: root.cap1_sec2_pag1()  # Call the code on event
+                    min: -1
+                    max: 1
+                    step: 0.05
+                    value: -1
                     orientation: 'vertical'
             BoxLayout:
-                size_hint: (0.925, 0.075)  # Buttom-right
-                Label:
-                    size_hint: (0.2, None)  # To leave 20% free to the left
+                size_hint: (0.075, 0.075)  # Bottom laceholder
+            BoxLayout:
+                size_hint: (0.075, 0.925)  # Top-left
                 Slider:
-                    on_value: root.cap1_sec1_pag2_x(float(args[1]))  # Send value to .py file
-                    min: -0.7
-                    max: 0.7
-                    step: 0.01
-                    value: 0
-                    orientation: 'horizontal'
-                Label:
-                    size_hint: (0.2, None)  # To leave 20% free to the right
+                    id: y1
+                    on_value: root.cap1_sec2_pag1()  # Call the code on event
+                    min: -1
+                    max: 1
+                    step: 0.05
+                    value: 1
+                    orientation: 'vertical'
+            BoxLayout:
+                size_hint: (0.075, 0.075)  # Bottom laceholder
             BoxLayout:
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
-                    Line:  # Y-axis
-                        points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
-                    Line:  # X-axis
-                        points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
+                    Line:  # Curve line (bezier line)
+                        bezier: root.p_0
                     Color:
-                        rgba: azul
-                    Ellipse:  # Point
-                        pos: root.p_0
+                        rgba: cafe_claro
+                    Line:
+                        dash_length: 5
+                        dash_offset: 5
+                        points: root.width / 4, root.height * 6 / 10, root.width / 4 , root.height * 15 / 16
+                    Ellipse:  # y1 point
+                        pos: root.width / 4 - offset, root.height * 6 / 8 - offset
+                        size: point_size, point_size
+                    Line:
+                        dash_length: 5
+                        dash_offset: 5
+                        points: root.width * 3 / 4, root.height * 6 / 10, root.width * 3 / 4 , root.height * 15 / 16
+                    Ellipse:  # Left point
+                        pos: root.width/10 - offset, root.height * 6 / 8 - offset
+                        size: point_size, point_size
+                    Ellipse:  # Right point
+                        pos: root.width*8/10 - offset, root.height * 3 / 4 - offset
                         size: point_size, point_size
                 Label:
-                    id: my_custom_label
+                    id: main_message
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'

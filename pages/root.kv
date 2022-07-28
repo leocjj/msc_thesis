@@ -10,6 +10,7 @@
 #:set amarillo      (0.988, 0.914, 0.789, 1)  # rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
 #:set gris          (0.945, 0.945, 0.938, 1)  # rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris claro
 #:set azul          (0.203, 0.395, 0.641, 1)  # rgba: 0.203, 0.395, 0.641, 1  # 52,101,164  0x3465A4 Azul
+#:set blanco        (1, 1, 1, 1)              # rgba: 1, 1, 1, 1              # 255,255,255 0xFFFFFF Azul
 
 # Texto
 # https://docutils.sourceforge.io/rst.html
@@ -106,7 +107,7 @@ RootWidget:
         BoxLayout:
             canvas.before:
                 Color:
-                    rgba: cafe_claro
+                    rgba: negro
                 Rectangle:
                     pos: self.pos
                     size: self.size

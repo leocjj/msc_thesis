@@ -9,7 +9,8 @@
 #:set prev_symbol ' ' if not prev_file else '<--'
 #:set next_symbol ' ' if not next_file else '-->'
 
-#:set f 0.7
+#:set point_size 6
+#:set offset point_size / 2
 
 RootWidget:
     # import container
@@ -33,32 +34,34 @@ RootWidget:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
                     id: wm
-                    min: 0
-                    max: 10
-                    value: 10
-                    step: 1
+                    min: 1
+                    max: 15
+                    value: 1
+                    step: 0.1
                     orientation: 'horizontal'
                 Label:
                     size_hint: (0.2, None)    # To leave 20% free to the right
             BoxLayout:
                 size_hint: (1, 0.925)
                 canvas:
-                    Color:
-                        rgba: azul
                     Line:
-                        width: 1.0
-                        dash_length: 1
-                        dash_offset: wm.value
-                        bezier: (root.width/10, root.height * 3 / 4, root.width / 2 , root.height, root.width*9/10, root.height * 3 / 4)
-                    #Ellipse:
-                    #    pos: root.width/2 - min(root.width,root.height/2)*f*wm.value/2, root.height*3/4 - min(root.width,root.height/2)*f*wm.value/2
-                    #    size: min(root.width,root.height/2)*f*wm.value, min(root.width,root.height/2)*f*wm.value
+                        dash_length: 2
+                        dash_offset: wm.max - wm.value
+                        bezier: (root.width/10, root.height * 6 / 8, root.width / 4, root.height, root.width * 3 / 4 , root.height / 2, root.width*9/10, root.height * 3 / 4)
+                    Color:
+                        rgba: cafe_claro
+                    Ellipse:  # Left point
+                        pos: root.width/10 - offset, root.height * 6 / 8 - offset
+                        size: point_size, point_size
+                    Ellipse:  # Right oint
+                        pos: root.width*9/10 - offset, root.height * 3 / 4 - offset
+                        size: point_size, point_size
                 Label:
                     #center: root.center
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'
-                    text: 'Tamaño = {}'.format(int(wm.value*100) if wm.value != 0 else f"{int(wm.value)}\n Esto es una línea")
+                    text: 'Cantidad de puntos: 10^{}'.format(int(wm.value)) if wm.value != wm.max else f"Infinitos puntos!\n Esto es una línea ;)"
 
 
         RstDocument:

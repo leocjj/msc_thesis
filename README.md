@@ -54,18 +54,21 @@ Run buildozer
 ```
 
 ```sh
-    # Instalar Android Studio y seguir los pasos de:
+    # Instalar Android Studio y seguir los siguientes pasos SOLO la primera vez:
     # https://developer.android.com/studio/publish/app-signing.html#generate-key
     export P4A_RELEASE_KEYALIAS=upload
     export P4A_RELEASE_KEYALIAS_PASSWD=12345678
     export P4A_RELEASE_KEYSTORE=~/thesis/keystores/upload-keystore.jks
     export P4A_RELEASE_KEYSTORE_PASSWD=12345678
 
-    https://kivy.org/doc/stable/guide/packaging-android.html#release-on-the-market
-    https://developer.android.com/studio/publish/app-signing.html#signing-manually
-    https://developer.android.com/
+    # https://kivy.org/doc/stable/guide/packaging-android.html#release-on-the-market
+    # https://developer.android.com/studio/publish/app-signing.html#signing-manually
+    # https://developer.android.com/
+    
     buildozer android release
-    # And then copy the file created in /bin/ folder into the smartphone
+    
+    # Go to: https://play.google.com/apps/publish
+    ####  And then copy the file created in /bin/ folder into the smartphone
     # by using bluetooth or USB cable.
 ```
 

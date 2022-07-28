@@ -59,8 +59,16 @@ RootWidget:
                         points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
                     Line:  # X-axis
                         points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
+                    Line:  # X-axis
+                        dash_length: 1
+                        dash_offset: 2
+                        points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
+                    Line:
+                        bezier: (300, 300, 400, 400, 500, 300)
+                    Line:
+                        circle: 400, 400, 100
                     Color:
-                        rgba: blanco
+                        rgba: azul
                     Ellipse:  # Point
                         pos: root.p_0
                         size: point_size, point_size
@@ -105,3 +113,8 @@ RootWidget:
                 width: self.height
                 text: next_symbol
                 on_release: app.next_screen(next_file)
+
+# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Line   ==> Lines (dashed), curves, circle, ellipse, rectangle, bezier curves
+# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Point  
+# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Quad   ==> Triangle too
+# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Mesh
