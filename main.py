@@ -33,7 +33,9 @@ class RootWidget(BoxLayout):
     # label_wid = ObjectProperty()
     p_0 = ListProperty([0, 0])
     p_1 = ListProperty([0, 0, 0, 0])
-    p_2 = ListProperty([0, 0, 0, 0])
+    p_2 = ListProperty([0, 0, 0, 0])  # List, for 'points' attributes in .kv files
+    p_3 = ListProperty((0, 0))  # Tuple, for 'pos' attributes in .kv files
+    p_4 = ListProperty((0, 0))  # Tuple, for 'pos' attributes in .kv files
 
     def cap1_sec1_pag1_x(self, f):
         """Control horizontal slider event (x)"""
@@ -105,24 +107,30 @@ class RootWidget(BoxLayout):
     def cap1_sec2_pag1(self):
         """Control sliders events"""
         Clock.schedule_interval(self.update_points, 0.01)
-        slider_alto1 = self.slider_y1.value
-        slider_alto2 = self.slider_y2.value
+        slider_a = self.slider_y1.value
+        slider_b = self.slider_y2.value
 
         self.p_0 = [
             self.width / 10,
             self.height * 3 / 4,
             self.width / 4,
-            self.height * (3 + slider_alto1) / 4,
+            self.height * (3 + slider_a) / 4,
             self.width * 3 / 4,
-            self.height * (3 + slider_alto2) / 4,
+            self.height * (3 + slider_b) / 4,
             self.width * 8 / 10,
             self.height * 3 / 4,
         ]
+        self.slider_1 = self.height * (3 + slider_a) / 4
+        self.p_3 = [self.width / 4 - offset, self.height * (3 + slider_a) / 4 - offset]
+        self.p_4 = [
+            self.width * 3 / 4 - offset,
+            self.height * (3 + slider_b) / 4 - offset,
+        ]
         self.label_wid.text = (
-            f"Curvatura izq.: {(slider_alto1):.2f}  Curvatura der.: {(slider_alto2):.2f}"
+            f"Curvatura izq.: {(slider_a):.2f}  Curvatura der.: {(slider_b):.2f}"
             + (
                 "\n Esto es una línea... recta!!!"
-                if slider_alto1 == slider_alto2 == 0.0
+                if slider_a == slider_b == 0.0
                 else ""
             )
         )
@@ -149,6 +157,48 @@ class RootWidget(BoxLayout):
         elif slider_left != self.slider_y1.min and slider_right != self.slider_y2.max:
             self.label_wid.text = "Semirecta finita"
 
+    def cap1_sec3_pag0(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        rotation_in_degrees = self.slider_y1.value
+        pivot_point_y = self.slider_y2.value
+        max_length = max(self.height, self.width)
+        v = Vector(1, 0)
+        rotation_transformation = v.rotate(rotation_in_degrees).normalize()
+
+        # Horizontal fixed line
+        self.p_1 = [0, self.height * 3 / 4, self.width, self.height * 3 / 4]
+
+        # Pivot point for second (mobile) line
+        self.p_3 = (self.width / 2, self.height * (3 + pivot_point_y) / 4)
+
+        # Points to draw second (mobile) line
+        self.p_0 = [
+            self.p_3[0] + offset - max_length * rotation_transformation.x,
+            self.p_3[1] + offset - max_length * rotation_transformation.y,
+            self.p_3[0] + offset + max_length * rotation_transformation.x,
+            self.p_3[1] + offset + max_length * rotation_transformation.y,
+        ]
+        # Intersection point between two lines
+        intersect = Vector.line_intersection(
+            (self.p_0[0], self.p_0[1]),
+            (self.p_0[2], self.p_0[3]),
+            (self.p_1[0], self.p_1[1]),
+            (self.p_1[2], self.p_1[3]),
+        )
+        # Y-distance between pivot point and fixed line
+        distance = self.p_3[1] + offset - self.p_1[1]
+
+        if not intersect:
+            if abs(distance) < 1:
+                self.label_wid.text = f"Las dos rectas son la misma.\nInfinitos puntos de intersección :-/"
+            else:
+                self.label_wid.text = f"Paralelas!!! No hay punto de intersección :-0\n Distancia entre rectas: {abs(distance):.1f}"
+            self.p_4 = (0, 0)
+        else:
+            self.p_4 = (intersect.x - offset, intersect.y - offset)
+            self.label_wid.text = f"Punto de intesección: ({(intersect.x - self.width/2 - offset):.1f}, {(intersect.y - self.height*3/4):.1f})"
+
     container = ObjectProperty(None)
 
     def update_points(self, dt):
@@ -162,7 +212,7 @@ class Virtual_EuclidesApp(App):
         """This method loads the root.kv file automatically"""
         self.root = Builder.load_file("pages/root.kv")
         # Call to intro screen.
-        self.next_screen("1.2.2")
+        self.next_screen("1.3")
 
     def next_screen(self, screen):
         """Clear container and load the given screen object from file in kv folder.

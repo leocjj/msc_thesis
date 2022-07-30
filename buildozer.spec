@@ -11,6 +11,7 @@ package.domain = co.edu.utp
 
 ## (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
+# docutils is mandatory if rst text widget is used.
 requirements = python3,kivy,docutils
 
 # (str) Source code where the main.py live
@@ -29,7 +30,7 @@ icon.filename = %(source.dir)s/images/app_icon.png
 orientation = portrait
 
 ## (str) Application versioning (method 1)
-version = 0.3
+version = 0.31
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
