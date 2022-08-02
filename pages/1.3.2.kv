@@ -1,9 +1,9 @@
 #:kivy 2.1.0
 
-#:set prev_file '1.3'
-#:set this_file '1.3.1'
+#:set prev_file '1.3.1'
+#:set this_file '1.3.2'
 #:set this_cap_sec  cap1_sec3
-#:set next_file '1.3.2'
+#:set next_file ''
 
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
 #:set prev_symbol ' ' if not prev_file else '<--'
@@ -16,6 +16,8 @@ RootWidget:
     # import container
     container: container
     label_wid: main_message
+    slider_x1: x1
+    slider_x2: x2
     slider_y1: y1
     slider_y2: y2
 
@@ -28,60 +30,93 @@ RootWidget:
 
         # fill the canvas
         GridLayout:
-            rows: 2
+            rows: 3
             orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
 
+            BoxLayout:  # Empty space
+                size_hint: (0.075, 0.075)  # Buttom-left
             BoxLayout:  # Empty space
                 size_hint: (0.075, 0.075)  # Buttom-left
             BoxLayout:  # Space for vertical (right) slider
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
                     id: y2
-                    on_value: root.cap1_sec3_pag1()  # Call the code on event
-                    min: 0
-                    max: 180
-                    value: 0
-                    step: 1
+                    on_value: root.cap1_sec3_pag2()  # Call the code on event
+                    min: -0.6
+                    max: 0.7
+                    value: 0.1
+                    step: 0.01
+                    orientation: 'vertical'
+            BoxLayout:  # Empty space
+                size_hint: (0.075, 0.075)  # Buttom-left
+            BoxLayout:
+                size_hint: (0.075, 0.075)  # Buttom-left
+            BoxLayout:
+                size_hint: (0.075, 0.925)
+                Slider:
+                    id: y1
+                    on_value: root.cap1_sec3_pag2()  # Call the code on event
+                    min: -0.6
+                    max: 0.7
+                    value: -0.1
+                    step: 0.01
                     orientation: 'vertical'
             BoxLayout:
                 size_hint: (1, 0.075)
                 Label:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
-                    id: y1
-                    on_value: root.cap1_sec3_pag1()  # Call the code on event
-                    min: 0
-                    max: 360
-                    value: 0
-                    step: 1
+                    id: x2
+                    on_value: root.cap1_sec3_pag2()  # Call the code on event
+                    min: -0.7
+                    max: 0.7
+                    value: 0.1
+                    step: 0.01
                     orientation: 'horizontal'
+            BoxLayout:
+                size_hint: (1, 0.075)
                 Label:
-                    size_hint: (0.2, None)    # To leave 20% free to the right
+                    size_hint: (0.2, None)  # To leave 20% free to the left
+                Slider:
+                    id: x1
+                    on_value: root.cap1_sec3_pag2()  # Call the code on event
+                    min: -0.7
+                    max: 0.7
+                    value: -0.1
+                    step: 0.01
+                    orientation: 'horizontal'
+
             BoxLayout:  # Space for canvas
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
-                    Line:  # Rotating line 1
-                        points: root.p_1
+                    Line:  # Y-axis
+                        points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
+                    Line:  # X-axis
+                        points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
                     Color:
                         rgba: cafe_claro
-                    Line:  # Rotating line 2
-                        points: root.p_2
-                    Ellipse:  # Pivot point for right side of rotatign line 2
-                        pos: root.p_4
-                        size: point_size, point_size
-                    Color:
-                        rgba: azul
-                    Ellipse:  # Pivot point for rotatign lines
-                        pos: root.p_3
+                    Ellipse:  # Point A
+                        pos: root.p_A
                         size: point_size, point_size
                     Color:
                         rgba: blanco
-                    Line:  # Arc describing angle from line 2 to line 1 CCW
-                        circle: root.width/2, root.height*3/4, min(root.width, root.height/2)/3.5, 90-y2.value, 90-y1.value  # (center_x, center_y, radius, angle_start, angle_end, segments)
+                    Line:  # Main line, from A to B
+                        points: root.l_1
                     Color:
-                        rgba: cafe_claro
-                    Line:  # Arc describing angle from line 2 to line 1 CW
-                        circle: root.width/2, root.height*3/4, min(root.width, root.height/2)/4, -90-y2.value, 90-y1.value  # (center_x, center_y, radius, angle_start, angle_end, segments)
+                        rgba: rojo
+                    Ellipse:  # Point B
+                        pos: root.p_B
+                        size: point_size, point_size
+                    Color:
+                        rgba: cafe
+                    Line:  # Secondary line, x-distance
+                        points: root.l_2
+                    Color:
+                        rgba: rojo
+                    Line:  # Secondary line, y-distance
+                        points: root.l_3
+
+
                 Label:
                     id: main_message
                     text_size: self.size

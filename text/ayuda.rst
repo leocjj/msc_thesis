@@ -2,7 +2,7 @@
 Virtual_ Euclides_
 =============================
 
-**Proyecto de Grado**
+**Tesis de Grado**
 
 **Maestría en Enseñanza de la Matemática**
 
@@ -13,7 +13,9 @@ Virtual_ Euclides_
 Laboratorio Virtual de Geometría
 ======================================
 
-Aplicación móvil para la enseñanza de los fundamentos de la geometría Euclidiana mediante la interacción con elementos geométricos, permitiendo la contrastación de los conceptos teóricos con la visualización de los resultados en pantalla.
+Aplicación móvil para la enseñanza de los fundamentos de la geometría Euclidiana 
+mediante la interacción con elementos gráficos, permitiendo la contrastación 
+de los conceptos teóricos con la visualización de los resultados en pantalla.
 
 
 Ayuda
@@ -42,8 +44,7 @@ Créditos
  **Autor:** Leonardo Calderón Jaramillo, leonardocj@gmail.com
 
  **Director de tésis:**  Prof. Remigio Delgado Escobar
- 
- **Director Maestría:**  Prof. José Rodrígo Gonzalez Granada
+
 
 Desarrollado en:
 ----------------
