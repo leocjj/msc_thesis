@@ -38,7 +38,7 @@ RootWidget:
                 Slider:
                     id: left
                     on_value: root.cap1_sec2_pag2()  # Call the code on event
-                    min: -2
+                    min: -3
                     max: 0
                     value: 0
                     step: 0.1
@@ -47,7 +47,7 @@ RootWidget:
                     id: right
                     on_value: root.cap1_sec2_pag2()  # Call the code on event
                     min: 0
-                    max: 2
+                    max: 3
                     value: 0
                     step: 0.1
                     orientation: 'horizontal'
@@ -57,14 +57,14 @@ RootWidget:
                 size_hint: (1, 0.925)
                 canvas:
                     Line:
-                        points: root.p_0
+                        points: root.l_1
                     Color:
                         rgba: cafe_claro
                     Ellipse:  # Left point
-                        pos: root.width * 2 / 10 - offset, root.height * 6 / 8 - offset
+                        pos: root.p_A
                         size: point_size, point_size
                     Ellipse:  # Right oint
-                        pos: root.width * 8 / 10 - offset, root.height * 3 / 4 - offset
+                        pos: root.p_B
                         size: point_size, point_size
                 Label:
                     id: main_message

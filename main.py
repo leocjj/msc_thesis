@@ -33,17 +33,34 @@ class RootWidget(BoxLayout):
     # slider_3 = NumericProperty(0.0)
     # slider_alto2 = NumericProperty(0.0)
     # label_wid = ObjectProperty()
-    p_0 = ListProperty([0, 0])  # List of two elements, for point location
-    p_1 = ListProperty([0, 0, 0, 0])  # List of four elements, to draw line in .kv files
-    p_2 = ListProperty([0, 0, 0, 0])  # List of four elements, to draw line in .kv files
-    p_3 = ListProperty((0, 0))  # Tuple, for 'pos' attributes in .kv files
-    p_4 = ListProperty((0, 0))  # Tuple, for 'pos' attributes in .kv files
-    p_A = ListProperty([0, 0])  # List of two elements, for point location
-    p_B = ListProperty([0, 0])  # List of two elements, for point location
-    p_C = ListProperty([0, 0])  # List of two elements, for point location
-    l_1 = ListProperty([0, 0, 0, 0])  # List of four elements, to draw line in .kv files
-    l_2 = ListProperty([0, 0, 0, 0])  # List of four elements, to draw line in .kv files
-    l_3 = ListProperty([0, 0, 0, 0])  # List of four elements, to draw line in .kv files
+
+    # Tuple, for 'pos' attributes in .kv files
+    p_3 = ListProperty((0, 0))
+    p_4 = ListProperty((0, 0))
+
+    # List of two elements, for point location
+    p_0 = ListProperty([0, 0])
+    p_A = ListProperty([0, 0])
+    p_B = ListProperty([0, 0])
+    p_C = ListProperty([0, 0])
+    p_D = ListProperty([0, 0])
+    p_E = ListProperty([0, 0])
+
+    # List of four elements, to draw line in .kv files
+    p_1 = ListProperty([0, 0, 0, 0])
+    p_2 = ListProperty([0, 0, 0, 0])
+    l_1 = ListProperty([0, 0, 0, 0])
+    l_2 = ListProperty([0, 0, 0, 0])
+    l_3 = ListProperty([0, 0, 0, 0])
+
+    # List of five elements to draw a cicle in .kv files
+    # (center_x, center_y, radius, angle_start, angle_end)
+    c_1 = ListProperty((0, 0, 0, 0, 0))
+    c_2 = ListProperty((0, 0, 0, 0, 0))
+    c_3 = ListProperty((0, 0, 0, 0, 0))
+    c_4 = ListProperty((0, 0, 0, 0, 0))
+    c_5 = ListProperty((0, 0, 0, 0, 0))
+    c_6 = ListProperty((0, 0, 0, 0, 0))
 
     def cap1_sec1_pag1_x(self, f):
         """Control horizontal slider event (x)"""
@@ -136,11 +153,9 @@ class RootWidget(BoxLayout):
         ]
         self.label_wid.text = (
             f"Curvatura izq.: {(slider_a):.2f}  Curvatura der.: {(slider_b):.2f}"
-            + (
-                "\n Esto es una línea... recta!!!"
-                if slider_a == slider_b == 0.0
-                else ""
-            )
+            + "\n Esto es una línea... recta!!!"
+            if slider_a == slider_b == 0.0
+            else ""
         )
 
     def cap1_sec2_pag2(self):
@@ -149,12 +164,20 @@ class RootWidget(BoxLayout):
         slider_left = self.slider_y1.value
         slider_right = self.slider_y2.value
 
-        self.p_0 = [
+        self.l_1 = [
             self.width * (2 + slider_left) / 10,
             self.height * 6 / 8,
             self.width * (8 + slider_right) / 10,
             self.height * 3 / 4,
         ]
+        self.p_A = (
+            self.width * (2 + slider_left) / 10 - offset,
+            self.height * 6 / 8 - offset,
+        )
+        self.p_B = (
+            self.width * (8 + slider_right) / 10 - offset,
+            self.height * 3 / 4 - offset,
+        )
 
         if slider_left == self.slider_y1.min and slider_right == self.slider_y2.max:
             self.label_wid.text = "Recta infinita (ambos lados)"
@@ -197,7 +220,7 @@ class RootWidget(BoxLayout):
         # Y-distance between pivot point and fixed line
         distance = self.p_3[1] + offset - self.p_1[1]
 
-        if not intersect:
+        if not intersect or abs(intersect.x) > 100000:
             if abs(distance) < 1:
                 self.label_wid.text = f"Las dos rectas son la misma.\nInfinitos puntos de intersección :-/"
             else:
@@ -294,17 +317,320 @@ class RootWidget(BoxLayout):
             self.p_B[1],
         ]
 
-        # Adding offset to draw points correctly
-        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
-        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
-
         Dx = abs(Ax - Bx)
         Dy = abs(Ay - By)
         Distancia = sqrt(pow(Dx, 2) + pow(Dy, 2)).real
         self.label_wid.text = (
-            f"A({(Ax*10):.1f}, {(Ay*10):.1f})   B({(Bx*10):.1f}, {(By*10):.1f})"
-            + f"\nDx:{(Dx*10):.2f}  Dy:{(Dy*10):.2f}  D:{(Distancia*10):.2f}"
+            f"[color=3465A4]A[color=FFFFFF]({(Ax*10):.1f}, {(Ay*10):.1f})   [color=FF0000]B[color=FFFFFF]({(Bx*10):.1f}, {(By*10):.1f})"
+            + f"\n[color=3465A4]Dx:{(Dx*10):.2f}  [color=FF0000]Dy:{(Dy*10):.2f}  [color=D9A560]D:{(Distancia*10):.2f}"
         )
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+
+    def cap1_sec4_pag0(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        rotation_in_degrees = self.slider_y1.value
+        pivot_point_y = self.slider_y2.value
+        max_length = max(self.height, self.width)
+        v = Vector(1, 0)
+        rotation_transformation = v.rotate(rotation_in_degrees).normalize()
+
+        # Horizontal fixed line bottom
+        self.l_1 = [0, self.height * 11 / 16, self.width, self.height * 11 / 16]
+
+        # Pivot point for rotating line
+        self.p_A = (self.width / 2, self.height * (3 + pivot_point_y) / 4)
+
+        # Points to draw rotating line
+        self.l_2 = [
+            self.p_A[0] - max_length * rotation_transformation.x,
+            self.p_A[1] - max_length * rotation_transformation.y,
+            self.p_A[0] + max_length * rotation_transformation.x,
+            self.p_A[1] + max_length * rotation_transformation.y,
+        ]
+        # Horizontal fixed line top
+        self.l_3 = [0, self.height * 13 / 16, self.width, self.height * 13 / 16]
+
+        # Intersection point bottom
+        intersect_bottom = Vector.line_intersection(
+            (self.l_2[0], self.l_2[1]),
+            (self.l_2[2], self.l_2[3]),
+            (self.l_1[0], self.l_1[1]),
+            (self.l_1[2], self.l_1[3]),
+        )
+        if not intersect_bottom or abs(intersect_bottom.x) > 100000:
+            self.p_B = (0, 0)
+        else:
+            self.p_B = (intersect_bottom.x, intersect_bottom.y)
+
+        # Intersection point top
+        intersect_top = Vector.line_intersection(
+            (self.l_2[0], self.l_2[1]),
+            (self.l_2[2], self.l_2[3]),
+            (self.l_3[0], self.l_3[1]),
+            (self.l_3[2], self.l_3[3]),
+        )
+        if not intersect_top or abs(intersect_top.x) > 100000:
+            self.p_C = (0, 0)
+        else:
+            self.p_C = (intersect_top.x, intersect_top.y)
+
+        # Circles around point B and C
+        self.c_1 = (self.p_B[0], self.p_B[1], 20)
+        self.c_2 = (self.p_C[0], self.p_C[1], 20)
+
+        # Angle for circles works CW instead of CCW, staring from the north.
+        ang = Vector(0, 1).angle((self.p_C[0] - self.p_B[0], self.p_C[1] - self.p_B[1]))
+
+        # circle = (center_x, center_y, radius, angle_start, angle_end)
+        self.c_3 = (self.p_B[0], self.p_B[1], 20, 90, ang)
+        self.c_4 = (self.p_B[0], self.p_B[1], 20, 90 - 180, ang - 180)
+        self.c_5 = (self.p_C[0], self.p_C[1], 20, 90, ang)
+        self.c_6 = (self.p_C[0], self.p_C[1], 20, 90 - 180, ang - 180)
+
+        if self.p_B[0] == 0 and self.p_B[1] == 0:
+            self.label_wid.text = f"Rectas paralelas, no hay ángulos definidos!"
+        else:
+            if (90 - ang) == 90:
+                self.label_wid.text = (
+                    f"[color=FF3333]Ángulo: {(90 - ang):.2f}\n"
+                    "[color=FFFFFF]Perpendiculares!!!"
+                )
+            else:
+                self.label_wid.text = (
+                    f"[color=FF3333]Ángulo: [color=FFFFFF]{(90 - ang):.2f}"
+                )
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+
+    def cap1_sec4_pag1(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        degrees_left = self.slider_y1.value
+        degrees_right = self.slider_y2.value
+        max_length = max(self.height, self.width)
+        v = Vector(1, 0)
+        rotation_left = v.rotate(degrees_left).normalize()
+        rotation_right = v.rotate(degrees_right).normalize()
+
+        # Horizontal fixed line bottom
+        self.l_1 = [0, self.height * 10 / 16, self.width, self.height * 10 / 16]
+        # Pivot point for rotating line left
+        self.p_A = (self.width / 3, self.height * 11 / 16)
+        # Pivot point for rotating line left
+        self.p_B = (self.width * 2 / 3, self.height * 12 / 16)
+        # Points to draw rotating line left
+        self.l_2 = [
+            self.p_A[0] - max_length * rotation_left.x,
+            self.p_A[1] - max_length * rotation_left.y,
+            self.p_A[0] + max_length * rotation_left.x,
+            self.p_A[1] + max_length * rotation_left.y,
+        ]
+        # Points to draw rotating line right
+        self.l_3 = [
+            self.p_B[0] - max_length * rotation_right.x,
+            self.p_B[1] - max_length * rotation_right.y,
+            self.p_B[0] + max_length * rotation_right.x,
+            self.p_B[1] + max_length * rotation_right.y,
+        ]
+
+        # Intersection point bottom-left
+        intersect_bottom_left = Vector.line_intersection(
+            (self.l_2[0], self.l_2[1]),
+            (self.l_2[2], self.l_2[3]),
+            (self.l_1[0], self.l_1[1]),
+            (self.l_1[2], self.l_1[3]),
+        )
+        if not intersect_bottom_left or abs(intersect_bottom_left.x) > 100000:
+            self.p_C = (0, 0)
+            ang_C = 0
+        else:
+            self.p_C = (intersect_bottom_left.x, intersect_bottom_left.y)
+            ang_C = Vector(
+                (self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])
+            ).angle(((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1])))
+
+        # Intersection point bottom-right
+        intersect_bottom_right = Vector.line_intersection(
+            (self.l_3[0], self.l_3[1]),
+            (self.l_3[2], self.l_3[3]),
+            (self.l_1[0], self.l_1[1]),
+            (self.l_1[2], self.l_1[3]),
+        )
+        if not intersect_bottom_right or abs(intersect_bottom_right.x) > 100000:
+            self.p_D = (0, 0)
+            ang_D = 0
+        else:
+            self.p_D = (intersect_bottom_right.x, intersect_bottom_right.y)
+            ang_D = 180 - Vector(
+                (self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])
+            ).angle(((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1])))
+
+        # Intersection point left-right
+        intersect_left_right = Vector.line_intersection(
+            (self.l_2[0], self.l_2[1]),
+            (self.l_2[2], self.l_2[3]),
+            (self.l_3[0], self.l_3[1]),
+            (self.l_3[2], self.l_3[3]),
+        )
+        if not intersect_left_right or abs(intersect_left_right.x) > 100000:
+            self.p_E = (0, 0)
+            ang_E = 0
+        else:
+            self.p_E = (intersect_left_right.x, intersect_left_right.y)
+            ang_E = -Vector(
+                (self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])
+            ).angle(((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])))
+
+        # self.label_wid.text = (
+        #    f"Ángulos  [color=FF3333]C: [color=FFFFFF]{ang_C:.0f}"
+        #    + f"[color=3465A4]  D: [color=FFFFFF]{ang_D:.0f}"
+        #    + f"[color=D9A560]  E: [color=FFFFFF]{ang_E:.0f}"
+        # )
+
+        msg_angulos = (
+            f"Ángulos  [color=FF3333]C: [color=FFFFFF]{ang_C:.0f}"
+            + f"[color=3465A4]  D: [color=FFFFFF]{ang_D:.0f}"
+            + f"[color=D9A560]  E: [color=FFFFFF]{ang_E:.0f}\n"
+        )
+
+        angulos = (int(ang_C), int(ang_D), int(ang_E))
+        if ang_C == 0 and ang_D == 0 and ang_E == 0:
+            msg_paralelas = "Las tres rectas son paralelas entre si."
+        elif 90 not in angulos and 0 in angulos:
+            msg_paralelas = "Dos rectas paralelas y una las intersecta."
+        elif 90 in angulos and 0 in angulos:
+            msg_paralelas = "Dos rectas paralelas y una perpendicular a estas."
+        else:
+            msg_paralelas = "Las tres rectas se intersectan entre sí."
+        self.label_wid.text = msg_angulos + msg_paralelas
+
+        """
+        # Circles around points C and D
+        self.c_1 = (self.p_B[0], self.p_B[1], 20)
+        self.c_2 = (self.p_C[0], self.p_C[1], 20)
+
+        # Angle for circles works CW instead of CCW, staring from the north.
+        ang = Vector(0, 1).angle((self.p_C[0] - self.p_B[0], self.p_C[1] - self.p_B[1]))
+
+        # circle = (center_x, center_y, radius, angle_start, angle_end)
+        self.c_3 = (self.p_B[0], self.p_B[1], 20, 90, ang)
+        self.c_4 = (self.p_B[0], self.p_B[1], 20, 90 - 180, ang - 180)
+        self.c_5 = (self.p_C[0], self.p_C[1], 20, 90, ang)
+        self.c_6 = (self.p_C[0], self.p_C[1], 20, 90 - 180, ang - 180)
+
+        if self.p_B[0] == 0 and self.p_B[1] == 0:
+            self.label_wid.text = f"Rectas paralelas, no hay ángulos definidos!"
+        else:
+            if (90 - ang) == 90:
+                self.label_wid.text = (
+                    f"[color=FF3333]Ángulo: {(90 - ang):.2f}\n"
+                    "[color=FFFFFF]Perpendiculares!!!"
+                )
+            else:
+                self.label_wid.text = (
+                    f"[color=FF3333]Ángulo: [color=FFFFFF]{(90 - ang):.2f}"
+                )
+        """
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
+        self.p_E = (self.p_E[0] - offset, self.p_E[1] - offset)
+
+    def cap1_sec4_pag2(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        x = self.slider_x.value
+        y = self.slider_y.value
+
+        # Point bottom-left
+        self.p_A = (self.width / 3, self.height * 3 / 4)
+        # Point bottom-right
+        self.p_B = (self.width * 2 / 3, self.height * 3 / 4)
+        # Point bottom-right
+        self.p_C = (self.width * (1 + x) / 2, self.height * (3 + y) / 4)
+
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Horizontal fixed line bottom
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
+        # Horizontal fixed line bottom
+        self.l_3 = [self.p_C[0], self.p_C[1], self.p_B[0], self.p_B[1]]
+
+        ang_A = abs(
+            Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_B = abs(
+            Vector((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_C = abs(
+            180
+            - Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
+                ((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1]))
+            )
+        )
+        if y < 0:
+            ang_C = 360 - ang_C
+
+        msg_angulos = (
+            f"Ángulos  [color=FF3333]C: [color=FFFFFF]{int(ang_A)}"
+            + f"[color=3465A4]  D: [color=FFFFFF]{int(ang_B)}"
+            + f"[color=D9A560]  E: [color=FFFFFF]{int(ang_C)}\n"
+        )
+
+        angulos = (int(ang_A), int(ang_B), int(ang_C))
+        if 0 in angulos or 180 in angulos or 360 in angulos:
+            msg_paralelas = "Los tres puntos son colineales."
+        elif 90 in angulos and 0 not in angulos:
+            msg_paralelas = "Un ángulo perpendicular (90 grados)."
+        else:
+            msg_paralelas = "..."
+        self.label_wid.text = msg_angulos + msg_paralelas
+
+        """
+        # Circles around points C and D
+        self.c_1 = (self.p_B[0], self.p_B[1], 20)
+        self.c_2 = (self.p_C[0], self.p_C[1], 20)
+
+        # Angle for circles works CW instead of CCW, staring from the north.
+        ang = Vector(0, 1).angle((self.p_C[0] - self.p_B[0], self.p_C[1] - self.p_B[1]))
+
+        # circle = (center_x, center_y, radius, angle_start, angle_end)
+        self.c_3 = (self.p_B[0], self.p_B[1], 20, 90, ang)
+        self.c_4 = (self.p_B[0], self.p_B[1], 20, 90 - 180, ang - 180)
+        self.c_5 = (self.p_C[0], self.p_C[1], 20, 90, ang)
+        self.c_6 = (self.p_C[0], self.p_C[1], 20, 90 - 180, ang - 180)
+
+        if self.p_B[0] == 0 and self.p_B[1] == 0:
+            self.label_wid.text = f"Rectas paralelas, no hay ángulos definidos!"
+        else:
+            if (90 - ang) == 90:
+                self.label_wid.text = (
+                    f"[color=FF3333]Ángulo: {(90 - ang):.2f}\n"
+                    "[color=FFFFFF]Perpendiculares!!!"
+                )
+            else:
+                self.label_wid.text = (
+                    f"[color=FF3333]Ángulo: [color=FFFFFF]{(90 - ang):.2f}"
+                )
+        """
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
 
     container = ObjectProperty(None)
 

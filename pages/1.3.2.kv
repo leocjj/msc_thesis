@@ -11,6 +11,7 @@
 
 #:set point_size 6
 #:set offset point_size / 2
+#:set line_width 1.1
 
 RootWidget:
     # import container
@@ -95,34 +96,32 @@ RootWidget:
                         points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
                     Color:
                         rgba: cafe_claro
+                    Line:  # Main line, from A to B
+                        points: root.l_1
+                        width: line_width
+                    Color:
+                        rgba: azul
+                    Line:  # Secondary line, x-distance
+                        points: root.l_2
+                        width: line_width
                     Ellipse:  # Point A
                         pos: root.p_A
                         size: point_size, point_size
                     Color:
-                        rgba: blanco
-                    Line:  # Main line, from A to B
-                        points: root.l_1
-                    Color:
-                        rgba: rojo
-                    Ellipse:  # Point B
-                        pos: root.p_B
-                        size: point_size, point_size
-                    Color:
-                        rgba: cafe
-                    Line:  # Secondary line, x-distance
-                        points: root.l_2
-                    Color:
                         rgba: rojo
                     Line:  # Secondary line, y-distance
                         points: root.l_3
-
+                        width: line_width
+                    Ellipse:  # Point B
+                        pos: root.p_B
+                        size: point_size, point_size
 
                 Label:
                     id: main_message
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'
-
+                    markup: True
 
 
         RstDocument:
