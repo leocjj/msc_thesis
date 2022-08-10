@@ -11,6 +11,7 @@
 
 #:set point_size 6
 #:set offset point_size / 2
+#:set line_width 1.1
 
 RootWidget:
     # import container
@@ -58,6 +59,7 @@ RootWidget:
                 canvas:
                     Line:
                         points: root.l_1
+                        width: line_width
                     Color:
                         rgba: cafe_claro
                     Ellipse:  # Left point

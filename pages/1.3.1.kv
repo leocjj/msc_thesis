@@ -11,6 +11,7 @@
 
 #:set point_size 6
 #:set offset point_size / 2
+#:set line_width 1.1
 
 RootWidget:
     # import container
@@ -62,10 +63,12 @@ RootWidget:
                 canvas:
                     Line:  # Rotating line 1
                         points: root.p_1
+                        width: line_width
                     Color:
                         rgba: cafe_claro
                     Line:  # Rotating line 2
                         points: root.p_2
+                        width: line_width
                     Ellipse:  # Pivot point for right side of rotatign line 2
                         pos: root.p_4
                         size: point_size, point_size
@@ -78,10 +81,12 @@ RootWidget:
                         rgba: blanco
                     Line:  # Arc describing angle from line 2 to line 1 CCW
                         circle: root.width/2, root.height*3/4, min(root.width, root.height/2)/3.5, 90-y2.value, 90-y1.value  # (center_x, center_y, radius, angle_start, angle_end, segments)
+                        width: line_width
                     Color:
                         rgba: cafe_claro
                     Line:  # Arc describing angle from line 2 to line 1 CW
                         circle: root.width/2, root.height*3/4, min(root.width, root.height/2)/4, -90-y2.value, 90-y1.value  # (center_x, center_y, radius, angle_start, angle_end, segments)
+                        width: line_width
                 Label:
                     id: main_message
                     text_size: self.size

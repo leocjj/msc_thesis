@@ -11,6 +11,7 @@
 
 #:set point_size 6
 #:set offset point_size / 2
+#:set line_width 1.1
 
 RootWidget:
     # import container
@@ -62,10 +63,12 @@ RootWidget:
                 canvas:
                     Line:  # Rotating line
                         points: root.p_0
+                        width: line_width
                     Color:
                         rgba: cafe_claro
                     Line:  # Fixed line
                         points: root.p_1
+                        width: line_width
                     Ellipse:  # Base point for rotating line
                         pos: root.p_3
                         size: point_size, point_size

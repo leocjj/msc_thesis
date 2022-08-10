@@ -10,6 +10,7 @@
 #:set next_symbol ' ' if not next_file else '-->'
 
 #:set point_size 6
+#:set line_width 1.1
 
 RootWidget:
     # import container
@@ -53,10 +54,12 @@ RootWidget:
                 canvas:
                     Line:
                         points: root.p_1
+                        width: line_width
                     Line:
                         points: root.p_2
+                        width: line_width
                     Color:
-                        rgba: blanco
+                        rgba: rojo
                     Ellipse:  # Point
                         pos: root.p_0
                         size: point_size, point_size
