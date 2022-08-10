@@ -1,8 +1,36 @@
-Puntos
-======
+Estructura general del contenido
+======================================
 
-Concepto
--------------------
+El contenido se presenta dividido en capítulos, secciones (de capítulo) y páginas (de sección).
 
-Definición 1
------------------------
+
+`Capítulos`_
+
+Los capítulos se presenta en el **menú superior** a través de los cuales se puede 
+**navegar usando las flechas** izquierda (ir al capítulo anterior) y derecha (ir al 
+capítulo siguiente) en la parte superior derecha de la pantalla.
+
+Cada capítulo **tiene varias secciones asociadas** las cuales se despliegan al seleccionarlo
+en este menú superior. 
+
+`Secciones`_
+
+Las secciones son las partes que **constituyen un capítulo** y cada una presenta
+**un tema específico**, el cual puede contener una o más páginas.
+
+Se accede a estas, seleccionando (presionando o dando clic) sobre el espacio donde
+aparece el título del capítulo, allí se despliegan las secciones correspondientes y
+luego seleccionando la deseada.
+
+`Páginas`_
+
+Por lo general, **cada sección contiene varias páginas** a través de las cuales se puede
+navegar usando las flechas izquierda (ir a la página anterior) y derecha (ir a la página
+siguiente) **en la parte inferior** derecha de la pantalla.
+
+En el borde inferior central, aparecerá en todo momento la sección y la página que se
+encuentre desplegada con el fin de ubicarse rápidamente en los contenidos.
+
+------------------------
+
+**Ve a la siguiente página usando el botón -->**

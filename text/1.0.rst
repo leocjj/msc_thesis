@@ -1,8 +1,33 @@
-Puntos
-======
+Virtual Euclides
+=========================================
 
-Concepto
+El principal objetivo de esta aplicación es **mejorar el proceso aprendizaje de la geometría aplicada**, principalmente en estudiantes de ingeniería.
+
+Para lo cual se implementó una **metodología constructivista basada en la interacción virtual** de objetos geométricos usando la funcionalidad de touch screen de los dispositivos modernos.
+
+En resumen esta metodología brinda al estudiante, objetos gráficos que puede manipular para obtener diferentes resultados los cuales son explicados en cada momento,
+esto con el fin de generar un **proceso inductivo** que va desde la construcción de los elementos más básicos como **puntos y líneas hasta** llegar a la construcción de **superficies y volúmenes**.
+
+
+Propuesta
 -------------------
 
-Definición 1
+Con esta aplicación, se pretende entre otras:
+
+- Realizar un **proceso constructivista de objetos geométricos** basado en un proceso visual interactivo en plataformas móviles.
+- Brindar una **ayuda didáctica de la geometría desde sus bases más fundamentales**, durante el proceso de enseñanza-aprendizaje de tal forma que permitan una mayor apropiación de los conceptos que son expuestos por medios tradicionales de una forma estática y contemplativa versus una nueva forma dinámica e interactiva.
+- **Aplicar una metodología de aprendizaje** que permite diferenciarla por un lado con aplicaciones que solo brindan un listado de fórmulas y/o calculadoras de objetos geométricos o solo muestran los conceptos con texto e imágenes estáticas. Incluso una combinación de estos dos tipos de aplicación no permite un aprendizaje desde la construcción del conocimiento sino solo una apropiación de ideas no siempre conexas.
+
+
+Código abierto
 -----------------------
+
+Al crear esta aplicación como código abierto, usando tecnologías de fácil aprendizaje 
+por un entusiasta de la programación, la ingeniería o las ciencias exactas, se deja 
+una plataforma para futuros desarrollos que permitan ampliar el alcance con respecto 
+a la geometría o incluso explorar otras áreas del conocimiento usando el mismo 
+principio de aprendizaje constructivista por interacción virtual.
+
+------------------------
+
+**Ve a la siguiente página usando el botón -->**

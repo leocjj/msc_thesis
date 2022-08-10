@@ -1,0 +1,22 @@
+Descargo de responsabilidad (disclaimer)
+------------------------
+
+Por otro lado hay ciertos aspectos de se deben mencionar, los cuales no son parte del 
+alcance del presente trabajo:
+
+* Esta aplicación no pretende presentar un proceso demostrativo de los conceptos y no sustituye el estudio formal del contenido de un curso que implique los conceptos básicos de la geometría Euclidiana.
+
+* No se presenta una rigurosidad matemática en la descripción de los objetos matemáticos, la cual hace parte de la responsabilidad del profesor y no se pretende sustituirlo en su función.
+
+* No contiene todos los objetos geométricos de estudio, ni se presenta como una lista exhaustiva de temas, solo se trabajan aquellos que el autor considera importantes (incluyendo el orden) para construir unas bases conceptuales sólidas que permitan al estudiante poder abordar otros objetos o conceptos geométricos.
+
+* Por lo tanto, el orden de presentación de los conceptos sigue el orden que el autor consideró adecuado desde un punto de vista constructivista, inductivo, a partir de la experiencia con la interacción virtual de objetos geométricos. Y de este modo se recomienda seguir el orden propuesto para tener una mayor coherencia entre capítulos y secciones.
+
+* En el contenido se presentan definiciones, postulados y nociones comunes del libro I de los Elementos de Euclides (de allí el nombre de la aplicación) pero no se pretende hacer una presentación completa y detallada al respecto, sino utilizar estos como referente conceptual para ahondar en la experiencia de interacción.
+
+* Se utilizará la palabra **Geometría** para referirse a la Geometría Euclidiana, es decir, a la geometría que cumple con los cinco postulados de Euclides.
+
+-------
+ 
+**RECUERDA** seguir el orden propuesto, repasar cada sección y ... divertirse aprendiendo!
+

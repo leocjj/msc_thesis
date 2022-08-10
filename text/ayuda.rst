@@ -34,9 +34,9 @@ Ejemplo:
 **CAP.1 - PUNTOS Y RECTAS**
     Cada capítulo (menú superior) tiene varias secciones asociadas las cuales se despliegan al seleccionarlo.
 **1.0 Introducción**
-    Sección de capítulo. Presenta un tema particular, al cual puede desarrollarse en una o más páginas
+    Sección de capítulo. Presenta un tema particular, el cual puede desarrollarse en una o más páginas
 **1.0.1 Introducción - página 1**
-    Página de sección, se puede navegar a través de las páginas usando el menú en la parte inferior.
+    Página de sección, se puede navegar a través de las páginas usando las flechas en la parte inferior derecha.
 
 
 Créditos
@@ -58,6 +58,6 @@ Código fuente
 
 --------
 
-**Version:** 0.1.0
+**Version:** 0.37.0
 
-**Fecha:** 05-Jul-2022
+**Fecha:** 09-Ago-2022
