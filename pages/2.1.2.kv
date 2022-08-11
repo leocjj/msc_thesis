@@ -1,9 +1,9 @@
 #:kivy 2.1.0
 
-#:set prev_file ''
-#:set this_file '2.1'
+#:set prev_file '2.1.1'
+#:set this_file '2.1.2'
 #:set this_cap_sec  cap2_sec1
-#:set next_file '2.1.1'
+#:set next_file ''
 
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
 #:set prev_symbol ' ' if not prev_file else '<--'
@@ -38,7 +38,7 @@ RootWidget:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
                     id: y
-                    on_value: root.cap2_sec1_pag0()  # Call the code on event
+                    on_value: root.cap2_sec1_pag2()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
@@ -50,7 +50,7 @@ RootWidget:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
                     id: x
-                    on_value: root.cap2_sec1_pag0()  # Call the code on event
+                    on_value: root.cap2_sec1_pag2()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0

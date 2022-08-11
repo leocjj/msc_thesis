@@ -37,6 +37,7 @@ class RootWidget(BoxLayout):
     p_C = ListProperty([0, 0])
     p_D = ListProperty([0, 0])
     p_E = ListProperty([0, 0])
+    p_F = ListProperty([0, 0])
 
     # List of four elements, to draw line in .kv files
     p_1 = ListProperty([0, 0, 0, 0])
@@ -44,6 +45,11 @@ class RootWidget(BoxLayout):
     l_1 = ListProperty([0, 0, 0, 0])
     l_2 = ListProperty([0, 0, 0, 0])
     l_3 = ListProperty([0, 0, 0, 0])
+    l_4 = ListProperty([0, 0, 0, 0])
+    l_5 = ListProperty([0, 0, 0, 0])
+    l_6 = ListProperty([0, 0, 0, 0])
+    l_7 = ListProperty([0, 0, 0, 0])
+    l_8 = ListProperty([0, 0, 0, 0])
 
     # List of five elements to draw a cicle in .kv files
     # (center_x, center_y, radius, angle_start, angle_end)
@@ -58,7 +64,6 @@ class RootWidget(BoxLayout):
 
     def update_points(self, dt):
         pass
-
 
     def cap1_sec1_pag1_x(self, f):
         """Control horizontal slider event (x)"""
@@ -553,14 +558,14 @@ class RootWidget(BoxLayout):
         self.p_A = (self.width / 3, self.height * 3 / 4)
         # Point bottom-right
         self.p_B = (self.width * 2 / 3, self.height * 3 / 4)
-        # Point bottom-right
+        # Point bottom-top
         self.p_C = (self.width * (1 + x) / 2, self.height * (3 + y) / 4)
 
         # Horizontal fixed line bottom
         self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
-        # Horizontal fixed line bottom
+        # Left line
         self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
-        # Horizontal fixed line bottom
+        # Right line
         self.l_3 = [self.p_C[0], self.p_C[1], self.p_B[0], self.p_B[1]]
 
         ang_A = abs(
@@ -583,16 +588,16 @@ class RootWidget(BoxLayout):
             ang_C = 360 - ang_C
 
         msg_angulos = (
-            f"Ángulos  [color=FF3333]C: [color=FFFFFF]{int(ang_A)}"
-            + f"[color=3465A4]  D: [color=FFFFFF]{int(ang_B)}"
-            + f"[color=D9A560]  E: [color=FFFFFF]{int(ang_C)}\n"
+            f"Ángulos  [color=FF3333]A: [color=FFFFFF]{int(ang_A)}"
+            + f"[color=3465A4]  B: [color=FFFFFF]{int(ang_B)}"
+            + f"[color=D9A560]  C: [color=FFFFFF]{int(ang_C)}\n"
         )
 
         angulos = (int(ang_A), int(ang_B), int(ang_C))
-        if 0 in angulos or 180 in angulos or 360 in angulos:
-            msg_paralelas = "Los tres puntos son colineales."
+        if abs(self.p_A[1] - self.p_C[1]) < 0.5:
+            msg_paralelas = "Los tres puntos son colineales. No hay polígono!"
         elif 90 in angulos and 0 not in angulos:
-            msg_paralelas = "Un ángulo perpendicular (90 grados)."
+            msg_paralelas = "Un ángulo recto (90 grados)."
         else:
             msg_paralelas = "..."
         self.label_wid.text = msg_angulos + msg_paralelas
@@ -629,7 +634,6 @@ class RootWidget(BoxLayout):
         self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
         self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
         self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
-
 
     def cap2_sec1_pag0(self):
         """Control sliders events"""
@@ -638,84 +642,175 @@ class RootWidget(BoxLayout):
         y = self.slider_y.value
 
         # Point bottom-left
-        self.p_A = (self.width / 3, self.height * 3 / 4)
+        self.p_A = (self.width / 3, self.height * 5 / 8)
         # Point bottom-right
-        self.p_B = (self.width * 2 / 3, self.height * 3 / 4)
-        # Point bottom-right
+        self.p_B = (self.width * 2 / 3, self.height * 5 / 8)
+        # Point bottom-top
         self.p_C = (self.width * (1 + x) / 2, self.height * (3 + y) / 4)
 
         # Horizontal fixed line bottom
         self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
-        # Horizontal fixed line bottom
+        # Left line
         self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
-        # Horizontal fixed line bottom
+        # Right line
         self.l_3 = [self.p_C[0], self.p_C[1], self.p_B[0], self.p_B[1]]
 
-        ang_A = abs(
-            Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
-                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+        ang_A = int(
+            abs(
+                Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
+                    ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+                )
             )
         )
-        ang_B = abs(
-            Vector((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])).angle(
-                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+        ang_B = int(
+            abs(
+                Vector((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])).angle(
+                    ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+                )
             )
         )
-        ang_C = abs(
-            180
-            - Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
-                ((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1]))
+        ang_C = int(
+            abs(
+                180
+                - Vector(
+                    (self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])
+                ).angle(((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])))
             )
         )
         if y < 0:
             ang_C = 360 - ang_C
 
         msg_angulos = (
-            f"Ángulos  [color=FF3333]C: [color=FFFFFF]{int(ang_A)}"
-            + f"[color=3465A4]  D: [color=FFFFFF]{int(ang_B)}"
-            + f"[color=D9A560]  E: [color=FFFFFF]{int(ang_C)}\n"
+            f"Ángulos  [color=FF3333]A: [color=FFFFFF]{ang_A}"
+            + f"[color=3465A4]  B: [color=FFFFFF]{ang_B}"
+            + f"[color=D9A560]  C: [color=FFFFFF]{ang_C}"
         )
 
-        angulos = (int(ang_A), int(ang_B), int(ang_C))
-        if 0 in angulos or 180 in angulos or 360 in angulos:
-            msg_paralelas = "Los tres puntos son colineales."
-        elif 90 in angulos and 0 not in angulos:
-            msg_paralelas = "Un ángulo perpendicular (90 grados)."
+        if abs(self.p_A[1] - self.p_C[1]) < 0.5:
+            msg_angulos_2 = "Los tres puntos son colineales. No hay triángulo!"
+        elif ang_A < 90 and ang_B < 90 and ang_C < 90:
+            msg_angulos_2 = "Triángulo acutángulo"
+        elif ang_A == 90 or ang_B == 90 or ang_C == 90:
+            msg_angulos_2 = "Triángulo rectángulo"
+        elif ang_A > 90 or ang_B > 90 or ang_C > 90:
+            msg_angulos_2 = "Triángulo obtusángulo"
         else:
-            msg_paralelas = "..."
-        self.label_wid.text = msg_angulos + msg_paralelas
+            msg_angulos_2 = "..."
 
-        """
-        # Circles around points C and D
-        self.c_1 = (self.p_B[0], self.p_B[1], 20)
-        self.c_2 = (self.p_C[0], self.p_C[1], 20)
+        lado_a = int(
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_C[0], self.p_C[1]))
+        )
+        lado_b = int(
+            Vector(self.p_A[0], self.p_A[1]).distance((self.p_C[0], self.p_C[1]))
+        )
+        lado_c = int(
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_A[0], self.p_A[1]))
+        )
 
-        # Angle for circles works CW instead of CCW, staring from the north.
-        ang = Vector(0, 1).angle((self.p_C[0] - self.p_B[0], self.p_C[1] - self.p_B[1]))
+        msg_lados = (
+            f"Lados  [color=FF3333]a: [color=FFFFFF]{lado_a}"
+            + f"[color=3465A4]  b: [color=FFFFFF]{lado_b}"
+            + f"[color=D9A560]  c: [color=FFFFFF]{lado_c}"
+        )
 
-        # circle = (center_x, center_y, radius, angle_start, angle_end)
-        self.c_3 = (self.p_B[0], self.p_B[1], 20, 90, ang)
-        self.c_4 = (self.p_B[0], self.p_B[1], 20, 90 - 180, ang - 180)
-        self.c_5 = (self.p_C[0], self.p_C[1], 20, 90, ang)
-        self.c_6 = (self.p_C[0], self.p_C[1], 20, 90 - 180, ang - 180)
-
-        if self.p_B[0] == 0 and self.p_B[1] == 0:
-            self.label_wid.text = f"Rectas paralelas, no hay ángulos definidos!"
+        if abs(self.p_A[1] - self.p_C[1]) < 0.5:
+            msg_lados_2 = ""
+        elif lado_a == lado_b == lado_c:
+            msg_lados_2 = "Triangulo equilátero"
+        elif lado_a != lado_b and lado_a != lado_c and lado_b != lado_c:
+            msg_lados_2 = "Triangulo escaleno"
         else:
-            if (90 - ang) == 90:
-                self.label_wid.text = (
-                    f"[color=FF3333]Ángulo: {(90 - ang):.2f}\n"
-                    "[color=FFFFFF]Perpendiculares!!!"
-                )
-            else:
-                self.label_wid.text = (
-                    f"[color=FF3333]Ángulo: [color=FFFFFF]{(90 - ang):.2f}"
-                )
-        """
+            msg_lados_2 = "Triangulo isóceles"
+
+        self.label_wid.text = (
+            msg_angulos + "\n" + msg_angulos_2 + "\n" + msg_lados + "\n" + msg_lados_2
+        )
 
         # Adding offset to draw points correctly
         self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
         self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
         self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
 
+    def cap2_sec1_pag1(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        x = self.slider_x.value
+        y = self.slider_y.value
 
+        # Point bottom-left
+        self.p_A = (self.width / 3, self.height * 5 / 8)
+        # Point bottom-right
+        self.p_B = (self.width * 2 / 3, self.height * 5 / 8)
+        # Point bottom-top
+        self.p_C = (self.width * (1 + x) / 2, self.height * (3 + y) / 4)
+        # Point bottom - for the height of the triangle with the point C.
+        self.p_D = (self.width * (1 + x) / 2, self.height * 5 / 8)
+        # Point bottom - for the middle point
+        self.p_E = (
+            (self.width * 2 / 3 - self.width / 3) / 2 + self.width / 3,
+            self.height * 5 / 8,
+        )
+
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Left line
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
+        # Right line
+        self.l_3 = [self.p_C[0], self.p_C[1], self.p_B[0], self.p_B[1]]
+
+        # Height of the tringle
+        self.l_4 = [self.p_C[0], self.p_C[1], self.p_D[0], self.p_D[1]]
+        self.l_5 = [self.p_A[0], self.p_A[1], self.p_D[0], self.p_D[1]]
+        # Median line
+        self.l_6 = [self.p_C[0], self.p_C[1], self.p_E[0], self.p_E[1]]
+        # Mediatrix line
+        self.l_7 = [self.p_E[0], self.p_E[1], self.p_E[0], self.p_C[1]]
+
+        # Calculating bisectrix
+        ang_C = int(
+            abs(
+                180
+                - Vector(
+                    (self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])
+                ).angle(((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])))
+            )
+        )
+        if self.p_C[1] < self.p_A[1]:
+            ang_C = 360 - ang_C
+        ang_base = int(
+            abs(
+                Vector(1, 0).angle(
+                    ((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1]))
+                )
+            )
+        )
+        max_length = max(self.height, self.width)
+        v = Vector(0, 100)
+        rotation_left = v.rotate(-ang_C / 2 - ang_base - 90)
+        self.l_8 = [
+            self.p_C[0],
+            self.p_C[1],
+            self.p_C[0] + max_length * rotation_left.x,
+            self.p_C[1] + max_length * rotation_left.y,
+        ]
+        # Intersection of the bisectrix
+        intersect = Vector.line_intersection(
+            (self.l_8[0], self.l_8[1]),
+            (self.l_8[2], self.l_8[3]),
+            (self.l_1[0], self.l_1[1]),
+            (self.l_1[2], self.l_1[3]),
+        )
+        self.p_F = (intersect.x, intersect.y)
+        # Truncating bisextrix in the bottom
+        self.l_8[2] = self.p_F[0]
+        self.l_8[3] = self.p_F[1]
+
+        self.label_wid.text = f"Ángulo del vertice superior: {ang_C:.0f}"
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
+        self.p_E = (self.p_E[0] - offset, self.p_E[1] - offset)
+        self.p_F = (self.p_F[0] - offset, self.p_F[1] - offset)

@@ -1,9 +1,9 @@
 #:kivy 2.1.0
 
-#:set prev_file ''
-#:set this_file '2.1'
+#:set prev_file '2.1'
+#:set this_file '2.1.1'
 #:set this_cap_sec  cap2_sec1
-#:set next_file '2.1.1'
+#:set next_file '2.1.2'
 
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
 #:set prev_symbol ' ' if not prev_file else '<--'
@@ -38,7 +38,7 @@ RootWidget:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
                     id: y
-                    on_value: root.cap2_sec1_pag0()  # Call the code on event
+                    on_value: root.cap2_sec1_pag1()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
@@ -50,7 +50,7 @@ RootWidget:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
                     id: x
-                    on_value: root.cap2_sec1_pag0()  # Call the code on event
+                    on_value: root.cap2_sec1_pag1()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
@@ -61,37 +61,64 @@ RootWidget:
             BoxLayout:  # Space for canvas
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
+
                     Color:
                         rgba: cafe_claro
+                    Line:  # Auxiliar line for height of the triangle
+                        points: root.l_5
+
+                    Color:
+                        rgba: blanco
                     Line:  # Horizontal fixed line bottom
                         points: root.l_1
                         width: line_width
-                    Color:
-                        rgba: azul
                     Line:  # rotating line left
                         points: root.l_2
                         width: line_width
-                    Color:
-                        rgba: rojo
                     Line:  # rotating line right
                         points: root.l_3
                         width: line_width
- 
-                    Color:
-                        rgba: rojo
                     Ellipse:  # Intersection point left
                         pos: root.p_A
                         size: point_size, point_size
-                    Color:
-                        rgba: azul
                     Ellipse:  # Intersection point right
                         pos: root.p_B
                         size: point_size, point_size
-                    Color:
-                        rgba: cafe_claro
                     Ellipse:  # Intersection point top
                         pos: root.p_C
                         size: point_size, point_size
+
+                    Color:
+                        rgba: cafe_claro
+                    Ellipse:  # For the height of the triangle with the point C.
+                        pos: root.p_D
+                        size: point_size, point_size
+                    Line:  # rotating line right
+                        points: root.l_4
+                        width: line_width
+                    Color:
+                        rgba: rojo
+                    Ellipse:  # For the middle point
+                        pos: root.p_E
+                        size: point_size, point_size
+                    Line:  # Median line
+                        points: root.l_6
+                        width: line_width
+                    Color:
+                        rgba: azul
+                    Line:  # Mediatrix line
+                        points: root.l_7
+                        width: line_width
+                    Color:
+                        rgba: verde
+                    Ellipse:  # For the middle point
+                        pos: root.p_F
+                        size: point_size, point_size
+                    Line:  # Bisectrix line
+                        points: root.l_8
+                        width: line_width
+
+
 
                 Label:
                     id: main_message
