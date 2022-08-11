@@ -1,8 +1,8 @@
 #:kivy 2.1.0
 
-#:set prev_file '1.1.1'
-#:set this_file '1.1.2'
-#:set this_cap_sec  cap1_sec1
+#:set prev_file ''
+#:set this_file '2.1'
+#:set this_cap_sec  cap2_sec1
 #:set next_file ''
 
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
@@ -10,11 +10,15 @@
 #:set next_symbol ' ' if not next_file else '-->'
 
 #:set point_size 6
+#:set offset point_size / 2
+#:set line_width 1.1
 
 RootWidget:
     # import container
     container: container
-    label_wid: my_custom_label
+    label_wid: main_message
+    slider_x: x
+    slider_y: y
 
     # fill the container
     BoxLayout:
@@ -28,55 +32,73 @@ RootWidget:
             rows: 2
             orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
 
-            BoxLayout:
+            BoxLayout:  # Empty space
                 size_hint: (0.075, 0.075)  # Buttom-left
-            BoxLayout:
+            BoxLayout:  # Space for vertical (right) slider
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
-                    on_value: root.cap1_sec1_pag2_y(float(args[1]))  # Send value to .py file
-                    min: -0.6
+                    id: y
+                    on_value: root.cap2_sec1_pag0()  # Call the code on event
+                    min: -0.7
                     max: 0.7
-                    step: 0.01
                     value: 0
+                    step: 0.001
                     orientation: 'vertical'
             BoxLayout:
-                size_hint: (0.925, 0.075)  # Buttom-right
+                size_hint: (1, 0.075)
                 Label:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
-                    on_value: root.cap1_sec1_pag2_x(float(args[1]))  # Send value to .py file
+                    id: x
+                    on_value: root.cap2_sec1_pag0()  # Call the code on event
                     min: -0.7
                     max: 0.7
-                    step: 0.01
                     value: 0
+                    step: 0.001
                     orientation: 'horizontal'
                 Label:
-                    size_hint: (0.2, None)  # To leave 20% free to the right
-            BoxLayout:
+                    size_hint: (0.2, None)    # To leave 20% free to the right
+            BoxLayout:  # Space for canvas
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
-                    Line:  # Y-axis
-                        points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
-                    Line:  # X-axis
-                        points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
-                    Line:  # X-axis
-                        dash_length: 1
-                        dash_offset: 2
-                        points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
-                    Line:
-                        bezier: (300, 300, 400, 400, 500, 300)
-                    Line:
-                        circle: 400, 400, 100
+                    Color:
+                        rgba: cafe_claro
+                    Line:  # Horizontal fixed line bottom
+                        points: root.l_1
+                        width: line_width
                     Color:
                         rgba: azul
-                    Ellipse:  # Point
-                        pos: root.p_0
+                    Line:  # rotating line left
+                        points: root.l_2
+                        width: line_width
+                    Color:
+                        rgba: rojo
+                    Line:  # rotating line right
+                        points: root.l_3
+                        width: line_width
+ 
+                    Color:
+                        rgba: rojo
+                    Ellipse:  # Intersection point left
+                        pos: root.p_A
                         size: point_size, point_size
+                    Color:
+                        rgba: azul
+                    Ellipse:  # Intersection point right
+                        pos: root.p_B
+                        size: point_size, point_size
+                    Color:
+                        rgba: cafe_claro
+                    Ellipse:  # Intersection point top
+                        pos: root.p_C
+                        size: point_size, point_size
+
                 Label:
-                    id: my_custom_label
+                    id: main_message
                     text_size: self.size
                     halign: 'center'
                     valign: 'top'
+                    markup: True
 
 
         RstDocument:
@@ -113,8 +135,3 @@ RootWidget:
                 width: self.height
                 text: next_symbol
                 on_release: app.next_screen(next_file)
-
-# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Line   ==> Lines (dashed), curves, circle, ellipse, rectangle, bezier curves
-# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Point  
-# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Quad   ==> Triangle too
-# https://kivy.org/doc/stable/api-kivy.graphics.html?highlight=line#kivy.graphics.Mesh
