@@ -1,5 +1,5 @@
 Polígonos de tres lados - Triángulos
 ======================================================
 
-Concepto 2.1
+Concepto 2.1.2
 -------------------

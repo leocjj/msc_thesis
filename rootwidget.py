@@ -22,9 +22,6 @@ class RootWidget(BoxLayout):
 
     slider_1 = NumericProperty(0.0)
     slider_2 = NumericProperty(0.0)
-    # slider_3 = NumericProperty(0.0)
-    # slider_alto2 = NumericProperty(0.0)
-    # label_wid = ObjectProperty()
 
     # Tuple, for 'pos' attributes in .kv files
     p_3 = ListProperty((0, 0))

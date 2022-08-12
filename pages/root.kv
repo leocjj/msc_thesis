@@ -9,6 +9,8 @@
 #:set cafe_claro    (0.848, 0.645, 0.375, 1)  # rgba: 0.848, 0.645, 0.375, 1  # 217,165,96  0xD9A560 Café claro
 #:set amarillo      (0.988, 0.914, 0.789, 1)  # rgba: 0.988, 0.914, 0.789, 1  # 253,234,202 0xFDEACA Amarillo pálido
 #:set gris          (0.945, 0.945, 0.938, 1)  # rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris claro
+#:set gris_medio    (0.645, 0.645, 0.645, 1)  # rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris oscuro
+#:set gris_oscuro   (0.345, 0.345, 0.345, 1)  # rgba: 0.945, 0.945, 0.938, 1  # 242,242,240 0xF2F2F0 Gris oscuro
 #:set azul          (0.203, 0.395, 0.641, 1)  # rgba: 0.203, 0.395, 0.641, 1  # 52,101,164  0x3465A4 Azul
 #:set blanco        (1, 1, 1, 1)              # rgba: 1, 1, 1, 1              # 255,255,255 0xFFFFFF Blanco
 #:set rojo          (1, 0, 0, 1)              # rgba: 1, 0, 0, 1              # 255,0,0     0xFF0000 Rojo
@@ -46,7 +48,22 @@
 #:set cap4_sec4 "4.4 Planos"
 #:set cap4_sec5 "4.5 Sólidos"
 
+#:set prev_symbol_path 'images/left_arrow.png'
+#:set next_symbol_path 'images/right_arrow.png'
+
+# Header configuration
+#:set header_height '36dp'
+#:set help_symbol_path "images/question_mark.png"
+#:set header_background_color gris_oscuro
+#:set carousel_background_color gris
+
+# Bottom half canvas (notes) configuration
+#:set notes_background_color gris
+
+# Footer configuration
 #:set footer_height '36dp'
+#:set footer_background_color gris_oscuro
+#:set footer_text_color blanco
 
 RootWidget:
     # import container
@@ -65,13 +82,21 @@ RootWidget:
             padding: 0
             spacing: 2
             size_hint_y: None
-            height: '40dp'
+            height: header_height
+            canvas.before:
+                Color:
+                    rgba: header_background_color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
 
-            Button:
+            IconButton:
+                source: help_symbol_path
+                height: header_height
+                width: header_height
+                color: gris_medio
                 size_hint_x: None
-                width: self.height
-                text: " ? "
-                on_release: app.next_screen('ayuda')
+                on_press: app.next_screen('ayuda')
 
             # Display selectors for sections and sub-sections
             # The number will be used to open the corresponding file
@@ -79,31 +104,40 @@ RootWidget:
                 id: carousel
                 loop: False
                 Spinner:
+                    background_color: carousel_background_color
                     text: cap1
                     values: cap1, cap1_sec0, cap1_sec1, cap1_sec2, cap1_sec3, cap1_sec4
                     on_text: app.next_screen(self.text)
                 Spinner:
+                    background_color: carousel_background_color
                     text: cap2
                     values: cap2, cap2_sec0, cap2_sec1, cap2_sec2, cap2_sec3
                     on_text: app.next_screen(self.text)
                 Spinner:
+                    background_color: carousel_background_color
                     text: cap3
                     values: cap3, cap3_sec0, cap3_sec1, cap3_sec2, cap3_sec3
                     on_text: app.next_screen(self.text)
                 Spinner:
+                    background_color: carousel_background_color
                     text: cap4
                     values: cap4, cap4_sec0, cap4_sec1, cap4_sec2, cap4_sec3, cap4_sec4, cap4_sec5
                     on_text: app.next_screen(self.text)
-            Button:
+
+            IconButton:
+                source: prev_symbol_path
+                height: header_height
+                width: header_height
+                opacity: 0.9
                 size_hint_x: None
-                width: self.height
-                text: '<--'
-                on_release: carousel.load_previous()
-            Button:
+                on_press: carousel.load_previous()
+            IconButton:
+                source: next_symbol_path
+                height: header_height
+                width: header_height
+                opacity: 0.9
                 size_hint_x: None
-                width: self.height
-                text: '-->'
-                on_release: carousel.load_next()
+                on_press: carousel.load_next()
 
         # create container to show content
         BoxLayout:

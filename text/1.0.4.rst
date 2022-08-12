@@ -1,5 +1,5 @@
 Descargo de responsabilidad (disclaimer)
-------------------------
+----------------------------------------------
 
 Por otro lado hay ciertos aspectos de se deben mencionar, los cuales no son parte del 
 alcance del presente trabajo:

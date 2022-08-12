@@ -4,10 +4,14 @@
 #:set this_file '1.0.1'
 #:set this_cap_sec  cap1_sec0
 #:set next_file '1.0.2'
-
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
-#:set prev_symbol ' ' if not prev_file else '<--'
-#:set next_symbol ' ' if not next_file else '-->'
+
+#:set prev_symbol prev_symbol_path
+#:set next_symbol next_symbol_path
+
+#:set point_size 6
+#:set offset point_size / 2
+#:set line_width 1.1
 
 RootWidget:
     # import container
@@ -23,7 +27,7 @@ RootWidget:
         RstDocument:
             canvas.before:
                 Color:
-                    rgba: amarillo
+                    rgba: notes_background_color
                 Rectangle:
                     pos: self.pos
                     size: self.size
@@ -38,19 +42,25 @@ RootWidget:
             height: footer_height
             canvas.before:
                 Color:
-                    rgba: azul
+                    rgba: footer_background_color
                 Rectangle:
                     pos: self.pos
                     size: self.size
+            IconButton:
+                source: prev_symbol
+                #color: blanco if prev_file else footer_background_color
+                height: footer_height
+                width: footer_height
+                size_hint_x: None
+                on_press: app.next_screen(prev_file)
             Label:
                 text: this_cap_sec + ' - pág. ' + page
-            Button:
+                color: footer_text_color
+            IconButton:
+                source: next_symbol
+                #color: blanco if next_file else footer_background_color
+                height: footer_height
+                width: footer_height
                 size_hint_x: None
-                width: self.height
-                text: prev_symbol
-                on_release: app.next_screen(prev_file)
-            Button:
-                size_hint_x: None
-                width: self.height
-                text: next_symbol
-                on_release: app.next_screen(next_file)
+                on_press: app.next_screen(next_file)
+                

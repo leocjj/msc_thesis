@@ -7,13 +7,20 @@ place on the screen which could be filled with any other content from a .kv file
 """
 from kivy.app import App
 from kivy.lang import Builder
+from kivy.uix.behaviors import ButtonBehavior
+from kivy.uix.image import Image
 
+# Importing the main class with all events handler. Is then used in root.kv
+from rootwidget import RootWidget
 from kivy import require
 
-# Main class with all events handler. Is then used in root.kv
-from rootwidget import RootWidget
-
 require("2.1.0")
+
+
+class IconButton(ButtonBehavior, Image):
+    """https://kivy.org/doc/stable/api-kivy.uix.behaviors.html#behavior-mixin-classes"""
+
+    pass
 
 
 class Virtual_EuclidesApp(App):
@@ -23,7 +30,7 @@ class Virtual_EuclidesApp(App):
         """This method loads the root.kv file automatically"""
         self.root = Builder.load_file("pages/root.kv")
         # Call to intro screen.
-        self.next_screen("2.1")
+        self.next_screen("intro")
 
     def next_screen(self, screen):
         """Clear container and load the given screen object from file in kv folder.

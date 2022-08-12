@@ -58,6 +58,6 @@ Código fuente
 
 --------
 
-**Version:** 0.37.0
+**Version:** 0.39.0
 
-**Fecha:** 09-Ago-2022
+**Fecha:** 12-Ago-2022
