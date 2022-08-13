@@ -1,0 +1,7 @@
+Polígonos de tres lados - Triángulos
+======================================================
+
+Concepto 2.1.4
+-------------------
+
+https://es.wikipedia.org/wiki/Recta_de_Euler

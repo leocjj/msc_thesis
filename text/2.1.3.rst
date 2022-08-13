@@ -1,5 +1,5 @@
 Polígonos de tres lados - Triángulos
 ======================================================
 
-Mediatrices - circuncentro - circunferencia circunscrita
+Bisectrices - incentro - circunferencia inscrita
 ----------------------------------------------------------------------------
