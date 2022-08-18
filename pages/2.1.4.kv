@@ -1,9 +1,9 @@
 #:kivy 2.1.0
 
-#:set prev_file '2.1.2'
-#:set this_file '2.1.3'
+#:set prev_file '2.1.3'
+#:set this_file '2.1.4'
 #:set this_cap_sec  cap2_sec1
-#:set next_file '2.1.4'
+#:set next_file '2.1.5'
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
 
 #:set prev_symbol prev_symbol_path
@@ -38,7 +38,7 @@ RootWidget:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
                     id: y
-                    on_value: root.cap2_sec1_pag3()  # Call the code on event
+                    on_value: root.cap2_sec1_pag4()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
@@ -50,7 +50,7 @@ RootWidget:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
                     id: x
-                    on_value: root.cap2_sec1_pag3()  # Call the code on event
+                    on_value: root.cap2_sec1_pag4()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
@@ -94,38 +94,60 @@ RootWidget:
                         size: point_size, point_size
 
                     Color:
-                        rgba: rojo
-                    Ellipse:  # For the intersection point
+                        rgba: cafe_claro
+                    Ellipse:  # For the middle point
                         pos: root.p_D
                         size: point_size, point_size
-                    Line:  # Bisectrix line
-                        points: root.l_4
-                    Color:
-                        rgba: azul
-                    Ellipse:  # For the intersection point
-                        pos: root.p_E
-                        size: point_size, point_size
-                    Line:  # Bisectrix line
-                        points: root.l_5
                     Color:
                         rgba: cafe_claro
-                    Ellipse:  # For the intersection point
+                    Line:  # Mediatrix line
+                        points: root.l_4
+
+                    Color:
+                        rgba: azul
+                    Ellipse:  # For the middle point
+                        pos: root.p_E
+                        size: point_size, point_size
+                    Color:
+                        rgba: azul
+                    Line:  # Mediatrix line
+                        points: root.l_5
+
+                    Color:
+                        rgba: rojo
+                    Ellipse:  # For the middle point
                         pos: root.p_F
                         size: point_size, point_size
-                    Line:  # Bisectrix line
+                    Color:
+                        rgba: rojo
+                    Line:  # Mediatrix line
                         points: root.l_6
 
                     Color:
                         rgba: blanco
-                    Ellipse:  # Incenter
+                    Ellipse:  # Circuncenter
                         pos: root.p_G
                         size: point_size, point_size
 
                     Color:
                         rgba: gris
-                    Line:  # Inscrite circunference
+                    Line:  # Circunscrite circunference
                         circle: root.c_1
-
+                    
+                    Color:
+                        rgba: gris_oscuro
+                    Line:  # Curve line (bezier line)
+                        bezier: root.p_0
+                        dash_length: 5
+                        dash_offset: 5
+                    Line:  # Curve line (bezier line)
+                        bezier: root.p_1
+                        dash_length: 5
+                        dash_offset: 5
+                    Line:  # Curve line (bezier line)
+                        bezier: root.p_2
+                        dash_length: 5
+                        dash_offset: 5
 
                 Label:
                     id: main_message

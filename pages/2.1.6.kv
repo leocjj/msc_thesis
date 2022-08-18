@@ -1,9 +1,9 @@
 #:kivy 2.1.0
 
-#:set prev_file '2.1.2'
-#:set this_file '2.1.3'
+#:set prev_file '2.1.5'
+#:set this_file '2.1.6'
 #:set this_cap_sec  cap2_sec1
-#:set next_file '2.1.4'
+#:set next_file ''
 #:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
 
 #:set prev_symbol prev_symbol_path
@@ -38,7 +38,7 @@ RootWidget:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
                     id: y
-                    on_value: root.cap2_sec1_pag3()  # Call the code on event
+                    on_value: root.cap2_sec1_pag6()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
@@ -50,7 +50,7 @@ RootWidget:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
                     id: x
-                    on_value: root.cap2_sec1_pag3()  # Call the code on event
+                    on_value: root.cap2_sec1_pag6()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
@@ -78,53 +78,41 @@ RootWidget:
                         width: line_width
  
                     Color:
-                        rgba: rojo
-                    Ellipse:  # Vertex point left
-                        pos: root.p_A
-                        size: point_size, point_size
-                    Color:
-                        rgba: azul
-                    Ellipse:  # Vertex point right
-                        pos: root.p_B
-                        size: point_size, point_size
-                    Color:
-                        rgba: cafe_claro
-                    Ellipse:  # Vertex point top
-                        pos: root.p_C
-                        size: point_size, point_size
-
-                    Color:
-                        rgba: rojo
-                    Ellipse:  # For the intersection point
-                        pos: root.p_D
-                        size: point_size, point_size
-                    Line:  # Bisectrix line
+                        rgba: amarillo
+                    Line:  # Euler's line
                         points: root.l_4
-                    Color:
-                        rgba: azul
-                    Ellipse:  # For the intersection point
-                        pos: root.p_E
-                        size: point_size, point_size
-                    Line:  # Bisectrix line
-                        points: root.l_5
-                    Color:
-                        rgba: cafe_claro
-                    Ellipse:  # For the intersection point
-                        pos: root.p_F
-                        size: point_size, point_size
-                    Line:  # Bisectrix line
-                        points: root.l_6
+                        dash_length: 5
+                        dash_offset: 5
 
                     Color:
-                        rgba: blanco
-                    Ellipse:  # Incenter
+                        rgba: rojo
+                    Ellipse:  # Circuncenter
                         pos: root.p_G
                         size: point_size, point_size
+                    Line:  # Circunscrite circunference
+                        circle: root.c_1
 
                     Color:
                         rgba: gris
+                    Ellipse:  # Incenter
+                        pos: root.p_G2
+                        size: point_size, point_size
                     Line:  # Inscrite circunference
-                        circle: root.c_1
+                        circle: root.c_2
+
+                    Color:
+                        rgba: azul
+                    Ellipse:  # Baricenter
+                        pos: root.p_G3
+                        size: point_size, point_size
+
+                    Color:
+                        rgba: verde
+                    Ellipse:  # Orthocenter
+                        pos: root.p_G4
+                        size: point_size, point_size
+                    Line:  # Inscrite circunference
+                        circle: root.c_4
 
 
                 Label:

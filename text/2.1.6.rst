@@ -1,5 +1,7 @@
 Polígonos de tres lados - Triángulos
 ======================================================
 
-Medianas - Baricentro, centroide o centro de gravedad
+Recta de Euler
 ----------------------------------------------------------------------------
+
+https://es.wikipedia.org/wiki/Recta_de_Euler
