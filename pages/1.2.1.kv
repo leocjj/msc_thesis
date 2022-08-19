@@ -62,28 +62,34 @@ RootWidget:
             BoxLayout:
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
-                    Line:  # Curve line (bezier line)
-                        bezier: root.p_0
-                        width: line_width
                     Color:
                         rgba: cafe_claro
                     Line:  # y1 line
                         dash_length: 5
                         dash_offset: 5
                         points: root.width / 4, root.height * 6 / 10, root.width / 4 , root.height * 15 / 16
-                    Ellipse:  # y1 point
-                        pos: root.p_3
-                        size: point_size, point_size
                     Line:  # y2 line
                         dash_length: 5
                         dash_offset: 5
                         points: root.width * 3 / 4, root.height * 6 / 10, root.width * 3 / 4 , root.height * 15 / 16
+                    Line:  # Curve line (bezier line)
+                        bezier: root.p_0
+                        width: line_width
+                    Color:
+                        rgba: cafe_claro
+                    Ellipse:  # y1 point
+                        pos: root.p_3
+                        size: point_size, point_size
                     Ellipse:  # y2 point
                         pos: root.p_4
                         size: point_size, point_size
+                    Color:
+                        rgba: rojo
                     Ellipse:  # Fixed left point
                         pos: root.width/10 - offset, root.height * 6 / 8 - offset
                         size: point_size, point_size
+                    Color:
+                        rgba: verde
                     Ellipse:  # Fixed right point
                         pos: root.width*8/10 - offset, root.height * 3 / 4 - offset
                         size: point_size, point_size

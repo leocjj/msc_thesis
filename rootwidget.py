@@ -1,5 +1,4 @@
-from cmath import sqrt  # TODO: from math???
-from math import atan, pi
+from math import asin, acos, atan, pi, sqrt
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import (
     ObjectProperty,
@@ -158,9 +157,11 @@ class RootWidget(BoxLayout):
         ]
         self.label_wid.text = (
             f"Curvatura izq.: {(slider_a):.2f}  Curvatura der.: {(slider_b):.2f}"
-            + "\n Esto es una línea... recta!!!"
-            if slider_a == slider_b == 0.0
-            else ""
+            + (
+                "\n Esto es una línea... recta!!!"
+                if slider_a == slider_b == 0.0
+                else ""
+            )
         )
 
     def cap1_sec2_pag2(self):
@@ -339,6 +340,7 @@ class RootWidget(BoxLayout):
         rotation_in_degrees = self.slider_y1.value
         pivot_point_y = self.slider_y2.value
         max_length = max(self.height, self.width)
+        circle_radius = self.height / 16
         v = Vector(1, 0)
         rotation_transformation = v.rotate(rotation_in_degrees).normalize()
 
@@ -383,25 +385,25 @@ class RootWidget(BoxLayout):
             self.p_C = (intersect_top.x, intersect_top.y)
 
         # Circles around point B and C
-        self.c_1 = (self.p_B[0], self.p_B[1], 20)
-        self.c_2 = (self.p_C[0], self.p_C[1], 20)
+        self.c_1 = (self.p_B[0], self.p_B[1], circle_radius)
+        self.c_2 = (self.p_C[0], self.p_C[1], circle_radius)
 
         # Angle for circles works CW instead of CCW, staring from the north.
         ang = Vector(0, 1).angle((self.p_C[0] - self.p_B[0], self.p_C[1] - self.p_B[1]))
 
         # circle = (center_x, center_y, radius, angle_start, angle_end)
-        self.c_3 = (self.p_B[0], self.p_B[1], 20, 90, ang)
-        self.c_4 = (self.p_B[0], self.p_B[1], 20, 90 - 180, ang - 180)
-        self.c_5 = (self.p_C[0], self.p_C[1], 20, 90, ang)
-        self.c_6 = (self.p_C[0], self.p_C[1], 20, 90 - 180, ang - 180)
+        self.c_3 = (self.p_B[0], self.p_B[1], circle_radius, 90, ang)
+        self.c_4 = (self.p_B[0], self.p_B[1], circle_radius, 90 - 180, ang - 180)
+        self.c_5 = (self.p_C[0], self.p_C[1], circle_radius, 90, ang)
+        self.c_6 = (self.p_C[0], self.p_C[1], circle_radius, 90 - 180, ang - 180)
 
         if self.p_B[0] == 0 and self.p_B[1] == 0:
             self.label_wid.text = f"Rectas paralelas, no hay ángulos definidos!"
         else:
             if int(90 - ang) == 90:
                 self.label_wid.text = (
-                    f"[color=FF3333]Ángulo: {int(90 - ang)} grados\n"
-                    "[color=FFFFFF]Perpendiculares!!!"
+                    f"[color=FF3333]Ángulo: [color=FFFFFF]{int(90 - ang)} grados\n"
+                    "Perpendiculares!!!"
                 )
             else:
                 self.label_wid.text = (
@@ -802,10 +804,13 @@ class RootWidget(BoxLayout):
             (self.l_1[0], self.l_1[1]),
             (self.l_1[2], self.l_1[3]),
         )
-        self.p_F = (intersect.x, intersect.y)
-        # Truncating bisextrix in the bottom
-        self.l_8[2] = self.p_F[0]
-        self.l_8[3] = self.p_F[1]
+        if not intersect or abs(intersect.x) > 100000:
+            self.p_F = (intersect.x, intersect.y)
+        else:
+            self.p_F = (intersect.x, intersect.y)
+            # Truncating bisextrix in the bottom
+            self.l_8[2] = self.p_F[0]
+            self.l_8[3] = self.p_F[1]
 
         self.label_wid.text = f"Ángulo del vertice superior: {ang_C:.0f}"
 
@@ -998,6 +1003,8 @@ class RootWidget(BoxLayout):
             self.p_D = (0, 0)
         else:
             self.p_D = (intersect.x, intersect.y)
+            self.l_4[2] = self.p_D[0]
+            self.l_4[3] = self.p_D[1]
 
         # Intersection of the bisectrix line with side (line l_2)
         intersect = Vector.line_intersection(
@@ -1010,6 +1017,8 @@ class RootWidget(BoxLayout):
             self.p_E = (0, 0)
         else:
             self.p_E = (intersect.x, intersect.y)
+            self.l_5[2] = self.p_E[0]
+            self.l_5[3] = self.p_E[1]
 
         # Intersection of the bisectrix line with side (line l_1)
         intersect = Vector.line_intersection(
@@ -1022,6 +1031,8 @@ class RootWidget(BoxLayout):
             self.p_F = (0, 0)
         else:
             self.p_F = (intersect.x, intersect.y)
+            self.l_6[2] = self.p_F[0]
+            self.l_6[3] = self.p_F[1]
 
         # Intersection of the bisectrixs lines - incenter
         intersect = Vector.line_intersection(
@@ -1636,3 +1647,99 @@ class RootWidget(BoxLayout):
         self.p_G2 = (self.p_G2[0] - offset, self.p_G2[1] - offset)
         self.p_G3 = (self.p_G3[0] - offset, self.p_G3[1] - offset)
         self.p_G4 = (self.p_G4[0] - offset, self.p_G4[1] - offset)
+
+    def cap2_sec2_pag0(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Ax = 0
+        Ay = 0
+        Bx = self.slider_x.value
+        By = self.slider_y.value
+
+        # Point A
+        self.p_A = [self.width / 2, self.height * 3 / 4]
+        # Point B
+        self.p_B = [self.width / 2 * (1 + Bx), self.height * (3 + By) / 4]
+        # Points to draw main line, from A to B
+        self.l_1 = [
+            self.p_A[0],
+            self.p_A[1],
+            self.p_B[0],
+            self.p_B[1],
+        ]
+        # Points to draw Secondary line, x-distance
+        self.l_2 = [
+            self.p_A[0],
+            self.p_A[1],
+            self.p_B[0],
+            self.p_A[1],
+        ]
+        # Points to draw Secondary line, y-distance
+        self.l_3 = [
+            self.p_B[0],
+            self.p_A[1],
+            self.p_B[0],
+            self.p_B[1],
+        ]
+
+        x = (Bx - Ax) * 10  # Scaled
+        y = (By - Ay) * 10  # Scaled
+        d = sqrt(pow(x, 2) + pow(y, 2))
+        msg_1 = f"[color=3465A4]  x: {x:.2f}  [color=FF0000]y: {y:.2f}  [color=D9A560]d: {d:.2f}"
+        if d < 0.05:
+            msg_2 = f"[color=FFFFFF]  y/d: ~  x/d: ~  y/x: ~"
+        elif -0.05 < x < 0.05:
+            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: ~"
+        else:
+            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: {y/x:.4f}"
+        self.label_wid.text = msg_1 + "\n" + msg_2
+
+    def cap2_sec2_pag1(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Ax = 0
+        Ay = 0
+        Bx = self.slider_x.value
+        By = self.slider_y.value
+
+        # Point A
+        self.p_A = [self.width / 2, self.height * 3 / 4]
+        # Point B
+        self.p_B = [self.width / 2 * (1 + Bx), self.height * (3 + By) / 4]
+        # Points to draw main line, from A to B
+        self.l_1 = [
+            self.p_A[0],
+            self.p_A[1],
+            self.p_B[0],
+            self.p_B[1],
+        ]
+        # Points to draw Secondary line, x-distance
+        self.l_2 = [
+            self.p_A[0],
+            self.p_A[1],
+            self.p_B[0],
+            self.p_A[1],
+        ]
+        # Points to draw Secondary line, y-distance
+        self.l_3 = [
+            self.p_B[0],
+            self.p_A[1],
+            self.p_B[0],
+            self.p_B[1],
+        ]
+
+        x = (Bx - Ax) * 10  # Scaled
+        y = (By - Ay) * 10  # Scaled
+        d = sqrt(pow(x, 2) + pow(y, 2))
+        msg_1 = f"[color=3465A4]  x: {x:.2f}  [color=FF0000]y: {y:.2f}  [color=D9A560]d: {d:.2f}"
+        if d < 0.05:
+            msg_2 = f"[color=3465A4]  A: 0  [color=FF0000]B: 0  [color=D9A560]C: 0"
+            msg_3 = f"[color=FFFFFF]  y/d: ~  x/d: ~  y/x: ~"
+        elif -0.05 < x < 0.05:
+            msg_2 = f"[color=3465A4]  A: {asin(x/d):.2f}  [color=FF0000]B: {asin(y/d):.2f}  [color=D9A560]C: {(pi/2):.2f}"
+            msg_3 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: ~"
+        else:
+            msg_2 = f"[color=3465A4]  A: {asin(x/d):.2f}  [color=FF0000]B: {asin(y/d):.2f}  [color=D9A560]C: {(pi/2):.2f}"
+            msg_3 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: {y/x:.4f}"
+        self.label_wid.text = msg_1 + "\n" + msg_2+ "\n" + msg_3
+

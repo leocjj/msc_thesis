@@ -50,10 +50,12 @@ RootWidget:
                         dash_offset: wm.max - wm.value
                         bezier: (root.width/10, root.height * 6 / 8, root.width / 4, root.height, root.width * 3 / 4 , root.height / 2, root.width*9/10, root.height * 3 / 4)
                     Color:
-                        rgba: cafe_claro
+                        rgba: rojo
                     Ellipse:  # Left point
                         pos: root.width/10 - offset, root.height * 6 / 8 - offset
                         size: point_size, point_size
+                    Color:
+                        rgba: verde
                     Ellipse:  # Right oint
                         pos: root.width*9/10 - offset, root.height * 3 / 4 - offset
                         size: point_size, point_size

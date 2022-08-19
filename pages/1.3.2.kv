@@ -94,11 +94,14 @@ RootWidget:
                         points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
                     Line:  # X-axis
                         points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
+
                     Color:
                         rgba: cafe_claro
                     Line:  # Main line, from A to B
                         points: root.l_1
-                        width: line_width
+                        dash_length: 5
+                        dash_offset: 5
+
                     Color:
                         rgba: azul
                     Line:  # Secondary line, x-distance
@@ -107,6 +110,7 @@ RootWidget:
                     Ellipse:  # Point A
                         pos: root.p_A
                         size: point_size, point_size
+
                     Color:
                         rgba: rojo
                     Line:  # Secondary line, y-distance
