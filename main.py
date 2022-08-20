@@ -10,8 +10,9 @@ from kivy.lang import Builder
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.image import Image
 
-# Importing the main class with all events handler. Is then used in root.kv
+# Keep this. Importing the main class with all events handler. Is then used in root.kv
 from rootwidget import RootWidget
+
 from kivy import require
 
 require("2.1.0")

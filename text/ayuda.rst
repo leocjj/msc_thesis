@@ -39,25 +39,36 @@ Ejemplo:
     Página de sección, se puede navegar a través de las páginas usando las flechas en la parte inferior derecha.
 
 
+
 Créditos
---------
- **Autor:** Leonardo Calderón Jaramillo, leonardocj@gmail.com
+=====================================================
 
- **Director de tésis:**  Prof. Remigio Delgado Escobar
+Tesis de Grado
 
+Maestría en Enseñanza de la Matemática
+
+Universidad Tecnológica de Pereira - UTP
+
+--------------------------------------------------------
+
+**Autor:** Leonardo Calderón Jaramillo
+
+**Email:** leonardocj@gmail.com
+
+**Director de tésis:**  Prof. Remigio Delgado Escobar
+
+--------------------------------------------------------
 
 Desarrollado en:
-----------------
+--------------------------------------------------------
  * Python 3.8
  * Kivy 2.1 - Open source Python library
 
 Código fuente
-----------------
- https://github.com/leocjj/msc_thesis
+--------------------------------------------------------
 
+**Licencia:** GNU General Public License v3.0
 
---------
+**Código fuente:** https://github.com/leocjj/msc_thesis
 
-**Version:** 0.42
-
-**Fecha:** 19-Ago-2022
+--------------------------------------------------------

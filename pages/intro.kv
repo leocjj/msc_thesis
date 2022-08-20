@@ -8,9 +8,11 @@ RootWidget:
     BoxLayout:
         id: container
         orientation: 'vertical'
-        padding: 0
-        spacing: 3
-
-        Image:
-            source: 'images/app_intro.png'
-            size: self.texture_size
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: intro_background_color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: rst_files_folder + "intro.rst"
