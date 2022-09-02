@@ -2,19 +2,21 @@
 Virtual_ Euclides_
 =====================================================
 
-.. NOTE:: **Para iniciar, presiona el botón de info (i) en la parte superior izquierda.**
-#. **Para ver los capítulos** usa las flechas en la parte superior derecha.
-#. **Para ver las secciones de cada capítulo** presiona en el nombre del capítulo.
-#. **Para ver las páginas de cada sección** usa las flechas de la parte inferior derecha.
+.. NOTE:: **Para iniciar, presiona el botón de información (i) en la esquina superior izquierda.**
 
 =====================================================
 
-Tesis de Grado
+
+.. image:: ./images/logo_utp_small.png
+
 --------------------------------------------------------
 
-Maestría en Enseñanza de la Matemática
+=====================================================
+Tesis_ de_ Grado_
+=====================================================
 
-Universidad Tecnológica de Pereira - UTP
+
+**Maestría en Enseñanza de la Matemática**
 
 --------------------------------------------------------
 
@@ -22,9 +24,9 @@ Universidad Tecnológica de Pereira - UTP
 
 **Email:** leonardocj@gmail.com
 
-**Fecha:** 2022-08-19
+**Fecha:** 2022-09-01
 
-**Revisión:** beta 0.42
+**Revisión:** beta 0.45
 
 **Descripción:** Laboratorio Virtual de Geometría
 

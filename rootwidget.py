@@ -277,11 +277,17 @@ class RootWidget(BoxLayout):
 
         if abs(angulo) == 90 or abs(angulo) == 270:
             self.label_wid.text = (
-                f"Suplemento:{suplemento:.1f}   Ángulo: {angulo:.1f}"
-                + "\n Líneas perpendiculares, ángulos rectos!!!"
+                f"[color=00FF00]Ángulo: {angulo:.1f} \n"
+                + f"[color=FF0000]Suplemento:{suplemento:.1f} \n [color=FFFFFF]Líneas perpendiculares,   ángulos rectos!!!"
             )
-        else:
-            self.label_wid.text = f"Suplemento:{suplemento:.1f}   Ángulo: {angulo:.1f}"
+        elif abs(angulo) < 90:
+            self.label_wid.text = f"[color=00FF00]Ángulo: {angulo:.1f}  (Agudo) \n  [color=FF0000]Suplemento:{suplemento:.1f}"
+        elif 90 < abs(angulo) < 180:
+            self.label_wid.text = f"[color=00FF00]Ángulo: {angulo:.1f}  (Obtuso) \n  [color=FF0000]Suplemento:{suplemento:.1f}"
+        elif abs(angulo) == 180:
+            self.label_wid.text = f"[color=00FF00]Ángulo: {angulo:.1f}  (Llano) \n  [color=FF0000]Suplemento:{suplemento:.1f}"
+        elif abs(angulo) > 180:
+            self.label_wid.text = f"[color=00FF00]Ángulo: {angulo:.1f}  (Cóncavo) \n  [color=FF0000]Suplemento:{suplemento:.1f}"
 
     def cap1_sec3_pag2(self):
         """Control sliders events"""
@@ -400,14 +406,15 @@ class RootWidget(BoxLayout):
         if self.p_B[0] == 0 and self.p_B[1] == 0:
             self.label_wid.text = f"Rectas paralelas, no hay ángulos definidos!"
         else:
-            if int(90 - ang) == 90:
+            if abs(ang) == 90:
                 self.label_wid.text = (
                     f"[color=FF3333]Ángulo: [color=FFFFFF]{int(90 - ang)} grados\n"
                     "Perpendiculares!!!"
                 )
             else:
                 self.label_wid.text = (
-                    f"[color=FF3333]Ángulo: [color=FFFFFF]{int(90 - ang)} grados"
+                    f"[color=FF3333]Ángulo: [color=FFFFFF]{int(90 - ang)} grados\n"
+                    f"[color=3333FF]Ángulo: [color=FFFFFF]{180 - int(90 - ang)} grados"
                 )
 
         # Adding offset to draw points correctly
@@ -1741,5 +1748,5 @@ class RootWidget(BoxLayout):
         else:
             msg_2 = f"[color=3465A4]  A: {asin(x/d):.2f}  [color=FF0000]B: {asin(y/d):.2f}  [color=D9A560]C: {(pi/2):.2f}"
             msg_3 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: {y/x:.4f}"
-        self.label_wid.text = msg_1 + "\n" + msg_2+ "\n" + msg_3
+        self.label_wid.text = msg_1 + "\n" + msg_2 + "\n" + msg_3
 

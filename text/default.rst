@@ -1,8 +1,14 @@
-=============================
-Virtual_ Euclides_
-=============================
+Pagina_ en_ construcción_
+======================================
 
-#. Usa las flechas de la parte superior derecha para desplazarte entre **capítulos**.
-#. Selecciona (presiona) un capítulo para desplegar las **secciones** que contine.
-#. Selecciona (presiona) una sección para mostrarla en pantalla.
-#. Usa las flechas de la parte inferior derecha para desplazarte entre las **páginas** de la sección.
+**1- Para ver los capítulos** desplaza o arrastra (presionar, dejar presionado y luego mover) hacia los lados, el menú desplegable en la parter superior central.
+
+.. image:: ./images/help_1.png
+
+**2- Para ver las secciones de cada capítulo** presiona en el nombre del capítulo. Luego presiona en la sección deseada para abrirla.
+
+.. image:: ./images/help_2.png
+
+**3- Para ver las páginas de cada sección** usa las flechas de la esquina superior derecha para desplazarce entre las páginas.
+
+.. image:: ./images/help_3.png

@@ -23,5 +23,3 @@ Es el principal interés en este punto poder presentar al estudiante, la forma d
 recomenda y cómo explorar el contenido de los capítulos.
 
 ------------------------
-
-**Ve a la siguiente página usando el botón -->**

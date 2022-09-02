@@ -14,9 +14,11 @@ alcance del presente trabajo:
 
 * En el contenido se presentan definiciones, postulados y nociones comunes del libro I de los Elementos de Euclides (de allí el nombre de la aplicación) pero no se pretende hacer una presentación completa y detallada al respecto, sino utilizar estos como referente conceptual para ahondar en la experiencia de interacción.
 
-* Se utilizará la palabra **Geometría** para referirse a la Geometría Euclidiana, es decir, a la geometría que cumple con los cinco postulados de Euclides (`Consulta cuáles son los cinco postulados de Euclides`_.
+* Cuando se realizan cálculos matemáticos como resultado de la interacción gŕafica, en algunos momentos se pueden general imprecisiones en algunos decimales debidos al calculo mismo. Esto no debería interferir con el proceso de análisis de los conceptos presentados.
+
+* Se utilizará la palabra **Geometría** para referirse a la Geometría Euclidiana en el plano, es decir, a la geometría que cumple con los cinco postulados de Euclides y se trabajo solo en dos dimensiones (`Consulta cuáles son los cinco postulados de Euclides`_).
 
 -------
  
-**RECUERDA** seguir el orden propuesto, repasar cada sección y ... divertirse aprendiendo!
+**RECUERDA** seguir el orden propuesto, repasar cada sección y ... divertirte aprendiendo!
 

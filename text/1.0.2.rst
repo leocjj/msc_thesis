@@ -32,5 +32,3 @@ En el borde inferior central, aparecerá en todo momento la sección y la págin
 encuentre desplegada con el fin de ubicarse rápidamente en los contenidos.
 
 ------------------------
-
-**Ve a la siguiente página usando el botón -->**

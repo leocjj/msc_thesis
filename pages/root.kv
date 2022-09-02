@@ -24,25 +24,25 @@
 # CAP.N - Capítulo: no está asociado a un archivo, solo es indicativo.
 # n.m   - Sección de capítulo: tiene dos archivos asociados 'n.m.kv' (estructura) y 'n.m.rst' (contenido)
 # n.m.l - Página de sección: tiene dos archivos asociados 'n.m.l.kv' (estructura) y 'n.m.l.rst' (contenido)
-#:set cap1      "CAP.1 - PUNTOS Y RECTAS"
+#:set cap1      "1 - PUNTOS Y RECTAS"
 #:set cap1_sec0 "1.0 Introducción"
 #:set cap1_sec1 "1.1 Concepto de punto"
 #:set cap1_sec2 "1.2 Concepto de línea"
 #:set cap1_sec3 "1.3 Dos líneas rectas"
 #:set cap1_sec4 "1.4 Tres líneas rectas"
-#:set cap2      "CAP.2 POLÍGONOS"
+#:set cap2      "2 - POLÍGONOS"
 #:set cap2_sec0 "2.0 Introducción"
 #:set cap2_sec1 "2.1 De tres lados"
 #:set cap2_sec2 "2.2 Razones del triángulo"
 #:set cap2_sec3 "2.3 De cuatro lados"
 #:set cap2_sec4 "2.4 Superficies"
 #:set cap2_sec5 "2.5 De más lados"
-#:set cap3      "CAP.3 LÍNEAS CURVAS"
+#:set cap3      "3 - LÍNEAS CURVAS"
 #:set cap3_sec0 "3.0 Introducción"
 #:set cap3_sec1 "3.1 Cerradas"
 #:set cap3_sec2 "3.2 Círculos"
 #:set cap3_sec3 "3.3 Abiertas"
-#:set cap4      "CAP.4 CONCEPTOS 3D"
+#:set cap4      "4 - CONCEPTOS 3D"
 #:set cap4_sec0 "4.0 Introducción"
 #:set cap4_sec1 "4.1 Puntos"
 #:set cap4_sec2 "4.2 Líneas"
@@ -54,7 +54,7 @@
 #:set next_symbol_path 'images/right_arrow.png'
 
 # Header configuration
-#:set header_height '36dp'
+#:set header_height '42dp'
 #:set help_symbol_path "images/info.png"
 #:set header_background_color gris_oscuro
 #:set carousel_background_color gris
@@ -66,9 +66,9 @@
 #:set notes_background_color amarillo
 
 # Footer configuration
-#:set footer_height '36dp'
-#:set footer_background_color gris_oscuro
-#:set footer_text_color blanco
+##:set footer_height '36dp'
+##:set footer_background_color gris_oscuro
+##:set footer_text_color blanco
 
 RootWidget:
     # import container
@@ -135,14 +135,14 @@ RootWidget:
                 width: header_height
                 opacity: 0.9
                 size_hint_x: None
-                on_press: carousel.load_previous()
+                on_press: app.next_screen("rw")  # carousel.load_previous()
             IconButton:
                 source: next_symbol_path
                 height: header_height
                 width: header_height
                 opacity: 0.9
                 size_hint_x: None
-                on_press: carousel.load_next()
+                on_press: app.next_screen("fw")  # carousel.load_next()
 
         # create container to show content
         BoxLayout:

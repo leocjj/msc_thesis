@@ -5,6 +5,7 @@ Container Example
 This example shows how to add a container to our screen. A container is simply an empty
 place on the screen which could be filled with any other content from a .kv file.
 """
+from os.path import exists
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.behaviors import ButtonBehavior
@@ -27,6 +28,8 @@ class IconButton(ButtonBehavior, Image):
 class Virtual_EuclidesApp(App):
     """This is the app itself"""
 
+    file_name = ""
+
     def build(self):
         """This method loads the root.kv file automatically"""
         self.root = Builder.load_file("pages/root.kv")
@@ -37,22 +40,39 @@ class Virtual_EuclidesApp(App):
         """Clear container and load the given screen object from file in kv folder.
         :param screen: str name of the screen object made from the loaded .kv file
         """
-        # Extract the filename from the first part of the text received (screen).
-        filename = screen.split(" ")[0]
-        if not filename:
-            return
-        filename = filename + ".kv"
-        # unload the content of the .kv file, it could have data from previous calls
-        Builder.unload_file("pages/" + filename)
-        # clear the container
-        self.root.container.clear_widgets()
-        # load the content of the .kv file
-        try:
-            screen = Builder.load_file("pages/" + filename)
-        except:
-            screen = Builder.load_file("pages/default.kv")
-        # add the content of the .kv file to the container
-        self.root.container.add_widget(screen)
+        filename_temp = ""
+        fs = self.file_name.split(".")
+        if screen in ("fw", "rw") and len(fs) == 4:
+            page_number = int(fs[2])
+            if screen == "fw":
+                page_number += 1
+            elif screen == "rw":
+                page_number -= 1
+            filename_temp = f"{fs[0]}.{fs[1]}.{str(page_number)}.{fs[3]}"
+        else:
+            # Extract the filename from the first part (number) of the text received (screen)
+            filename_temp = screen.split(" ")[0]
+            if not filename_temp:
+                return
+            # If number have '<chapter>.<section>', add extra '.0' to specify the page zero.
+            if len(filename_temp.split(".")) == 2:
+                filename_temp = filename_temp + ".0.kv"
+            else:
+                filename_temp = filename_temp + ".kv"
+
+        if filename_temp and exists("pages/" + filename_temp):
+            # unload the content of the .kv file, it could have data from previous calls
+            Builder.unload_file("pages/" + filename_temp)
+            # clear the container
+            self.root.container.clear_widgets()
+            # load the content of the .kv file
+            try:
+                screen = Builder.load_file("pages/" + filename_temp)
+                self.file_name = filename_temp
+            except:
+                screen = Builder.load_file("pages/default.kv")
+            # add the content of the .kv file to the container
+            self.root.container.add_widget(screen)
 
 
 if __name__ == "__main__":

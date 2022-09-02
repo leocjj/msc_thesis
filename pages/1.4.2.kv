@@ -1,13 +1,6 @@
 #:kivy 2.1.0
 
-#:set prev_file '1.4.1'
 #:set this_file '1.4.2'
-#:set this_cap_sec  cap1_sec4
-#:set next_file ''
-#:set page '0' if len(this_file.split('.')) <= 2 else this_file.split('.')[2]
-
-#:set prev_symbol prev_symbol_path
-#:set next_symbol next_symbol_path
 
 #:set point_size 6
 #:set offset point_size / 2
@@ -109,34 +102,3 @@ RootWidget:
                     pos: self.pos
                     size: self.size
             source: rst_files_folder + this_file + ".rst"
-
-        # Footer
-        BoxLayout:
-            orientation: 'horizontal'
-            padding: 0
-            spacing: 1
-            size_hint_y: None
-            height: footer_height
-            canvas.before:
-                Color:
-                    rgba: footer_background_color
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
-            IconButton:
-                source: prev_symbol
-                color: blanco if prev_file else footer_background_color
-                height: footer_height
-                width: footer_height
-                size_hint_x: None
-                on_press: app.next_screen(prev_file)
-            Label:
-                text: this_cap_sec + ' - pág. ' + page
-                color: footer_text_color
-            IconButton:
-                source: next_symbol
-                color: blanco if next_file else footer_background_color
-                height: footer_height
-                width: footer_height
-                size_hint_x: None
-                on_press: app.next_screen(next_file)
