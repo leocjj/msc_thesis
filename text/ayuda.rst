@@ -30,17 +30,21 @@ de los resultados en pantalla.
 Ayuda
 ======================================
 
-1- **Para ver los capítulos** desplaza o arrastra (presionar, dejar presionado y luego mover) hacia los lados, el menú desplegable en la parter superior central.
+**1- Para ver los capítulos:** desplazar o arrastrar (presionar, dejar presionado y luego mover) hacia los lados, el menú desplegable en la parter superior central.
 
 .. image:: ./images/help_1.png
 
-2- **Para ver las secciones de cada capítulo** presiona en el nombre del capítulo. Luego presiona en la sección deseada para abrirla.
+**2- Para ver las secciones de cada capítulo:** presionar en el nombre del capítulo, luego presionar en la sección deseada para abrirla.
 
 .. image:: ./images/help_2.png
 
-3- **Para ver las páginas de cada sección** usa las flechas de la esquina superior derecha para desplazarce entre las páginas.
+**3- Para ver las páginas de cada sección:** presionar las flechas de la esquina superior derecha para desplazarce entre las páginas. (1) para avanzar a la siguiente página. (2) para volver a la página anterior
 
 .. image:: ./images/help_3.png
+
+**4- Para interactuar con los gráficos en cada página:** desplazar los círculos según se muestra en la imágen. Cada uno permite cambiar un parámetros de la gráfica.
+
+.. image:: ./images/help_4.png
 
 
 Estructura general del contenido
@@ -55,6 +59,20 @@ Ejemplo:
     Página de sección, se puede navegar a través de las páginas usando las flechas en la parte inferior derecha.
 
 
+Solución de problemas
+======================================
+
+ **Cómo reiniciar una gŕafica**
+   Cambiar de página (avanzar o retroceder) y volver a la pagina deseada.
+ **No carga una sección**
+   Abrir una sección de otro capítulo y volver a la sección deseada.
+ **No puedo instalar la aplicación**
+   Es posible que el dispositivo tenga una versión de Android no compatible con la app.
+ **No puedo instalar una actualización**
+   Desinstalar e instalar nuevamente la aplicación.
+ **La aplicación no aparece en la Google Play Store para un dispositivo**
+   Es posible que el dispositivo tenga una versión de Android no compatible con la app.
+
 
 Créditos
 =====================================================
@@ -67,13 +85,24 @@ Créditos
 
 --------------------------------------------------------
 
-Desarrollado en:
+Video Google Play Store
+=====================================================
+
+**Obra:** Lo Tomas o lo Dejas
+
+**Música de** https://www.fiftysounds.com/es/ 
+
 --------------------------------------------------------
+
+Desarrollado en:
+=====================================================
  * Python 3.8
  * Kivy 2.1 - Open source Python library
 
-Código fuente
 --------------------------------------------------------
+
+Código fuente
+=====================================================
 
 **Licencia:** GNU General Public License v3.0
 

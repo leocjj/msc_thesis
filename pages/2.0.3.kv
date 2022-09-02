@@ -1,0 +1,27 @@
+#:kivy 2.1.0
+
+#:set this_file '2.0.3'
+
+#:set point_size 6
+#:set offset point_size / 2
+#:set line_width 1.1
+
+RootWidget:
+    # import container
+    container: container
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: notes_background_color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: rst_files_folder + this_file + ".rst"

@@ -186,13 +186,13 @@ class RootWidget(BoxLayout):
         )
 
         if slider_left == self.slider_y1.min and slider_right == self.slider_y2.max:
-            self.label_wid.text = "Recta infinita (ambos lados)"
+            self.label_wid.text = "Recta: es infinita a ambos lados"
         elif slider_left != self.slider_y1.min and slider_right == self.slider_y2.max:
-            self.label_wid.text = "Semirecta infinita a la derecha"
+            self.label_wid.text = "Semirecta: es infinita a la derecha"
         elif slider_left == self.slider_y1.min and slider_right != self.slider_y2.max:
-            self.label_wid.text = "Semirecta infinita a la izquierda"
+            self.label_wid.text = "Semirecta: es infinita a la izquierda"
         elif slider_left != self.slider_y1.min and slider_right != self.slider_y2.max:
-            self.label_wid.text = "Semirecta finita"
+            self.label_wid.text = "Segmento (de recta): es finito"
 
     def cap1_sec3_pag0(self):
         """Control sliders events"""

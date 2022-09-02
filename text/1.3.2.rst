@@ -1,4 +1,6 @@
-Dos líneas rectas - distancia
+*Cap.1 Sec.3 Pag.2*
+
+Concepto de distancia Euclidiana
 ======================================================
 
 Concepto
