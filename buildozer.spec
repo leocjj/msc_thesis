@@ -30,7 +30,7 @@ icon.filename = %(source.dir)s/images/app_icon.png
 orientation = portrait
 
 ## (str) Application versioning (method 1)
-version = 0.45
+version = 0.46
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
