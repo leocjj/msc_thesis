@@ -1,7 +1,24 @@
 *Cap.1 Sec.1 Pag.1*
 
-Concepto intuitivo de punto - 1
+Representación 1
 ======================================================
 
-Concepto
+Cada vez que realizamos un trazo continuo con un lapiz en una hoja, cualquiera que sea su
+forma, podremos decir que es una línea (concepto que veremos en la siguiente sección).
+
+Si realizamos dos trazos que se cruzan en alguna parte de la hoja como se ve en la
+gráfica, a esta ubicación específica la cual es única en este caso, la llamaremos punto,
+el cual se puede ver el color rojo.
+
+Expresado de otra forma, cuando dos líneas se cruzan de esta forma, decimos que se 
+**intersectan** en un punto y dicho punto tiene una ubicación única.
+
+(`Consultar el concepto de intersección en geometría`_).
+
+*Interpretación*
 -------------------
+#. Esta **representación** de un punto nos ayuda tanto a poder representar un punto como la interseccción de dos líneas, como a poder ubicarlo sin **ambigüedad**.
+#. Simpre que dos líneas se cruzen, lo harán en un punto y lo llamaremos punto de intersección. Los púntos de intersección pueden ser únicos, finitos o infinitos :0
+
+(`Consultar el concepto de ambigüedad`_).
+

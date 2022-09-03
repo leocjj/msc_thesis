@@ -105,33 +105,22 @@ class RootWidget(BoxLayout):
             [i[0] - offset, i[1] - offset] if i else (0, 0)
         )
 
-    def cap1_sec1_pag2_x(self, f):
-        """Control horizontal slider event (x)"""
+    def cap1_sec1_pag2(self):
         Clock.schedule_interval(self.update_points, 0.01)
-        self.slider_1 = f  # Receive and update the value from the slider.
-        # To set to zero the first time or update the value next times.
-        self.slider_2 = self.slider_2 if self.slider_2 else 0
-        self.p_0 = [
-            self.width / 2 * (1 + self.slider_1) - offset,
-            self.height * (3 + self.slider_2) / 4 - offset,
-        ]
-        self.label_wid.text = (
-            f"Coordenadas: ({(self.slider_1*10):.1f}, {(self.slider_2*10):.1f})"
-        )
+        x = self.slider_x.value
+        y = self.slider_y.value
 
-    def cap1_sec1_pag2_y(self, f):
-        """Control vertical slider event (y)"""
-        Clock.schedule_interval(self.update_points, 0.01)
-        self.slider_2 = f  # Receive and update the value from the slider.
-        # To set to zero the first time or update the value next times.
-        self.slider_1 = self.slider_1 if self.slider_1 else 0
-        self.p_0 = [
-            self.width / 2 * (1 + self.slider_1) - offset,
-            self.height * (3 + self.slider_2) / 4 - offset,
+        # Mobile point
+        self.p_A = (self.width / 2 * (1 + x), self.height * (3 + y) / 4)
+        # Origin point
+        self.p_B = [
+            self.width / 2,
+            self.height * 3 / 4,
         ]
-        self.label_wid.text = (
-            f"Coordenadas: ({(self.slider_1*10):.1f}, {(self.slider_2*10):.1f})"
-        )
+        self.label_wid.text = f"Coordenadas: ({(x * 10):.1f}, {(y * 10):.1f})"
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
 
     def cap1_sec2_pag1(self):
         """Control sliders events"""
