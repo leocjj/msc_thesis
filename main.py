@@ -34,7 +34,7 @@ class Virtual_EuclidesApp(App):
         """This method loads the root.kv file automatically"""
         self.root = Builder.load_file("pages/root.kv")
         # Call to intro screen.
-        self.next_screen("intro")
+        self.next_screen("1.1.2")
 
     def next_screen(self, screen):
         """Clear container and load the given screen object from file in kv folder.

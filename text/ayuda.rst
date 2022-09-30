@@ -46,6 +46,10 @@ Ayuda
 
 .. image:: ./images/help_4.png
 
+**5- Para ver todo el texto en cada página:** desplazar la ventana del texto según se muestra en la imágen.
+
+.. image:: ./images/help_5.png
+
 
 Estructura general del contenido
 ======================================
