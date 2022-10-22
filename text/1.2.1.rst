@@ -3,47 +3,33 @@
 Concepto intuitivo de rectitud
 ======================================================
 
-Cuantas líneas pueden haber entre el punto rojo y el punto verde?
+Cuantas líneas se pueden trazar entre el punto rojo y el punto verde?
+En la gráfica interactiva podemos ver una gran variedad y sin embargo,
+pueden haber muchas más si no nos limitaramos el tamaño de la pantall.
+En realidad existen infinitas líneas!!!
 
-Intuitivo:
-    Girar una cuerda distencionada... luego tensionarla
-    Haz de luz láser
-    Objeto en caida recta sin viento ni obstáculos
-
-*Definición 2*
--------------------
-    **"Una recta es la que yace por igual respecto de los puntos que están en ella."**
-
-
-
-
-En el gráfico interactivo podemos ver un punto rojo, uno verde y una serie de puntos
-blancos. A medida que desplazamos el slider, el número de puntos blancos aumenta y el
-espacio entre cada uno se hace menor. Llega un momento en que la cantidad de puntos
-es tan grande que es muy difícil poder ver cada punto de manera individual.
-
-Si este proceso lo seguimos imaginariamente hasta llegar a infinitos puntos blancos,
-podríamos decir que 'justo' al lado de un punto se encuentra el otro sin haber espacio entre estos.
-
-Este **segúndo concepto** es fundamental para todas las contrucciones geométricas que
-veremos. El **concepto de línea** lo podemos aproximar con algunas analogías de nuestra
-vida diaria. Podemos decir que una línea es:
-
-* Un hilo extremadamente fino que sostenemos de cada extremo con una mano, del cual no podemos medir su espesor pero sabemos cuanto mide de largo.
-* Un cable de energía que vemos a la distancia y cuelga de una torre a otra. No podemos especificar cuanto tiene de espesor, pero si podemos ver desde que parte de una torre sale y hasta que parte de la otra torre llega.
+Podemos imaginarnos una cuerda de longitud infinita la cual sujetamos en
+dos puntos (rojo y verde) y que podemos tensionarla o distensionarla a volundad.
+De todas las posibles formas que pueda tener la cuerda de esta forma,
+hay una muy especial y ocurre cuando tensionamos la cuerda al máximo
+sin romperla. En esta situación, la longitud de la cuerda será la más
+corta posible entre los dos punto. A esta forma la llamaremos **línea recta**. 
 
 Ahora podemos revizar la segúnda definición de Euclides:
 
-*Definición 2*
+*Definición 4*
 -------------------
-    **"Un línea es una lóngitud sin anchura."**
+    **"Una recta es la que yace por igual respecto de los puntos que están en ella."**
 
 *Interpretación*
 -------------------
-* Podemos decir entonces que la línea es lá **mínima expresión geométrica posible que solo tiene longitud**, no tiene ancho, ni altura por estar compuesta por una serie de puntos consecutivos sin espacio entre estos.
-    
-* Su ancho no puede ser medido de ninguna forma y lo representamos con la mínima expresión visible, en este caso en la pantalla sería un pixel de ancho. En otras palabras podríamos decir que **el ancho de una línea es de un punto**.
+* Esta definición puede ser considerada una de las más ambigüas, sin embargo, podemos extraer de forma muy intuitiva el intento de decir que no se la línea no se desvía ni aun lado ni a otro a medida que es trazada.
 
-* Como vimos en el gráfico interactivo donde estamos simulando la creación de infinitos puntos unos al lado de otros, desde un punto inicial a un punto final, a esta construcción le llamamos línea y de esta podemos decir que inicia en el punto rojo (o verde) y termina el verde (o rojo).
+El concepto de curvatura es estudiado formalmente en cursos de cálculo pero
+podemos decir que es una medida de la concavidad o tendencia de una línea a
+encontrarse consigo misma si se prolonga lo suficiente. Por otro lado podemos
+decir que una línea recta nunca se encontraría consigo misma si es prolongada
+lo suficiente aunque esto más una propiedad y no es una definición como veremos
+en la siguiente página.
 
-(`Consultar el concepto de longitud`_).
+(`Consultar el concepto de línea recta`_).

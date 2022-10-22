@@ -158,24 +158,28 @@ class RootWidget(BoxLayout):
         Clock.schedule_interval(self.update_points, 0.01)
         slider_left = self.slider_y1.value
         slider_right = self.slider_y2.value
+        slider_height_left = self.slider_y3.value
+        slider_height_rigth = self.slider_y4.value
 
-        self.l_1 = [
-            self.width * (2 + slider_left) / 10,
-            self.height * 6 / 8,
-            self.width * (8 + slider_right) / 10,
-            self.height * 3 / 4,
-        ]
         self.p_A = (
-            self.width * (2 + slider_left) / 10 - offset,
-            self.height * 6 / 8 - offset,
+            self.width * (5 + slider_left) / 10,
+            self.height * (3 + slider_height_rigth) / 4,
         )
         self.p_B = (
-            self.width * (8 + slider_right) / 10 - offset,
-            self.height * 3 / 4 - offset,
+            self.width * (5 + slider_right) / 10,
+            self.height * (3 + slider_height_left) / 4,
         )
+        self.l_1 = [
+            self.p_A[0] + offset,
+            self.p_A[1] + offset,
+            self.p_B[0] + offset,
+            self.p_B[1] + offset,
+        ]
 
         if slider_left == self.slider_y1.min and slider_right == self.slider_y2.max:
             self.label_wid.text = "Recta: es infinita a ambos lados"
+        elif slider_left == self.slider_y1.max and slider_right == self.slider_y2.min:
+            self.label_wid.text = "Esto es un punto, no se puede trazar una recta."
         elif slider_left != self.slider_y1.min and slider_right == self.slider_y2.max:
             self.label_wid.text = "Semirecta: es infinita a la derecha"
         elif slider_left == self.slider_y1.min and slider_right != self.slider_y2.max:
