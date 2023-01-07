@@ -12,11 +12,11 @@ En la gráfica podemos trasladar y girar (movimiento de rotación) la línea rec
 mientras la otra permanece estática. Podremos notar entonces tres tipos de situaciones:
 
 1. Las rectas no tienen punto de intersección:
-    No se encuentran nunca ni siquiera en el infinito y se les llama rectas paralelas
+    No se encuentran nunca ni siquiera en el infinito y se les llama **rectas paralelas**
     (este concepto lo seguiremos trabajando en las siguientes secciones).
 2. Las rectas se intersectan en todos sus infinitos puntos:
-    Una recta está completamente sobre la otra por lo cual podríamos decir que dejaron de
-    ser dos rectas diferentes y ahora son una sola. 
+    Una recta está completamente sobre la otra por lo cual podemos decir que dejaron de
+    ser dos rectas diferentes y ahora son la misma. 
 3. Las rectas se intersectan en un solo punto:
     Cuando dos rectas se intersectan pero no son la misma, es decir, no se intersectan en infinitos puntos,
-    solo se pueden intersectar en un solo punto.
+    solo se pueden intersectar en un solo punto (punto verde).

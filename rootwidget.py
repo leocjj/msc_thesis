@@ -12,7 +12,7 @@ from kivy import require
 
 require("2.1.0")
 
-offset = 3  # Half of the point_size value in .kv files, to drow the points correctly.
+offset = 3  # Half of the point_size value in .kv files, to draw the points correctly.
 
 
 class RootWidget(BoxLayout):
@@ -178,7 +178,8 @@ class RootWidget(BoxLayout):
 
         if slider_left == self.slider_y1.min and slider_right == self.slider_y2.max:
             self.label_wid.text = "Recta: es infinita a ambos lados"
-        elif slider_left == self.slider_y1.max and slider_right == self.slider_y2.min:
+        elif slider_left == self.slider_y1.max and slider_right == self.slider_y2.min and \
+            slider_height_left == slider_height_rigth:
             self.label_wid.text = "Esto es un punto, no se puede trazar una recta."
         elif slider_left != self.slider_y1.min and slider_right == self.slider_y2.max:
             self.label_wid.text = "Semirecta: es infinita a la derecha"
@@ -221,9 +222,9 @@ class RootWidget(BoxLayout):
 
         if not intersect or abs(intersect.x) > 100000:
             if abs(distance) < 1:
-                self.label_wid.text = f"Las dos rectas son la misma.\nInfinitos puntos de intersección :-/"
+                self.label_wid.text = f"Las dos rectas son la misma.\nInfinitos puntos de intersección!"
             else:
-                self.label_wid.text = f"Paralelas!!! No hay punto de intersección :-0\n Distancia entre rectas: {abs(distance):.1f}"
+                self.label_wid.text = f"Paralelas!!! No hay punto de intersección!\n Distancia entre rectas: {abs(distance):.1f}"
             self.p_4 = (0, 0)
         else:
             self.p_4 = (intersect.x - offset, intersect.y - offset)

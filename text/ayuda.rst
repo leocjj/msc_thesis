@@ -89,7 +89,7 @@ Créditos
 
 --------------------------------------------------------
 
-Video Google Play Store
+Música del video en Google Play Store
 =====================================================
 
 **Obra:** Lo Tomas o lo Dejas

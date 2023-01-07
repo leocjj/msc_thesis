@@ -3,5 +3,33 @@
 Concepto de distancia Euclidiana
 ======================================================
 
-Concepto
--------------------
+Lo primero que debemos tener en cuenta es que el concepto de distancia no es único,
+existen diferentes formas de medir lo que conocemos como distancia.
+
+Por ejemplo, si estamos en una ciudad y queremos ir de un lugar a otro caminando,
+no podremos ir de forma 'directa', es decir, en línea recta de un punto a otro ya
+que tendríamos que pasar por encima de casas y edificios como podemos observar en
+el siguiente gráfico con la línea verde. Debemos entonces seguir alguno de los
+recorridos posibles usando las calles, como vemos en los otros tres casos
+(líneas roja, azul y amarilla).
+
+.. image:: ./images/distance_graph.png
+
+A la menor distancia posible recorrida entre estos dos puntos a través de las 'calles',
+la llamamos **distancia Manhattan**. Podemos observar que la cantidad de calles (distancia)
+que recorremos por la línea roja, azul y amarilla, es la misma en los tres casos.
+
+Por otro lado, si pudieramos viajar por ejemplo en helicóptero de un punto al otro de la ciudad
+(línea verde) o si no hubiera obstáculos en el camino, podríamos trazar una línea recta entre
+los dos puntos y seguir este camino. A la longitud de este camino le llamaremos
+**distancia Euclidiana** (`Consultar el concepto de distancia Euclidiana`_).
+
+Si a cada punto le asignamos una ubicación usando coordenadas (x, y) como ya hemos visto,
+podemos calcular las dos distancias (Euclidiana y Manhattan) con las siguientes fórmulas teniendo
+encuenta los puntos P y Q con coordenadas (x1, y1) y (x2, y2) respectivamente.
+
+.. image:: ./images/distance_formula.jpg
+
+En la gráfica interactiva podemos ver dos puntos A y B con sus respectivas coordenadas, 
+la distancia Euclidiana (D) en línea café punteada y la distancia Manhattan (Dx + Dy)
+en líneas líneas azul y roja.

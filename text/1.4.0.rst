@@ -3,5 +3,26 @@
 Intersecciones y ángulos formados
 ======================================================
 
-Concepto
--------------------
+En esta sección veremos que ocurre si tenemos tres líneas rectas.
+
+En esta página analizaremos el caso de dos rectas paralelas fijas y una recta que podemos mover.
+En la siguiente página tendremos una recta fija y dos rectas que podremos mover.
+
+La gráfica interactiva inicia con las tres rectas paralelas (dos cafés fijas y una blanca móvil),
+es decir, por más que las sigamos hasta el infinito, nunca las veremos intersectarse entre si,
+por lo tanto no podemos definir ángulos entre ellas.
+
+Si desplazamos primero el control de la derecha (control vertival) podremos desplazar la recta blanca hacia
+arriba y hacia abajo donde veremos que las rectas siguen siendo paralelas. Cuando utilizamos el
+control central (control horizontal) podremos girar la recta blanca alrededor del punto verde y de
+esta forma dejará de ser paralela a las dos rectas cafés que siguen siendo paralelas entre si.
+
+La inclinación de la recta blanca respecto a las rectas cafés, nos genera entonces dos puntos de
+intersercción y se formarán ángulos alrededor de cada uno. 
+
+Utilizando lo aprendido en Cap.1 Sec.3. Pag.1, podemos ver que se forman los ángulos principales
+(en rojo) y los ángulos suplementarios (en azul). `Consultar el concepto de angulos alternos internos`_.
+
+**Es importante resaltar que todos los ángulos principales (rojos) son iguales entre si y todos los
+ángulos suplementarios (azules) son iguales entre si y solamente cambian si la recta gira, pero no
+cambian si la recta se desplaza sin girar.**

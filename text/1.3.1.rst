@@ -3,5 +3,28 @@
 Concepto de ángulo
 ======================================================
 
-Concepto
--------------------
+Cuando dos rectas (o semirrectas) se intersectan, podemos describir la forma en que lo
+hacen con un concepto que llamaremos **ángulo**. Este es una medida de la 'abertura' o
+inclinación de una recta respecto a la otra. En el gráfico podemos observar los ángulos
+diferentes que se forman al girar la semirrecta blanca y la café. El **ángulo principal
+en color verde** lo mediremos en el sentido contrario a las manecillas del reloj, es decir,
+a medida que la semirrecta blanca gire en este sentido, el ángulo verde será mayor.
+
+El **ángulo rojo el cual llamaremos suplemento**, es la 'abertura' restante hasta encontrarnos
+de nuevo con la semirrecta café. De este modo vemos que a medida que el ángulo aumenta su 
+suplemento disminuye. Cuando la semirrecta blanca sigue girando se encuentra con la semirrecta
+café y allí el suplemento es cero ya que toda la abertura corresponde al ángulo principal.
+
+Si seguimos girando la semirrecta blanca, el ángulo principal seguirá aumentando y podrá llegar
+a encontrarse nuevamente con la semirrecta café. Este ángulo corresponde a un valor de 360
+**grados sexagésimales** o 360° (`Consultar el concepto de grado sexagésimal`_).
+
+Existen varias formas de medir los ángulos, una de las más comunes son los grados sexagesimales,
+es decir, que asignamos un valor de 360 grados al ángulo obtenido al girar la semirrecta blanca
+completamente hasta llegar al punto de partida. La mitad de este valor será entonces 180 grados
+y corresponderá al ángulo cuando su suplemento es cero.
+
+Existe otro caso especial muy importante cuando el ángulo y su suplemento suman 180 grados,
+entonces decimos que las semirrectas blanca y café son **perpendiculares** y a los ángulos tanto al
+principal con su suplemento los llamamos **ángulos rectos**.
+
