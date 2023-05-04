@@ -9,7 +9,8 @@ El lugar geométrico donde esto ocurre se le llama **intersección**
 (`Consultar el concepto de intersección`_)
 
 En la gráfica podemos trasladar y girar (movimiento de rotación) la línea recta blanca
-mientras la otra permanece estática. Podremos notar entonces tres tipos de situaciones:
+alrededor del punto rojo, mientras la otra permanece estática.
+Podremos notar entonces tres tipos de situaciones:
 
 1. Las rectas no tienen punto de intersección:
     No se encuentran nunca ni siquiera en el infinito y se les llama **rectas paralelas**
@@ -20,3 +21,5 @@ mientras la otra permanece estática. Podremos notar entonces tres tipos de situ
 3. Las rectas se intersectan en un solo punto:
     Cuando dos rectas se intersectan pero no son la misma, es decir, no se intersectan en infinitos puntos,
     solo se pueden intersectar en un solo punto (punto verde).
+
+------------------------
