@@ -1,7 +1,32 @@
 *Cap.1 Sec.4 Pag.1*
 
-Paralelas y perpendiculares
+Concepto de polígono
 ======================================================
 
-Concepto
--------------------
+Ahora veremos que ocurre si tenemos dos rectas que podemos mover (azul y roja) y mantenemos
+una recta fija (café).
+
+**Si giramos únicamente la recta azul** con el control central (control horizontal), dejando
+la recta roja en su posición inicial (paralela a la recta café), obtenemos los mismos
+casos de la página anterior: rectas paralelas, rectas perpendiculares y rectas oblicuas.
+
+**Si giramos únicamente la recta roja** con el control derecho (control vertical), dejando
+la recta azul en su posición inicial (paralela a la recta café), obtenemos los mismos
+casos de la página anterior, pero esta vez la recta azul es la fija y la móvil es la roja.
+
+**Si giramos las dos rectas** con los dos controles, obtenemos los siguientes casos:
+
+    - **Las tres rectas se intersectan** entre si (hay tres puntos de intersección) y generan una zona de la pantalla (plano) la cual podemos decir que está separada del exterior por las tres rectas. A esta zona la llamaremos **interior**.
+    - **Las rectas azul y roja son paralelas** (no se intersectan) y la recta café es perpendicular a las dos rectas paralelas. En este caso, al igual que cuando girámos solo una de las rectas, no se genera una zona de la pantalla separada del exterior por las tres rectas.
+
+Cuando creamos una zona interior con tres líneas rectas podemos identificar dos tipos de ángulos:
+
+- Los ángulos que se encuentran en el **interior** de la zona **interior** (**angulos internos**).
+- Los ángulos que se encuentran en el **exterior** de la zona **interior** (**angulos externos**).
+
+Por otro lado, si tomamos únicamente las semirrectas que se forman entre los tres puntos
+de intersección, tendremos una figura geométrica llamada polígono
+( `Consultar el concepto de polígono`_) que en este caso es de tres lados,
+al cual llamaremos **triángulo** el cual veremos en la siguiente página.
+
+------------------------
