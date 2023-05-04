@@ -18,7 +18,8 @@ Expresado de otra forma, cuando dos líneas se cruzan de esta forma, decimos que
 *Interpretación*
 -------------------
 #. Esta **representación** de un punto nos ayuda tanto a poder representar un punto como la interseccción de dos líneas, como a poder ubicarlo sin **ambigüedad**.
-#. Simpre que dos líneas se cruzen, lo harán en un punto y lo llamaremos punto de intersección. Los púntos de intersección pueden ser únicos, finitos o infinitos :0
+#. Simpre que dos líneas se cruzen, lo harán en uno o más puntos y lo(s) llamaremos punto(s) de intersección. Los púntos de intersección pueden ser únicos, finitos o infinitos!
 
 (`Consultar el concepto de ambigüedad`_).
 
+------------------------
