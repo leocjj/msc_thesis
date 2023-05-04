@@ -85,8 +85,6 @@ Créditos
 
 **Email:** leonardocj@gmail.com
 
-**Director de tésis:**  Prof. Remigio Delgado Escobar
-
 --------------------------------------------------------
 
 Música del video en Google Play Store
