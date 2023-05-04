@@ -178,8 +178,11 @@ class RootWidget(BoxLayout):
 
         if slider_left == self.slider_y1.min and slider_right == self.slider_y2.max:
             self.label_wid.text = "Recta: es infinita a ambos lados"
-        elif slider_left == self.slider_y1.max and slider_right == self.slider_y2.min and \
-            slider_height_left == slider_height_rigth:
+        elif (
+            slider_left == self.slider_y1.max
+            and slider_right == self.slider_y2.min
+            and slider_height_left == slider_height_rigth
+        ):
             self.label_wid.text = "Esto es un punto, no se puede trazar una recta."
         elif slider_left != self.slider_y1.min and slider_right == self.slider_y2.max:
             self.label_wid.text = "Semirecta: es infinita a la derecha"
@@ -222,7 +225,9 @@ class RootWidget(BoxLayout):
 
         if not intersect or abs(intersect.x) > 100000:
             if abs(distance) < 1:
-                self.label_wid.text = f"Las dos rectas son la misma.\nInfinitos puntos de intersección!"
+                self.label_wid.text = (
+                    f"Las dos rectas son la misma.\nInfinitos puntos de intersección!"
+                )
             else:
                 self.label_wid.text = f"Paralelas!!! No hay punto de intersección!\n Distancia entre rectas: {abs(distance):.1f}"
             self.p_4 = (0, 0)
@@ -282,6 +287,9 @@ class RootWidget(BoxLayout):
             self.label_wid.text = f"[color=00FF00]Ángulo: {angulo:.1f}  (Llano) \n  [color=FF0000]Suplemento:{suplemento:.1f}"
         elif abs(angulo) > 180:
             self.label_wid.text = f"[color=00FF00]Ángulo: {angulo:.1f}  (Cóncavo) \n  [color=FF0000]Suplemento:{suplemento:.1f}"
+        self.label_wid.text = (
+            self.label_wid.text + f"\n[color=AF794B]Suma: {angulo + suplemento}\n"
+        )
 
     def cap1_sec3_pag2(self):
         """Control sliders events"""
@@ -327,8 +335,8 @@ class RootWidget(BoxLayout):
         Dy = abs(Ay - By)
         Distancia = sqrt(pow(Dx, 2) + pow(Dy, 2)).real
         self.label_wid.text = (
-            f"[color=3465A4]A[color=FFFFFF]({(Ax*10):.1f}, {(Ay*10):.1f})   [color=FF0000]B[color=FFFFFF]({(Bx*10):.1f}, {(By*10):.1f})"
-            + f"\n[color=3465A4]Dx:{(Dx*10):.2f}  [color=FF0000]Dy:{(Dy*10):.2f}  [color=D9A560]D:{(Distancia*10):.2f}"
+            f"[color=3465A4]P[color=FFFFFF]({(Ax*10):.1f}, {(Ay*10):.1f})   [color=FF0000]Q[color=FFFFFF]({(Bx*10):.1f}, {(By*10):.1f})"
+            + f"\n[color=3465A4]Dx:{(Dx*10):.2f}  [color=FF0000]Dy:{(Dy*10):.2f}  [color=00FF00]D:{(Distancia*10):.2f}"
         )
         # Adding offset to draw points correctly
         self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
@@ -400,15 +408,15 @@ class RootWidget(BoxLayout):
         if self.p_B[0] == 0 and self.p_B[1] == 0:
             self.label_wid.text = f"Rectas paralelas, no hay ángulos definidos!"
         else:
-            if abs(ang) == 90:
+            if int(90 - ang) == 90:
                 self.label_wid.text = (
-                    f"[color=FF3333]Ángulo: [color=FFFFFF]{int(90 - ang)} grados\n"
-                    "Perpendiculares!!!"
+                    f"[color=FF3333]Todos los ángulos: [color=FFFFFF]{int(90 - ang)} grados\n"
+                    "Recta blanca es perpendicular a las rectas cafés!!!"
                 )
             else:
                 self.label_wid.text = (
-                    f"[color=FF3333]Ángulo: [color=FFFFFF]{int(90 - ang)} grados\n"
-                    f"[color=3333FF]Ángulo: [color=FFFFFF]{180 - int(90 - ang)} grados"
+                    f"[color=FF3333]Ángulo principales: [color=FFFFFF]{int(90 - ang)} grados\n"
+                    f"[color=3333FF]Ángulo complementarios: [color=FFFFFF]{180 - int(90 - ang)} grados"
                 )
 
         # Adding offset to draw points correctly
@@ -604,7 +612,7 @@ class RootWidget(BoxLayout):
         elif 90 in angulos and 0 not in angulos:
             msg_paralelas = "Un ángulo recto (90 grados)."
         else:
-            msg_paralelas = "..."
+            msg_paralelas = "Polígono de tres lados: Triángulo."
         self.label_wid.text = msg_angulos + msg_paralelas
 
         """
@@ -1743,4 +1751,3 @@ class RootWidget(BoxLayout):
             msg_2 = f"[color=3465A4]  A: {asin(x/d):.2f}  [color=FF0000]B: {asin(y/d):.2f}  [color=D9A560]C: {(pi/2):.2f}"
             msg_3 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: {y/x:.4f}"
         self.label_wid.text = msg_1 + "\n" + msg_2 + "\n" + msg_3
-
