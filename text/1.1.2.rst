@@ -29,3 +29,5 @@ ubicación del punto verde especificando cuanto nos hemos desplazado hacia un la
 `Nota importante`_: se debe tener en cuenta siempre, que un objeto matemático es abstracto, es una contrucción mental, una idea, el cual tiene ciertas propiedades y operaciones. Debe diferenciarse de sus representaciones que como hemos visto, un mismo objeto puede tener varias pero estas no son el objeto en si.
 
 **Como analogía** de esto, podemos decir que el concepto de dinero es un concepto económico, pero su uso se puede dar de formas muy variadas: en monedas, en billetes, en tarjetas de crédito, en divisas, en inversiones, etc. De esta forma podremos utilizar el dinero (concepto único) por medio de diferentes representaciones las cuales NO son el dinero en sí, pero cada una tiene ciertas propiedades y nos permite usarlo de diferentes formas (operaciones).
+
+------------------------

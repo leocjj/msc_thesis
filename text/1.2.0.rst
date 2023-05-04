@@ -46,3 +46,4 @@ Para finalizar podemos facilmente intuir que una línea inicia con un punto y te
 
 Nota_: Los puntos extremos (los de inicio y fin), no son diferentes a los demás, por definición todos los puntos son iguales. En la gráfica interactiva se representan un poco más grandes y en un color diferentes a los puntos intermedios solo para tener el efecto visual y poderlos diferenciar.
 
+------------------------

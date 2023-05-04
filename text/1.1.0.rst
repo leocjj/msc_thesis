@@ -45,3 +45,5 @@ De esta forma ya podríamos tratar de entender la primera definición de Euclide
     diferentes **representaciones**. Veremos dos en las siguientes páginas.
 
 (`Consultar el concepto de representaciones matemáticas`_).
+
+------------------------

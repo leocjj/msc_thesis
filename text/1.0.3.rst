@@ -28,5 +28,5 @@ todos los casos posibles.
 Este segundo espacio en la **mitad inferior de la pantalla**, presenta un contenido que
 pretende presentar los objetos con los cuales se interactuó previamente, explicar las
 situaciones especiales y dar los conceptos importantes que refuerzan la actividad realizada.
- 
+
 ------------------------
