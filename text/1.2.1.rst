@@ -23,13 +23,15 @@ Ahora podemos revizar la segúnda definición de Euclides:
 
 *Interpretación*
 -------------------
-* Esta definición puede ser considerada una de las más ambigüas, sin embargo, podemos extraer de forma muy intuitiva el intento de decir que no se la línea no se desvía ni aun lado ni a otro a medida que es trazada.
+* Esta definición puede ser considerada una de las más ambigüas, sin embargo, podemos extraer de forma muy intuitiva el intento de decir que la línea no se desvía ni a un lado ni a otro a medida que es trazada.
 
 El concepto de curvatura es estudiado formalmente en cursos de cálculo pero
 podemos decir que es una medida de la concavidad o tendencia de una línea a
 encontrarse consigo misma si se prolonga lo suficiente. Por otro lado podemos
 decir que una línea recta nunca se encontraría consigo misma si es prolongada
-lo suficiente aunque esto más una propiedad y no es una definición como veremos
+lo suficiente aunque esto es más una propiedad y no es una definición como veremos
 en la siguiente página.
 
 (`Consultar el concepto de línea recta`_).
+
+------------------------
