@@ -37,7 +37,7 @@ class Virtual_EuclidesApp(App):
         self.next_screen("intro")
 
     def next_screen(self, screen):
-        """Clear container and load the given screen object from file in kv folder.
+        """Clear the container and load the given screen object from file in kv folder.
         :param screen: str name of the screen object made from the loaded .kv file
         """
         filename_temp = ""
