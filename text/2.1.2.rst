@@ -3,5 +3,27 @@
 Mediatrices - circuncentro - circunferencia circunscrita
 =========================================================
 
-Concepto
+Las **rectas notables** de un triángulo son aquellas que se construyen a partir de los
+elementos del triángulo y que tienen propiedades especiales. Estas son **la mediatriz,
+la bisectriz y la altura**. Adicionalmente, construiremos **la mediana**, que no es una recta
+notable, pero es igualmente importante en el estudio de los triángulos.
+
+Aquí veremos la primera de las tres rectas notables de un triángulo: la mediatriz.
+
+La mediatriz de un segmento es la recta perpendicular a dicho segmento que pasa por su punto
+medio. En el caso de un triángulo, `la mediatriz de un lado es la recta perpendicular a dicho
+lado que pasa por su punto medio`_.
+
+Cuando trazamos las tres mediatrices de un triángulo, estas siempre se intersectan en un punto.
+Este punto se llama `circuncentro`_ del triángulo.
+
+La circunferencia que pasa por los tres vértices de un triángulo se llama `circunferencia
+circunscrita`_ y tiene como centro el circuncentro del triángulo. Esto quiere decir que 
+la distancia desde el circuncentro hasta cualquiera de los vértices del triángulo es igual.
+
+El circuncentro de un triángulo puede estar dentro, fuera o sobre el triángulo.
+
+**Todas las propiedades aquí mencionadas se pueden comprobar con la figura interactiva y
+aplican para cualquier triángulo.**
+
 -------------------
