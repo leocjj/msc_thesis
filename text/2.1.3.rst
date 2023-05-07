@@ -3,5 +3,22 @@
 Bisectrices - incentro - circunferencia inscrita
 =========================================================
 
-Concepto
+Aquí veremos la segunda de las tres rectas notables de un triángulo: la bisectriz.
+
+La bisectriz de un ángulo es la recta que divide a dicho ángulo en dos ángulos iguales. En el
+caso de un triángulo, `la bisectriz de un ángulo es la recta que divide a dicho ángulo en dos
+ángulos iguales`_.
+
+Cuando trazamos las tres bisectrices de un triángulo, estas siempre se intersectan en un punto.
+Este punto se llama `incentro`_ del triángulo.
+
+La circunferencia que es tangente a los tres lados de un triángulo se llama `circunferencia
+inscrita`_ y tiene como centro el incentro del triángulo. Esto quiere decir que la distancia
+desde el incentro hasta el punto más cercano de cualquiera de los lados del triángulo, es igual.
+
+El incentro siempre están en el interior del triángulo.
+
+**Todas las propiedades aquí mencionadas se pueden comprobar con la figura interactiva y
+aplican para cualquier triángulo.**
+
 -------------------
