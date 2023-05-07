@@ -87,36 +87,28 @@ RootWidget:
                         size: point_size, point_size
 
                     Color:
-                        rgba: cafe_claro
+                        rgba: rojo
                     Ellipse:  # For the middle point
                         pos: root.p_D
                         size: point_size, point_size
-                    Color:
-                        rgba: cafe_claro
                     Line:  # Mediatrix line
                         points: root.l_4
                         dash_length: 4
                         dash_offset: 5
-
                     Color:
                         rgba: azul
                     Ellipse:  # For the middle point
                         pos: root.p_E
                         size: point_size, point_size
-                    Color:
-                        rgba: azul
                     Line:  # Mediatrix line
                         points: root.l_5
                         dash_length: 4
                         dash_offset: 5
-
                     Color:
-                        rgba: rojo
+                        rgba: cafe_claro
                     Ellipse:  # For the middle point
                         pos: root.p_F
                         size: point_size, point_size
-                    Color:
-                        rgba: rojo
                     Line:  # Mediatrix line
                         points: root.l_6
                         dash_length: 4
@@ -132,21 +124,6 @@ RootWidget:
                         rgba: gris
                     Line:  # Circunscrite circunference
                         circle: root.c_1
-                    
-                    Color:
-                        rgba: gris_oscuro
-                    Line:  # Curve line (bezier line)
-                        bezier: root.p_0
-                        dash_length: 5
-                        dash_offset: 5
-                    Line:  # Curve line (bezier line)
-                        bezier: root.p_1
-                        dash_length: 5
-                        dash_offset: 5
-                    Line:  # Curve line (bezier line)
-                        bezier: root.p_2
-                        dash_length: 5
-                        dash_offset: 5
 
                 Label:
                     id: main_message
