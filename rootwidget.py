@@ -780,12 +780,10 @@ class RootWidget(BoxLayout):
         self.l_7 = [self.p_E[0], self.p_E[1], self.p_E[0], self.p_C[1]]
 
         # Calculating bisectrix
-        ang_C = int(
-            abs(
-                180
-                - Vector(
-                    (self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])
-                ).angle(((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])))
+        ang_C = abs(
+            180
+            - Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
+                ((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1]))
             )
         )
         if self.p_C[1] < self.p_A[1]:
@@ -1089,6 +1087,114 @@ class RootWidget(BoxLayout):
         # Vertex point bottom-top
         self.p_C = (self.width * (1 + x) / 2, self.height * (3 + y) / 4)
 
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Left line
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
+        # Right line
+        self.l_3 = [self.p_B[0], self.p_B[1], self.p_C[0], self.p_C[1]]
+
+        # Height for angle of bottom-left vertex (A)
+        if (self.p_C[1] - self.p_B[1]) != 0:
+            ang_A = atan(-(self.p_C[0] - self.p_B[0]) / (self.p_C[1] - self.p_B[1]))
+            ang_A = ang_A * 180 / pi
+            v = Vector(100, 0)
+            rotation = v.rotate(ang_A)
+            self.l_4 = [
+                self.p_A[0],
+                self.p_A[1],
+                self.p_A[0] + max_length * rotation.x,
+                self.p_A[1] + max_length * rotation.y,
+            ]
+            # Intersection of the height line with side (line l_3)
+            intersect = Vector.line_intersection(
+                (self.l_4[0], self.l_4[1]),
+                (self.l_4[2], self.l_4[3]),
+                (self.l_3[0], self.l_3[1]),
+                (self.l_3[2], self.l_3[3]),
+            )
+            if not intersect or abs(intersect.x) > 10000:
+                self.p_D = (0, 0)
+            else:
+                self.p_D = (intersect.x, intersect.y)
+                self.l_4[2] = self.p_D[0]
+                self.l_4[3] = self.p_D[1]
+
+        # Height for angle of bottom-left vertex (B)
+        if (self.p_A[1] - self.p_C[1]) != 0:
+            ang_B = atan(-(self.p_A[0] - self.p_C[0]) / (self.p_A[1] - self.p_C[1]))
+            ang_B = ang_B * 180 / pi
+            v = Vector(100, 0)
+            rotation = v.rotate(ang_B)
+            self.l_5 = [
+                self.p_B[0],
+                self.p_B[1],
+                self.p_B[0] + max_length * rotation.x,
+                self.p_B[1] + max_length * rotation.y,
+            ]
+            # Intersection of the height line with side (line l_2)
+            intersect = Vector.line_intersection(
+                (self.l_5[0], self.l_5[1]),
+                (self.l_5[2], self.l_5[3]),
+                (self.l_2[0], self.l_2[1]),
+                (self.l_2[2], self.l_2[3]),
+            )
+            if not intersect or abs(intersect.x) > 10000:
+                self.p_E = (0, 0)
+            else:
+                self.p_E = (intersect.x, intersect.y)
+                self.l_5[2] = self.p_E[0]
+                self.l_5[3] = self.p_E[1]
+
+        # Height for angle of bottom-left vertex (C)
+        # Point bottom - for the height of the triangle with the point C.
+        self.p_F = (self.p_C[0], self.p_A[1])
+        self.l_6 = [self.p_C[0], self.p_C[1], self.p_F[0], self.p_F[1]]
+        # Intersection of the height lines
+        intersect = Vector.line_intersection(
+            (self.l_6[0], self.l_6[1]),
+            (self.l_6[2], self.l_6[3]),
+            (self.l_4[0], self.l_4[1]),
+            (self.l_4[2], self.l_4[3]),
+        )
+        # Circunference around orthocenter
+        if not intersect or abs(intersect.x) > 10000:
+            self.p_G = (0, 0)
+            radio = 0
+            self.c_1 = (0, 0, 1)
+        else:
+            self.p_G = (intersect.x, intersect.y)
+            radio_D = Vector(self.p_G).distance(self.p_D)
+            radio_E = Vector(self.p_G).distance(self.p_E)
+            radio_F = Vector(self.p_G).distance(self.p_F)
+            radio = max(radio_D, radio_E, radio_F)
+            self.c_1 = (self.p_G[0], self.p_G[1], radio)
+
+        self.label_wid.text = f"Radio de la circunferencia: {radio:.0f}"
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
+        self.p_E = (self.p_E[0] - offset, self.p_E[1] - offset)
+        self.p_F = (self.p_F[0] - offset, self.p_F[1] - offset)
+        self.p_G = (self.p_G[0] - offset, self.p_G[1] - offset)
+
+    def cap2_sec1_pag5(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        x = self.slider_x.value
+        y = self.slider_y.value
+        max_length = max(self.height, self.width)
+
+        # Vertex point bottom-left
+        self.p_A = (self.width / 3, self.height * 3 / 4)
+        # Vertex point bottom-right
+        self.p_B = (self.width * 2 / 3, self.height * 3 / 4)
+        # Vertex point bottom-top
+        self.p_C = (self.width * (1 + x) / 2, self.height * (3 + y) / 4)
+
         # Middle point bottom
         self.p_D = (
             (self.p_B[0] - self.p_A[0]) / 2 + self.p_A[0],
@@ -1179,114 +1285,6 @@ class RootWidget(BoxLayout):
             self.p_D[0],
             self.p_D[1],
         ]
-
-        self.label_wid.text = f"Radio de la circunferencia: {radio:.0f}"
-
-        # Adding offset to draw points correctly
-        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
-        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
-        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
-        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
-        self.p_E = (self.p_E[0] - offset, self.p_E[1] - offset)
-        self.p_F = (self.p_F[0] - offset, self.p_F[1] - offset)
-        self.p_G = (self.p_G[0] - offset, self.p_G[1] - offset)
-
-    def cap2_sec1_pag5(self):
-        """Control sliders events"""
-        Clock.schedule_interval(self.update_points, 0.01)
-        x = self.slider_x.value
-        y = self.slider_y.value
-        max_length = max(self.height, self.width)
-
-        # Vertex point bottom-left
-        self.p_A = (self.width / 3, self.height * 3 / 4)
-        # Vertex point bottom-right
-        self.p_B = (self.width * 2 / 3, self.height * 3 / 4)
-        # Vertex point bottom-top
-        self.p_C = (self.width * (1 + x) / 2, self.height * (3 + y) / 4)
-
-        # Horizontal fixed line bottom
-        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
-        # Left line
-        self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
-        # Right line
-        self.l_3 = [self.p_B[0], self.p_B[1], self.p_C[0], self.p_C[1]]
-
-        # Height for angle of bottom-left vertex (A)
-        if (self.p_C[1] - self.p_B[1]) != 0:
-            ang_A = atan(-(self.p_C[0] - self.p_B[0]) / (self.p_C[1] - self.p_B[1]))
-            ang_A = ang_A * 180 / pi
-            v = Vector(100, 0)
-            rotation = v.rotate(ang_A)
-            self.l_4 = [
-                self.p_A[0],
-                self.p_A[1],
-                self.p_A[0] + max_length * rotation.x,
-                self.p_A[1] + max_length * rotation.y,
-            ]
-            # Intersection of the height line with side (line l_3)
-            intersect = Vector.line_intersection(
-                (self.l_4[0], self.l_4[1]),
-                (self.l_4[2], self.l_4[3]),
-                (self.l_3[0], self.l_3[1]),
-                (self.l_3[2], self.l_3[3]),
-            )
-            if not intersect or abs(intersect.x) > 10000:
-                self.p_D = (0, 0)
-            else:
-                self.p_D = (intersect.x, intersect.y)
-                self.l_4[2] = self.p_D[0]
-                self.l_4[3] = self.p_D[1]
-
-        # Height for angle of bottom-left vertex (B)
-        if (self.p_A[1] - self.p_C[1]) != 0:
-            ang_B = atan(-(self.p_A[0] - self.p_C[0]) / (self.p_A[1] - self.p_C[1]))
-            ang_B = ang_B * 180 / pi
-            v = Vector(100, 0)
-            rotation = v.rotate(ang_B)
-            self.l_5 = [
-                self.p_B[0],
-                self.p_B[1],
-                self.p_B[0] + max_length * rotation.x,
-                self.p_B[1] + max_length * rotation.y,
-            ]
-            # Intersection of the height line with side (line l_2)
-            intersect = Vector.line_intersection(
-                (self.l_5[0], self.l_5[1]),
-                (self.l_5[2], self.l_5[3]),
-                (self.l_2[0], self.l_2[1]),
-                (self.l_2[2], self.l_2[3]),
-            )
-            if not intersect or abs(intersect.x) > 10000:
-                self.p_E = (0, 0)
-            else:
-                self.p_E = (intersect.x, intersect.y)
-                self.l_5[2] = self.p_E[0]
-                self.l_5[3] = self.p_E[1]
-
-        # Height for angle of bottom-left vertex (C)
-        # Point bottom - for the height of the triangle with the point C.
-        self.p_F = (self.p_C[0], self.p_A[1])
-        self.l_6 = [self.p_C[0], self.p_C[1], self.p_F[0], self.p_F[1]]
-        # Intersection of the height lines
-        intersect = Vector.line_intersection(
-            (self.l_6[0], self.l_6[1]),
-            (self.l_6[2], self.l_6[3]),
-            (self.l_4[0], self.l_4[1]),
-            (self.l_4[2], self.l_4[3]),
-        )
-        # Circunference around orthocenter
-        if not intersect or abs(intersect.x) > 10000:
-            self.p_G = (0, 0)
-            radio = 0
-            self.c_1 = (0, 0, 1)
-        else:
-            self.p_G = (intersect.x, intersect.y)
-            radio_D = Vector(self.p_G).distance(self.p_D)
-            radio_E = Vector(self.p_G).distance(self.p_E)
-            radio_F = Vector(self.p_G).distance(self.p_F)
-            radio = min(radio_D, radio_E, radio_F)
-            self.c_1 = (self.p_G[0], self.p_G[1], radio)
 
         self.label_wid.text = f"Radio de la circunferencia: {radio:.0f}"
 
