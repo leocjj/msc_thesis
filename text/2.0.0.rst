@@ -1,10 +1,88 @@
 *Cap.2 Sec.0 Pag.0*
 
-Definiciones
-======================================================
+Polígonos
+======================================
 
-Concepto
--------------------
+En la sección anterior finalizamos con la construcción de un polígono de 3 lados (triángulo)
+con base en lineas rectas y sus puntos de intersección a medida que las rotabamos.
+En esta sección vamos a profundizar en sus propiedades y herramientas matemáticas basadas
+en esta figura geométrica para luego continuar con los polígonos de 4 lados, superficies
+planas y otros tipos de polínogos.
+
+------------------------
+
+Es importante iniciar esta sección con algunas definiciones que nos lleven hasta la definición
+de polígono, ya que este es la base para construcciones geométricas más complejas,
+para el estudio de la geometría en general y la construcción de herramientas matemáticas
+como la trigonometría y la geometría analítica entre otras.
+
+`Recta`_: es una sucesión infinita de puntos que se extiende en una misma dirección.
+**Aclaración**: es una línea que no tiene principio ni fin, por lo tanto no podríamos dibujarla
+completamente y es por eso que la representamos con una flecha en cada extremo.
+
+`Semirrecta`_: parte de recta que tiene un punto inicial en un extremo y se extiende en
+una misma dirección el el otro extremo sin tener un punto final.
+
+`Segmentos de recta`_: son partes de recta que tienen un punto inicial y un punto final.
+
+.. image:: ./images/2.0.0.png
+
+`Ángulo`_: es la abertura entre dos rectas que se cortan en un punto común o dos semi-rectas
+que tienen un punto común.
+
+.. image:: ./images/2.0.1.png
+
+`Figura geométrica`_: composición de elementos geométricos como puntos y líneas.
+
+`Lado de una figura geométrica`_: es cada uno de los segmentos de línea que forman una
+figura geométrica. En la imagen siguiente, la figura geométrica tiene 3 lados, dos de ellos
+son rectos y el otro es curvo.
+
+.. image:: ./images/2.0.2.png
+
+`Figura geométrica plana`_: figura geométrica que se encuentra en un mismo plano(2 dimensiones).
+**Aclaración**: podemos decir que puede ser representada completamente en un papel (o en una
+pantalla de computadora) sin necesidad de imaginarnos una tercera dimensión, esto es,
+sin necesidad de imaginarnos la profundidad. En la siguiente imagen, la figura de la izquierda
+no requiere imaginarnos una tercera dimensión para representarla completamente, mientras que
+la figura de la derecha si requiere imaginarnos una profundidad para entender su forma.
+
+.. image:: ./images/2.0.3.png
+
+`Figura geométrica plana cerrada`_: figura geométrica plana que tiene todos sus lados unidos.
+**Aclaración**: es una figura geométrica plana que no tiene ningún lado abierto, es decir,
+que podemos diferenciar claramente una zona interior de la figura, de una zona exterior.
+En la figura de la izquierda podemos identificar claramente una zona interior (en azul) y una
+zona exterior (en amarillo), mientras que en la figura de la derecha no podemos diferenciar una
+zona interior de una exterior.
+
+.. image:: ./images/2.0.4.png
+
+`Polígono`_: figura geométrica plana cerrada, formada por segmentos de recta unidos por sus
+puntos iniciales y finales.
+
+.. image:: ./images/2.0.5.png
+
+`Lado de un polígono`_: es cada uno de los segmentos de recta que forman un polígono
+(ver líneas negras en la imagen siguiente).
+
+`Vértice de un polígono`_: es cada uno de los puntos donde se unen dos lados de un polígono
+(ver puntos rojos en la imagen siguiente).
+
+`Ángulo de un polígono`_: es cada uno de los ángulos internos que se forman en cada vértice,
+es decir, los ángulos hacia al interior del polígono (ver líneas azules en la imagen siguiente).
+
+.. image:: ./images/2.0.6.png
+
+`Polígono regular`_: polígono con todos sus lados iguales y todos sus ángulos iguales.
+
+.. image:: ./images/2.0.7.png
+
+`Triángulo`_: polígono de 3 lados.
+Como veremos más adelante, existen diferentes tipos de triángulos dependiendo de la longitud
+de sus lados y de la medida de sus ángulos.
+
+.. image:: ./images/2.0.8.png
 
 
 ------------------------
