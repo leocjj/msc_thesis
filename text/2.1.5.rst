@@ -1,7 +1,23 @@
 *Cap.2 Sec.1 Pag.5*
 
-Alturas - Ortocentro
+Medianas - Baricentro, centroide o centro de gravedad
 =========================================================
 
-Concepto
+
+Aquí veremos una cuarta recta que podemos trazar en un triángulo. Esta recta se llama
+`mediana`_ y es la recta que pasa por un vértice del triángulo y por el punto medio del
+lado opuesto a dicho vértice.
+
+Cuando trazamos las tres medianas de un triángulo, estas siempre se intersectan en un punto.
+Este punto se llama `baricentro`_ del triángulo.
+
+No existe una circunferencia especial que pueda ser trazada teniendo como centro el baricentro.
+Se grafica *solo por referencia*, una circunferencia con centro en el baricentro y radio
+igual a la menor distancia entre el baricentro y los puntos medios.
+
+El baricentro siempre está en el interior del triángulo.
+
+**Todas las propiedades aquí mencionadas se pueden comprobar con la figura interactiva y
+aplican para cualquier triángulo.**
+
 -------------------
