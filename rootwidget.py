@@ -1,4 +1,4 @@
-from math import asin, acos, atan, pi, sqrt
+from math import asin, atan, pi, sqrt, degrees, radians, sin, cos, tan
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import (
     ObjectProperty,
@@ -1692,20 +1692,27 @@ class RootWidget(BoxLayout):
         x = (Bx - Ax) * 10  # Scaled
         y = (By - Ay) * 10  # Scaled
         d = sqrt(pow(x, 2) + pow(y, 2))
-        msg_1 = f"[color=3465A4]  x: {x:.2f}  [color=FF0000]y: {y:.2f}  [color=D9A560]d: {d:.2f}"
+        msg_1 = f"[color=3465A4]  x: {x:.1f}  [color=FF0000]y: {y:.1f}  [color=D9A560]d: {d:.4f}"
         if d < 0.05:
-            msg_2 = f"[color=FFFFFF]  y/d: ~  x/d: ~  y/x: ~"
+            msg_2 = f"[color=FFFFFF]  y/d: ~   x/d: ~   y/x: ~"
         elif -0.05 < x < 0.05:
-            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: ~"
+            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}   x/d: {x/d:.4f}   y/x: ~"
         else:
-            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: {y/x:.4f}"
-        self.label_wid.text = msg_1 + "\n" + msg_2
+            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}   x/d: {x/d:.4f}   y/x: {y/x:.4f}"
+        if -0.05 < y < 0.05:
+            if -0.05 < x < 0.05:
+                msg_3 = f"[color=FFFFFF]  d/y: ~   d/x: ~   x/y: ~"
+            else:
+                msg_3 = f"[color=FFFFFF]  d/y: ~   d/x: {d/x:.4f}   x/y: ~"
+        elif -0.05 < x < 0.05:
+            msg_3 = f"[color=FFFFFF]  d/y: {d/y:.4f}   d/x: ~   x/y: {x/y:.4f}"
+        else:
+            msg_3 = f"[color=FFFFFF]  d/y: {d/y:.4f}   d/x: {d/x:.4f}   x/y: {x/y:.4f}"
+        self.label_wid.text = msg_1 + "\n" + msg_2 + "\n" + msg_3
 
     def cap2_sec2_pag1(self):
         """Control sliders events"""
         Clock.schedule_interval(self.update_points, 0.01)
-        Ax = 0
-        Ay = 0
         Bx = self.slider_x.value
         By = self.slider_y.value
 
@@ -1735,17 +1742,183 @@ class RootWidget(BoxLayout):
             self.p_B[1],
         ]
 
-        x = (Bx - Ax) * 10  # Scaled
-        y = (By - Ay) * 10  # Scaled
+        x = Bx * 10  # Scaled
+        y = By * 10  # Scaled
         d = sqrt(pow(x, 2) + pow(y, 2))
-        msg_1 = f"[color=3465A4]  x: {x:.2f}  [color=FF0000]y: {y:.2f}  [color=D9A560]d: {d:.2f}"
+
+        # Azul: 3465A4, Rojo: FF0000, Amarillo: D9A560, Blanco: FFFFFF
+        msg_1 = f"[color=3465A4]  x: {x:.1f}  [color=FF0000]y: {y:.1f}  [color=D9A560]d: {d:.4f}"
         if d < 0.05:
-            msg_2 = f"[color=3465A4]  A: 0  [color=FF0000]B: 0  [color=D9A560]C: 0"
-            msg_3 = f"[color=FFFFFF]  y/d: ~  x/d: ~  y/x: ~"
+            msg_2 = f"[color=FFFFFF]  y/d: ~   x/d: ~   y/x: ~"
+            msg_3 = f"[color=3465A4]  A: 0  [color=FF0000]B: 0  [color=D9A560]C: 0"
         elif -0.05 < x < 0.05:
-            msg_2 = f"[color=3465A4]  A: {asin(x/d):.2f}  [color=FF0000]B: {asin(y/d):.2f}  [color=D9A560]C: {(pi/2):.2f}"
-            msg_3 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: ~"
+            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}   x/d: {x/d:.4f}   y/x: ~"
+            msg_3 = f"[color=3465A4]  A: {degrees(asin(x/d)):.2f}° ({asin(x/d):.4f})  [color=FF0000]B: {degrees(asin(y/d)):.2f}° ({asin(y/d):.4f})  [color=D9A560]C: 90° ({(pi/2):.4f})"
         else:
-            msg_2 = f"[color=3465A4]  A: {asin(x/d):.2f}  [color=FF0000]B: {asin(y/d):.2f}  [color=D9A560]C: {(pi/2):.2f}"
-            msg_3 = f"[color=FFFFFF]  y/d: {y/d:.4f}  x/d: {x/d:.4f}  y/x: {y/x:.4f}"
+            msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}   x/d: {x/d:.4f}   y/x: {y/x:.4f}"
+            msg_3 = f"[color=3465A4]  A: {degrees(asin(x/d)):.2f}° ({asin(x/d):.4f})  [color=FF0000]B: {degrees(asin(y/d)):.2f}° ({asin(y/d):.4f})  [color=D9A560]C: 90° ({(pi/2):.4f})"
         self.label_wid.text = msg_1 + "\n" + msg_2 + "\n" + msg_3
+
+    def cap2_sec2_pag2(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Bx = self.slider_x.value
+        By = self.slider_y.value
+
+        # Point bottom-left
+        self.p_A = (self.width / 3, self.height * 5 / 8)
+        # Point bottom-right
+        self.p_B = (self.width * 2 / 3, self.height * 5 / 8)
+        # Point bottom-top
+        self.p_C = (self.width * (1 + Bx) / 2, self.height * (3 + By) / 4)
+
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Left line
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
+        # Right line
+        self.l_3 = [self.p_C[0], self.p_C[1], self.p_B[0], self.p_B[1]]
+
+        x = Bx * 10  # Scaled
+        y = By * 10  # Scaled
+
+        # Ángulos
+        ang_A = abs(
+            Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_B = abs(
+            Vector((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_C = abs(
+            Vector((self.l_2[0] - self.l_2[2]), (self.l_2[1] - self.l_2[3])).angle(
+                ((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1]))
+            )
+        )
+
+        msg_angulos = (
+            f"Ángulos  [color=FF3333]A: [color=FFFFFF]{round(ang_A, 2)}"
+            + f"[color=3465A4]  B: [color=FFFFFF]{round(ang_B, 2)}"
+            + f"[color=D9A560]  C: [color=FFFFFF]{round(ang_C, 2)}"
+        )
+
+        # Lados
+        if abs(self.p_A[1] - self.p_C[1]) < 0.5:
+            msg_angulos_2 = "Los tres puntos son colineales. No hay triángulo!"
+        else:
+            msg_angulos_2 = ""
+
+        lado_a = (
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_C[0], self.p_C[1])) / 10
+        )
+        lado_b = (
+            Vector(self.p_A[0], self.p_A[1]).distance((self.p_C[0], self.p_C[1])) / 10
+        )
+        lado_c = (
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_A[0], self.p_A[1])) / 10
+        )
+        msg_lados = (
+            f"Lados  [color=FF3333]a: [color=FFFFFF]{round(lado_a, 2)}"
+            + f"[color=3465A4]  b: [color=FFFFFF]{round(lado_b, 2)}"
+            + f"[color=D9A560]  c: [color=FFFFFF]{round(lado_c, 2)}"
+        )
+
+        msg_senos = (
+            f"[color=FF3333]sen(A): [color=FFFFFF]{round(sin(radians(ang_A)), 4)}"
+            + f"[color=3465A4]  sen(B): [color=FFFFFF]{round(sin(radians(ang_B)), 4)}"
+            + f"[color=D9A560]  sen(C): [color=FFFFFF]{round(sin(radians(ang_C)), 4)}"
+        )
+
+        self.label_wid.text = (
+            msg_angulos + "\n" + msg_lados + "\n" + msg_senos + "\n" + msg_angulos_2
+        )
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+
+    def cap2_sec2_pag3(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Bx = self.slider_x.value
+        By = self.slider_y.value
+
+        # Point bottom-left
+        self.p_A = (self.width / 3, self.height * 5 / 8)
+        # Point bottom-right
+        self.p_B = (self.width * 2 / 3, self.height * 5 / 8)
+        # Point bottom-top
+        self.p_C = (self.width * (1 + Bx) / 2, self.height * (3 + By) / 4)
+
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Left line
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
+        # Right line
+        self.l_3 = [self.p_C[0], self.p_C[1], self.p_B[0], self.p_B[1]]
+
+        x = Bx * 10  # Scaled
+        y = By * 10  # Scaled
+
+        # Ángulos
+        ang_A = abs(
+            Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_B = abs(
+            Vector((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_C = abs(
+            Vector((self.l_2[0] - self.l_2[2]), (self.l_2[1] - self.l_2[3])).angle(
+                ((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1]))
+            )
+        )
+
+        msg_angulos = (
+            f"Ángulos  [color=FF3333]A: [color=FFFFFF]{round(ang_A, 2)}"
+            + f"[color=3465A4]  B: [color=FFFFFF]{round(ang_B, 2)}"
+            + f"[color=D9A560]  C: [color=FFFFFF]{round(ang_C, 2)}"
+        )
+
+        # Lados
+        if abs(self.p_A[1] - self.p_C[1]) < 0.5:
+            msg_angulos_2 = "Los tres puntos son colineales. No hay triángulo!"
+        else:
+            msg_angulos_2 = ""
+
+        lado_a = (
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_C[0], self.p_C[1])) / 10
+        )
+        lado_b = (
+            Vector(self.p_A[0], self.p_A[1]).distance((self.p_C[0], self.p_C[1])) / 10
+        )
+        lado_c = (
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_A[0], self.p_A[1])) / 10
+        )
+        msg_lados = (
+            f"Lados  [color=FF3333]a: [color=FFFFFF]{round(lado_a, 2)}"
+            + f"[color=3465A4]  b: [color=FFFFFF]{round(lado_b, 2)}"
+            + f"[color=D9A560]  c: [color=FFFFFF]{round(lado_c, 2)}"
+        )
+
+        msg_senos = (
+            f"[color=FF3333]cos(A): [color=FFFFFF]{round(cos(radians(ang_A)), 4)}"
+            + f"[color=3465A4]  cos(B): [color=FFFFFF]{round(cos(radians(ang_B)), 4)}"
+            + f"[color=D9A560]  cos(C): [color=FFFFFF]{round(cos(radians(ang_C)), 4)}"
+        )
+
+        self.label_wid.text = (
+            msg_angulos + "\n" + msg_lados + "\n" + msg_senos + "\n" + msg_angulos_2
+        )
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
