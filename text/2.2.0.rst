@@ -1,7 +1,73 @@
 *Cap.2 Sec.2 Pag.0*
 
-Relación de lados
+Relación de lados 
 =========================================================
 
-Concepto
+En esta sección revisaremos en detalle las relaciones entre los lados y los ángulos de un
+triángulo, empezando por los triángulos rectángulos y luego con los triángulos en el caso
+más general (triángulos oblicuángulos). Para esto primero debemos definir algunos
+conceptos básicos:
+
+- **Triángulo rectángulo:** Triángulo que tiene un ángulo recto (90°). En otras palabras, tiene un lado perpendicular a otro.
+- **Lado opuesto a un ángulo:** el lado que no forma parte del ángulo.
+- **Lado adyacente a un ángulo:** lado que forma parte del ángulo.
+- **Relación:** proporción entre dos cantidades. Lo podemos entender como la división entre dos números, en este caso, entre las longitudes de dos lados de un triángulo la cual llamaremos **relación trigonométrica**.
+- **Hipotenusa:** lado opuesto al ángulo recto en un triángulo rectángulo. En la gráfica interactiva correcponde a la línea (lado) café (d).
+- **Cateto:** cada uno de los lados que forman el ángulo recto en un triángulo rectángulo. En la gráfica interactiva correcponde a las líneas (lados) azul (x) y rojo (y).
+
+-------------------
+
+Para las siguientes definiciones tomaremos como referencia el ángulo conformado por el cateto 'x' y la hipotenusa 'd' al cual llamaremos ángulo alfa.
+
+**Nota:** las mismas relaciones se pueden construir también con el ángulo conformado por el cateto 'y' y la hipotenusa 'd' al cual podríamos llamar ángulo beta.
+
+`Veamos las relaciones principales que podemos construir con los lados de un triángulo rectángulo:`_
+
+- Cateto 'y' sobre hipotenusa 'd': razón trigonométrica llamada **seno del ángulo** alfa.
+- Cateto 'x' sobre hipotenusa 'd': razón trigonométrica llamada **coseno del ángulo** alfa.
+- Cateto 'y' sobre cateto 'x': razón trigonométrica llamada **tangente del ángulo** alfa.
+
+`También existen las relaciones inversas:`_
+
+- Hipotenusa 'd' sobre cateto 'y': razón trigonométrica llamada **cosecante del ángulo** alfa.
+- Hipotenusa 'd' sobre cateto 'x' sobre : razón trigonométrica llamada **secante del ángulo** alfa.
+- Cateto 'x' sobre cateto 'y': razón trigonométrica llamada **cotangente del ángulo** alfa.
+
+-------------------
+
+`Resumiendo lo anterior en una tabla:`_
+
++----------------------------+--------------+---------------------------------------+
+| **Razón trigonométrica**   | **Relación** |         **Descripción**               |
++============================+==============+=======================================+
+| Seno del ángulo alfa       |      y/d     | Cateto opuesto sobre hipotenusa       |
++----------------------------+--------------+---------------------------------------+
+| Coseno del ángulo alfa     |      x/d     | Cateto adyacente sobre hipotenusa     |
++----------------------------+--------------+---------------------------------------+
+| Tangente del ángulo alfa   |      y/x     | Cateto opuesto sobre cateto adyacente |
++----------------------------+--------------+---------------------------------------+
+| Cosecante del ángulo alfa  |      d/y     | Hipotenusa sobre cateto opuesto       |
++----------------------------+--------------+---------------------------------------+
+| Secante del ángulo alfa    |      d/x     | Hipotenusa sobre cateto adyacente     |
++----------------------------+--------------+---------------------------------------+
+| Cotangente del ángulo alfa |      x/y     | Cateto adyacente sobre cateto opuesto |
++----------------------------+--------------+---------------------------------------+
+
+-------------------
+
+`Usando las relaciones seno sobre coseno y cosecante sobre secante, tenemos las
+siguientes definiciones alternas de tangente y cotangente:`_
+
++----------------------------+---------------------+-------------------------+
+| **Razón trigonométrica**   | **Relación**        | **Descripción**         |
++============================+=====================+=========================+
+| Tangente del ángulo alfa   | y/x = (y/d) / (x/d) | Seno sobre coseno       |
++----------------------------+---------------------+-------------------------+
+| Cotangente del ángulo alfa | x/y = (d/y) / (d/x) | Cosecante sobre secante |
++----------------------------+---------------------+-------------------------+
+
+-------------------
+
+`Consultar la definición de Trigonometría`_
+
 -------------------
