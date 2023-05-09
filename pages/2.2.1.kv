@@ -59,12 +59,11 @@ RootWidget:
                         points: root.width / 2, root.height * 6 / 10, root.width / 2 , root.height * 15 / 16
                     Line:  # X-axis
                         points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
-
                     Color:
                         rgba: cafe_claro
                     Line:  # Main line, from A to B
                         points: root.l_1
-
+                        width: line_width
                     Color:
                         rgba: azul
                     Line:  # Secondary line, x-distance
@@ -80,10 +79,9 @@ RootWidget:
                 Label:
                     id: main_message
                     text_size: self.size
-                    halign: 'left'
+                    halign: 'center'
                     valign: 'top'
                     markup: True
-
 
 
         RstDocument:
