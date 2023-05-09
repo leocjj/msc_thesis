@@ -31,11 +31,11 @@ RootWidget:
                 size_hint: (0.075, 0.925)  # Top-left
                 Slider:
                     id: y
-                    on_value: root.cap2_sec1_pag0()  # Call the code on event
+                    on_value: root.cap2_sec2_pag3()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
-                    step: 0.001
+                    step: 0.0001
                     orientation: 'vertical'
             BoxLayout:
                 size_hint: (1, 0.075)
@@ -43,14 +43,15 @@ RootWidget:
                     size_hint: (0.2, None)  # To leave 20% free to the left
                 Slider:
                     id: x
-                    on_value: root.cap2_sec1_pag0()  # Call the code on event
+                    on_value: root.cap2_sec2_pag3()  # Call the code on event
                     min: -0.7
                     max: 0.7
                     value: 0
-                    step: 0.001
+                    step: 0.0001
                     orientation: 'horizontal'
                 Label:
                     size_hint: (0.2, None)    # To leave 20% free to the right
+
             BoxLayout:  # Space for canvas
                 size_hint: (0.925, 0.925)  # Top-right
                 canvas:
