@@ -3,5 +3,60 @@
 Conceptos
 =========================================================
 
-Concepto
--------------------
+En esta sección se introducen los conceptos básicos de la geometría de polígonos llamados
+**cuadriláteros o cuadrángulos**, cuya característica principal es que tienen **cuatro
+aristas** o lados y **cuatro vértices** o esquinas.
+
+Sin embargo, con esta definición no tenemos una guía de cómo unir los cuatro vertices con
+cuatro lados y podríamos tener de forma general dos opciones:
+
+.. image:: ./images/2.3.0_complejos_simples.png
+
+**Cuadriláteros complejos:** son aquellos que tienen lados que se cruzan entre sí (izquierda).
+
+**Cuadriláteros simples:** son aquellos que tienen lados que no se cruzan entre sí (derecha).
+
+----
+
+Ahora bien, si consideramos solo los cuadriláteros simples, es decir que sus lados no se
+cruzan entre sí, podemos tener dos opciones:
+
+.. image:: ./images/2.3.0_convexos_concavos.png
+
+**Cuadriláteros concavos:** son aquellos que tienen al menos un ángulo interno mayor a 180° (izquierda).
+
+**Cuadriláteros convexos:** son aquellos que tienen todos sus ángulos internos menores a 180° (derecha).
+
+----
+
+Finalmente nos dedicaremos a estudiar los **cuadriláteros convexos**, que son los más
+importantes en la geometría euclidiana y que tienen la característica de que sus lados no
+se cruzan entre sí y sus ángulos internos son menores a 180°.
+
+Clasificaremos los cuadriláteros convexos (o simplemente cuadriláteros de aquí en adelante),
+de acuerdo a sus lados y ángulos internos según la siguiente tabla:
+
+.. image:: ./images/2.3.0_cuadrangulos.png
+
+En la parte superior de la tabla tenemos tres tipos de **cuadriláteros** según la cantidad de
+lados paralelos que tienen:
+
+  **Trapezoide**: 0 lados paralelos.
+
+  **Trapecio**: solo 2 lados paralelos.
+
+  **Paralelogramo**: lados opuestos paralelos (paralelos 2 a 2)
+
+Los **paralelogramos** a su vez se clasifican de acuerdo a la parte inferior de la tabla según
+el número de lados iguales y según el número de ángulos iguales en:
+
+  **Romboide**: lados opuestos iguales y ángulos opuestos iguales
+  
+  **Rombo**: 4 lados iguales y ángulos opuestos iguales
+  
+  **Rectángulo**: lados iguales 2 a 2 y 4 ángulos iguales.
+  
+  **Cuadrado**: 4 lados iguales y 4 ángulos iguales.
+
+
+----
