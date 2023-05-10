@@ -33,7 +33,12 @@ se clasifica según sus lados y sus ángulos.
 
 - **Triángulos escalenos:** todos sus lados son diferentes.
 
+
+.. image:: ./images/2.1.0_triangulos.png
+
 ( `Consultar el concepto de triángulo rectángulo`_).
+
+---------------------------------------------------------
 
 A continuación se dejan como referencia algunas definiciones de ángulos que se pueden encontrar en un triángulo.
 
