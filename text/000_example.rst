@@ -1,3 +1,14 @@
+
+
+.. figure:: ../_static/triangulos.png
+   :align: center
+   :width: 400px
+   :alt: Triángulos
+
+   Triángulos
+
+
+
 =====================================================
  The reStructuredText_ Cheat Sheet: Syntax Reminders
 =====================================================
