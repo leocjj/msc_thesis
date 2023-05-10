@@ -1933,3 +1933,130 @@ class RootWidget(BoxLayout):
         self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
         self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
         self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+
+    def cap2_sec3_pag1(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Cx = self.slider_x.value
+        Cy = self.slider_y.value
+
+        # Point bottom-left
+        self.p_A = (int(self.width / 3), int(self.height * 4.5 / 8))
+        # Point bottom-right
+        self.p_B = (int(self.width / 2), int(self.height * 4.5 / 8))
+        # Point top-left
+        self.p_C = (int(self.width * (1 + Cx) / 2), int(self.height * (3 + Cy) / 4))
+        # Point top-right, at the same width as B, at 45°.
+        self.p_D = (self.p_B[0], self.p_A[1] + (self.p_B[0] - self.p_A[0]))
+
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Left line
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_D[0], self.p_D[1]]
+        # Right line
+        self.l_3 = [self.p_B[0], self.p_B[1], self.p_C[0], self.p_C[1]]
+        # Top line
+        self.l_4 = [self.p_D[0], self.p_D[1], self.p_C[0], self.p_C[1]]
+
+        """
+        x = Cx * 10  # Scaled
+        y = Cy * 10  # Scaled
+
+        # Ángulos
+        ang_A = abs(
+            Vector((self.l_2[2] - self.l_2[0]), (self.l_2[3] - self.l_2[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_B = abs(
+            Vector((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1])).angle(
+                ((self.l_1[2] - self.l_1[0]), (self.l_1[3] - self.l_1[1]))
+            )
+        )
+        ang_C = abs(
+            Vector((self.l_2[0] - self.l_2[2]), (self.l_2[1] - self.l_2[3])).angle(
+                ((self.l_3[2] - self.l_3[0]), (self.l_3[3] - self.l_3[1]))
+            )
+        )
+
+        msg_angulos = (
+            f"Ángulos  [color=FF3333]A: [color=FFFFFF]{round(ang_A, 2)}"
+            + f"[color=3465A4]  B: [color=FFFFFF]{round(ang_B, 2)}"
+            + f"[color=D9A560]  C: [color=FFFFFF]{round(ang_C, 2)}"
+        )
+
+        # Lados
+        if abs(self.p_A[1] - self.p_C[1]) < 0.5:
+            msg_angulos_2 = "Los tres puntos son colineales. No hay triángulo!"
+        else:
+            msg_angulos_2 = ""
+
+        lado_a = (
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_C[0], self.p_C[1])) / 10
+        )
+        lado_b = (
+            Vector(self.p_A[0], self.p_A[1]).distance((self.p_C[0], self.p_C[1])) / 10
+        )
+        lado_c = (
+            Vector(self.p_B[0], self.p_B[1]).distance((self.p_A[0], self.p_A[1])) / 10
+        )
+        msg_lados = (
+            f"Lados  [color=FF3333]a: [color=FFFFFF]{round(lado_a, 2)}"
+            + f"[color=3465A4]  b: [color=FFFFFF]{round(lado_b, 2)}"
+            + f"[color=D9A560]  c: [color=FFFFFF]{round(lado_c, 2)}"
+        )
+
+        msg_senos = (
+            f"[color=FF3333]cos(A): [color=FFFFFF]{round(cos(radians(ang_A)), 4)}"
+            + f"[color=3465A4]  cos(B): [color=FFFFFF]{round(cos(radians(ang_B)), 4)}"
+            + f"[color=D9A560]  cos(C): [color=FFFFFF]{round(cos(radians(ang_C)), 4)}"
+        )
+
+        self.label_wid.text = (
+            msg_angulos + "\n" + msg_lados + "\n" + msg_senos + "\n" + msg_angulos_2
+        )
+        """
+
+        # Transforming points to draw
+        ax = (self.p_A[0] - self.p_A[0]) / 20
+        ay = (self.p_A[1] - self.p_A[1]) / 20
+        bx = (self.p_B[0] - self.p_A[0]) / 20
+        by = (self.p_B[1] - self.p_A[1]) / 20
+        cx = (self.p_C[0] - self.p_A[0]) / 20  # Mobile point
+        cy = (self.p_C[1] - self.p_A[1]) / 20  # Mobile point
+        dx = (self.p_D[0] - self.p_A[0]) / 20
+        dy = (self.p_D[1] - self.p_A[1]) / 20
+
+        # A lot of conditions to check the type of quadrangle
+        msg_tipo = ""
+        if cx == 0 and cy == 0:
+            msg_tipo = "No hay polígono, solo dos rectas unidas en un punto"
+        elif cx == 32 and cy == 16:
+            msg_tipo = "Simple, convexo, paralelogramo (lados opuestos paralelos)"
+        elif cx - cy == 16:
+            msg_tipo = "Simple, convexo, trapecio (lados AB y CD paralelos)"
+        elif cx > dx and cy == dy:
+            msg_tipo = "Simple, convexo, trapecio (lados AD y BC paralelos)"
+        elif cy == by:
+            if cx >= bx:
+                msg_tipo = "Los puntos A, B y C son colineales, es un triángulo!"
+            else:
+                msg_tipo = "Complejo, rectas AB y BC se cruzan"
+        elif cx == bx:
+            if cy > by and cy <= dy:
+                msg_tipo = "Los puntos B, C y D son colineales, es un triángulo!"
+            else:
+                msg_tipo = "Complejo, rectas BC y CD se cruzan"
+
+        self.label_wid.text = (
+            f"[color=D9A560]A({ax:.2f}, {ay:.2f})  [color=3465A4]B({bx:.2f}, {by:.2f})\
+        [color=00FF00]C({cx:.2f}, {cy:.2f})  [color=FF0000]D({dx:.2f}, {dy:.2f})"
+            + "[color=FFFFFF]\n"
+            + msg_tipo
+        )
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
