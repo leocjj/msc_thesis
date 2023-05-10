@@ -5,8 +5,8 @@
 Install miniconda (Python environment handler)
 
 ```sh
-    wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Linux-x86_64.sh
-    bash Miniconda3-py38_4.11.0-Linux-x86_64.sh
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh
     conda create -n kivy python=3.8     # kivy=2.1.0
     conda activate kivy
 ```
@@ -28,8 +28,8 @@ Test kivy
 
 Install miniconda (Python environment handler)
 
-1. Download https://repo.anaconda.com/miniconda/Miniconda3-py38_22.11.1-1-Windows-x86_64.exe
-2. Execute Miniconda3-py38_22.11.1-1-Windows-x86_64.exe
+1. Download https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe
+2. Execute Miniconda3-latest-Windows-x86_64.exe
 3. Run the following commands in Anaconda Powershell Prompt:
 
 ```sh
