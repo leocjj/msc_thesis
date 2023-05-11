@@ -2045,13 +2045,22 @@ class RootWidget(BoxLayout):
         unit = l / 20
         base_length = 7
         # Point top-right, at the same width as B, at 45°. In the center of the canvas
-        self.p_D = (self.width / 2, self.height * 3 / 4 + 2 * unit)
+        self.p_D = (
+            self.width / 2 - base_length * unit + Cx * unit,
+            self.height * 3 / 4 + (2 + Cy) * unit,
+        )
         # Point bottom-left
-        self.p_A = (self.p_D[0] - base_length * unit, self.p_D[1] - base_length * unit)
+        self.p_A = (
+            self.width / 2 - base_length * unit,
+            self.height * 3 / 4 + 2 * unit - base_length * unit,
+        )
         # Point bottom-right
-        self.p_B = (self.p_D[0], self.p_A[1])
+        self.p_B = (self.width / 2, self.height * 3 / 4 + 2 * unit - base_length * unit)
         # Point top-left
-        self.p_C = (self.p_D[0] + 7 * unit, self.p_D[1] )
+        self.p_C = (
+            self.width / 2 + Cx * unit,
+            self.height * 3 / 4 + (2 + Cy) * unit,
+        )
 
         # Horizontal fixed line bottom
         self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
@@ -2074,50 +2083,17 @@ class RootWidget(BoxLayout):
 
         # A lot of conditions to check the type of quadrangle
         msg_tipo = ""
-        # If the mobile point is in the origin
-        if cx == 0 and cy == 0:
-            msg_tipo = "No hay polígono, solo dos rectas unidas en un punto"
-        elif cx == 2 * base_length and cy == base_length:
-            msg_tipo = "1 Simple, convexo, paralelogramo (lados opuestos paralelos)"
-        # If the mobile point is in the diagonal line at 45° with B
-        elif cx - cy == base_length and cx > bx:
-            msg_tipo = "2 Simple, convexo, trapecio (lados AD y BC paralelos)"
-        elif cx > dx and cy == dy:
-            msg_tipo = "3 Simple, convexo, trapecio (lados AB y CD paralelos)"
-        elif cx > bx and cy < by:
-            msg_tipo = "4 Simple, concavo, trapezoide (no hay lados paralelos)"
-        # If the mobile point is in the horizontal line AB
-        elif cy == by:
-            if cx >= bx:
-                msg_tipo = "5 Los puntos A, B y C son colineales, es un triángulo!"
+        if cy == by:
+            msg_tipo = "No hay polígono, solo es una línea recta."
+        elif cx == base_length:
+            if cy == base_length:
+                msg_tipo = "Cuadrado: 4 lados iguales, 4 ángulos iguales."
             else:
-                msg_tipo = "6 Complejo, rectas AB y BC se cruzan"
-        # If the mobile point is in the vertical line BD
-        elif cx == bx:
-            if cy > by and cy <= dy:
-                msg_tipo = "7 Los puntos B, C y D son colineales, es un triángulo!"
-            else:
-                msg_tipo = "8 Complejo, rectas BC y CD se cruzan"
-        # If the mobile point is in the diagonal line at 45° with D
-        elif cx - cy == dx - dy:
-            if cx >= bx:
-                msg_tipo = "9 Los puntos A, B y C son colineales, es un triángulo!"
-            else:
-                msg_tipo = "10 Complejo, rectas AD y CD se cruzan"
-        # If the mobile point is in the diagonal line higher than 45° (with AD)
-        elif cy - cx > 0:
-            if cx <= bx and cy > by:
-                msg_tipo = "11 Complejo, rectas AD y BC se cruzan"
-            else:
-                msg_tipo = "12 Simple, concavo, trapezoide (no hay lados paralelos)"
-        # If the mobile point is in the diagonal line lower than 45° (with AD)
-        elif cy - cx < 0 and cx < bx:
-            if cy < by:
-                msg_tipo = "13 Complejo, rectas AB y CD se cruzan"
-            else:
-                msg_tipo = "14 Simple, concavo, trapezoide (no hay lados paralelos)"
+                msg_tipo = "Rectángulo: 4 ángulos iguales, lados opuestos iguales."
+        elif abs(dx) == 5 and dy == 5:
+            msg_tipo = "Rombo: 4 lados iguales, ángulos opuestos iguales."
         else:
-            msg_tipo = "15 Simple, convexo, trapezoide (no hay lados paralelos)"
+            msg_tipo = "Romboide: lados opuestos iguales, ángulos opuestos iguales."
 
         self.label_wid.text = (
             f"[color=D9A560]A({ax}, {ay})  [color=3465A4]B({bx}, {by})\
