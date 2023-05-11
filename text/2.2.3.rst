@@ -13,9 +13,9 @@ dos lados por el coseno del ángulo opuesto al lado que se esta considerando.**
 
 .. image:: ./images/2.2.3_ley_de_cosenos.png
    :align: center
-   :width: 300px
-   :height: 300px
-   :scale: 100 %
+   :width: 480px
+   :height: 288px
+
 De David Weisman (Dweisman) - En-Wiki. Original description is/was here, Dominio público,
 https://commons.wikimedia.org/w/index.php?curid=2596911
 
@@ -29,7 +29,7 @@ relaciones:
 .. image:: ./images/2.2.3_ley_de_cosenos_2.png
    :align: center
    :width: 300px
-   :scale: 100 %
+   :height: 144px
 
 ---------------------------------------------------------
 
@@ -42,8 +42,8 @@ a la conocida relación del **teorema de Pitágoras**.
 
 .. image:: ./images/2.2.3_ley_de_cosenos_3.png
    :align: center
-   :width: 160px
-   :scale: 100 %
+   :width: 180px
+   :height: 170px
 
 ---------------------------------------------------------
 
