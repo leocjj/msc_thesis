@@ -7,9 +7,9 @@ Los paralelogramos_ a su vez se clasifican de acuerdo al número de lados iguale
 el número de ángulos iguales. En la gráfica interactiva pueden identificarse los
 siguientes casos:
 
-  **Romboide**: lados opuestos iguales y ángulos opuestos iguales
+  **Romboide**: lados opuestos iguales y ángulos opuestos iguales.
   
-  **Rombo**: 4 lados iguales y ángulos opuestos iguales
+  **Rombo**: 4 lados iguales y ángulos opuestos iguales.
   
   **Rectángulo**: lados iguales 2 a 2 y 4 ángulos iguales.
   
