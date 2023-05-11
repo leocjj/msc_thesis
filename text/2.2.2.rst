@@ -15,9 +15,8 @@ relacion:
 
 .. image:: ./images/2.2.2_ley_de_senos.png
    :align: center
-   :width: 300px
-   :height: 300px
-   :scale: 100 %
+   :width: 480px
+   :height: 480px
 
 Tomado de: https://commons.wikimedia.org/wiki/File:Ley_de_los_senos.svg
 
