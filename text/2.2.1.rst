@@ -64,7 +64,9 @@ es decir, no necesariamente rectángulos.
 Leer la tabla de la siguiente forma: el seno de 0° es √0/2, el coseno de 30° es √3/2.
 
 .. image:: ./images/2.2.1_sencostan.png
-
+    :align: center
+    :width: 480px
+    :height: 280px
 
 -------------------
 
