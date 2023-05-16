@@ -3,5 +3,102 @@
 Concepto de área
 =========================================================
 
-Concepto
--------------------
+El área de una figura plana es la medida de la región encerrada por la figura.
+En este caso estudiaremos los paralelogramos vistos en la sección anterior,
+donde el área será la medida de la región encerrada por el paralelogramo y su
+perímetro será la medida de la longitud de su contorno o suma de la longitud 
+de sus lados.
+
+Intuitivamente vimos en la página anterior, que para construir el área de un
+rectángulo debíamos ir cubriendo una zona de la pantalla con infinitos puntos
+que conformaban una línea horizontal y luego ibamos colocando infinitas líneas
+verticales una encima de la otra, hasta cubrir toda la figura.
+
+Luego, podríamos decir que el valor para el área del rectángulo va a depender de
+la longitud de la línea horizontal que construímos inicialmente (azul) y de la
+longitud de las líneas verticales (verdes) que se van construyendo a partir de
+cada uno de los puntos de esta línea horizontal base.
+
+.. image:: ./images/2.4.1_area_rectangulo.png
+    :align: center
+    :width: 480px
+    :height: 180px
+
+----
+
+Por lo tanto, **el área del rectángulo será proporcional a la longitud de la línea
+horizontal base y proporcional a la longitud de una de las líneas verticales.**
+A esta proporcionalidad de dos factores se la llama **producto**.
+
+**En conclusión,** tendremos que el área del rectángulo será el producto de la
+longitud de la línea horizontal base por la longitud de una de las líneas
+verticales a la cual llamaremos alguras y que en otras palabras, es perpendicular
+a la línea base.
+
+Decimos entonces que **el área de un rectángulo es el producto de la longitud de
+la base por su altura.**
+
+----
+
+Ahora bien, vamos a ver qué ocurre con el área si el rectángulo pasa a ser un
+romboide, rombo o cuadrado.
+
+**Romboide:** el área la podemos construir de la misma manera que lo hicimos con
+el rectángulo a partir de una linea base y sucesivas lineas a partir de esta.
+Pero en este caso, la línea horizontal base no es perpendicular a las líneas
+que se construyen a partir de cada uno de los puntos de la lína base (ver línea
+roja).
+
+Sin embargo, la `cantidad* de líneas`_ que se construyen a partir de cada uno de los
+puntos de la línea base, es la misma que en el caso del rectángulo, por lo tanto,
+el área del romboide será igual que para el rectángulo, el producto de la
+longitud de la línea horizontal base por la longitud de una línea vertical (ver
+líneas verdes) que llamaremos altura del romboide y es perpendicular a la base.
+
+*`cantidad` en este caso es un concepto intuitivo, ya que no podemos contar 
+infinitas líneas.
+
+.. image:: ./images/2.4.1_area_romboide.png
+    :align: center
+    :width: 480px
+    :height: 180px
+
+Otra forma de verlo es la siguiente:
+
+.. image:: ./images/2.4.1_area_romboide_2.png
+    :align: center
+    :width: 480px
+    :height: 180px
+
+Partiendo de un romboide (líneas azules en la figura de la izquierda),
+contruimos dos triángulos
+rectángulos (ver líneas rojas en la figura de la izquierda) y por los
+conceptos vistos en el capítulo anterior, sabemos que los ángulos internos
+(no rectos) de los dos triángulos son igulaes y al tener la misma longitud la hipotenusa, los
+triángulos son congruentes (iguales). Por lo tanto, el área de cada uno de
+los triángulos es igual y finalmente podemos construir un rectángulo
+(ver líneas azules en la figura de la derecha) con la misma lína base y altura
+(ver líneas verde) que el romboide. 
+
+`La altura del romboide`_ la definiremos como la longitud de una línea que es
+perpendicular a la línea base y va desde un lado hasta el otro del romboide.
+
+Por lo tanto, el área del romboide será igual al área de un rectángulo de
+igual base y altura.
+
+**Cuadrado:** al ser un caso particular del rectángulo donde dos de sus lados que
+tenían una longitud diferente a los otros dos, ahora tienen la misma longitud,
+el área continuará siendo el producto de la longitud de la base por la altura.
+
+**Rombo:** al ser un caso particular del romboide, donde todos sus lados ahora
+son iguales, el área continuará siendo el producto de la longitud de la base por
+la altura.
+
+----
+
+`Como conclusión final, el área de un paralelogramo (romboide, rombo, rectángulo
+o cuadrado) es el producto de la longitud de la base por la altura:
+A = b * h`__
+
+
+----
