@@ -2190,3 +2190,85 @@ class RootWidget(BoxLayout):
         self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
         self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
         self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
+
+    def cap2_sec4_pag1(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Cx = self.slider_x.value
+        Cy = self.slider_y.value
+
+        # Minimun between width and height of the canvas
+        l = min(self.width, self.height / 2)
+        # Unit of measure
+        unit = l / 20
+        base_length = 7
+        # Point top-right, at the same width as B, at 45°. In the center of the canvas
+        self.p_D = (
+            self.width / 2 - base_length * unit + Cx * unit,
+            self.height * 3 / 4 + (2 + Cy) * unit,
+        )
+        # Point bottom-left
+        self.p_A = (
+            self.width / 2 - base_length * unit,
+            self.height * 3 / 4 + 2 * unit - base_length * unit,
+        )
+        # Point bottom-right
+        self.p_B = (self.width / 2, self.height * 3 / 4 + 2 * unit - base_length * unit)
+        # Point top-left
+        self.p_C = (
+            self.width / 2 + Cx * unit,
+            self.height * 3 / 4 + (2 + Cy) * unit,
+        )
+
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Left line
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_D[0], self.p_D[1]]
+        # Right line
+        self.l_3 = [self.p_B[0], self.p_B[1], self.p_C[0], self.p_C[1]]
+        # Top line
+        self.l_4 = [self.p_D[0], self.p_D[1], self.p_C[0], self.p_C[1]]
+
+        # Transforming points to compute more easily.
+        ax = round((self.p_A[0] - self.p_A[0]) / unit, 0)
+        ay = round((self.p_A[1] - self.p_A[1]) / unit, 0)
+        bx = round((self.p_B[0] - self.p_A[0]) / unit, 0)
+        by = round((self.p_B[1] - self.p_A[1]) / unit, 0)
+        cx = round((self.p_C[0] - self.p_A[0]) / unit, 0)  # Mobile point
+        cy = round((self.p_C[1] - self.p_A[1]) / unit, 0)  # Mobile point
+        dx = round((self.p_D[0] - self.p_A[0]) / unit, 0)
+        dy = round((self.p_D[1] - self.p_A[1]) / unit, 0)
+        base = abs(bx - ax)
+        height = abs(cy - ay)
+        area = base * height
+
+        # A lot of conditions to check the type of quadrangle
+        msg_tipo = ""
+        if cy == by:
+            msg_tipo = "No hay polígono, solo es una línea recta."
+        elif cx == base_length:
+            if cy == base_length:
+                msg_tipo = f"Cuadrado. Área = {base} * {height} = {area}"
+            else:
+                msg_tipo = f"Rectángulo. Área = {base} * {height} = {area}"
+        elif abs(dx) == 5 and dy == 5:
+            msg_tipo = f"Rombo. Área = {base} * {height} = {area}"
+        else:
+            msg_tipo = f"Romboide. Área = {base} * {height} = {area}"
+
+        # Rectangle (area)
+        self.p_POS = (self.p_A[0], self.p_A[1])
+        self.p_SIZE = (self.p_B[0] - self.p_A[0], self.p_C[1] - self.p_B[1])
+
+        self.label_wid.text = (
+            f"[color=D9A560]A({ax}, {ay})  [color=3465A4]B({bx}, {by})\
+        [color=00FF00]C({cx}, {cy})  [color=FF0000]D({dx}, {dy})"
+            + "[color=FF0000]\n"
+            + msg_tipo
+        )
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
