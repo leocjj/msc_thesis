@@ -24,9 +24,9 @@ Tesis_ de_ Grado_
 
 **Email:** leonardocj@gmail.com
 
-**Fecha:** 2023-05-09
+**Fecha:** 2023-05-15
 
-**Revisión:** beta 0.5.0
+**Revisión:** beta 0.5.1
 
 **Descripción:** Laboratorio Virtual de Geometría
 
