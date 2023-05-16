@@ -1,4 +1,4 @@
-from math import asin, atan, pi, sqrt, degrees, radians, sin, cos, tan
+from math import asin, atan, pi, sqrt, degrees, radians, sin, cos
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import (
     ObjectProperty,
@@ -39,6 +39,8 @@ class RootWidget(BoxLayout):
     p_G2 = ListProperty([0, 0])
     p_G3 = ListProperty([0, 0])
     p_G4 = ListProperty([0, 0])
+    p_POS = ListProperty([0, 0])
+    p_SIZE = ListProperty([0, 0])
 
     # List of four elements, to draw line in .kv files
     p_1 = ListProperty([0, 0, 0, 0])
@@ -51,6 +53,7 @@ class RootWidget(BoxLayout):
     l_6 = ListProperty([0, 0, 0, 0])
     l_7 = ListProperty([0, 0, 0, 0])
     l_8 = ListProperty([0, 0, 0, 0])
+    p_COLOR = ListProperty([0, 0, 0, 0])
 
     # List of five elements to draw a cicle in .kv files
     # (center_x, center_y, radius, angle_start, angle_end)
@@ -60,6 +63,9 @@ class RootWidget(BoxLayout):
     c_4 = ListProperty((0, 0, 0, 0, 0))
     c_5 = ListProperty((0, 0, 0, 0, 0))
     c_6 = ListProperty((0, 0, 0, 0, 0))
+
+    m_0 = []
+    m_1 = []
 
     container = ObjectProperty(None)
 
@@ -2101,6 +2107,83 @@ class RootWidget(BoxLayout):
             + "[color=FFFFFF]\n"
             + msg_tipo
         )
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
+
+    def cap2_sec4_pag0(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Cx = (
+            self.slider_x.value
+        )  # Number of points for horizontal line (from 0 to 'infinite')
+        Cy = self.slider_y.value  # Vertical position of the horizontal mobile line
+        max_value = self.slider_x.max  # 'infinite' points for horizontal line
+
+        # Mobile point left
+        self.p_A = (
+            self.width * 1 / 3,
+            self.height * (2.5 + Cy) / 4,
+        )
+        # Mobile oint rigth
+        self.p_B = (
+            self.width * 2 / 3,
+            self.height * (2.5 + Cy) / 4,
+        )
+        # Fixed point left
+        self.p_C = (
+            self.width * 1 / 3,
+            self.height * 2.5 / 4,
+        )
+        # Fixed point rigth
+        self.p_D = (
+            self.width * 2 / 3,
+            self.height * 2.5 / 4,
+        )
+
+        # Horizontal mobile line from bottom to top
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Horizontal fixed bottom line
+        self.l_2 = [0, 0, 0, 0]
+        # Vertical line left
+        self.l_3 = [0, 0, 0, 0]
+        # Vertical line rigth
+        self.l_4 = [0, 0, 0, 0]
+
+        if Cx == max_value and Cy > 0:
+            # Rectangle
+            self.p_COLOR = (1, 0, 0, 1)
+            self.p_POS = (self.width * 1 / 3, self.height * 2.5 / 4)
+            self.p_SIZE = (
+                self.p_B[0] - self.p_A[0],
+                self.p_A[1] - self.height * 2.5 / 4,
+            )
+            # Perimeter lines
+            self.l_2 = [self.p_C[0], self.p_C[1], self.p_D[0], self.p_D[1]]
+            self.l_3 = [self.p_C[0], self.p_C[1], self.p_A[0], self.p_A[1]]
+            self.l_4 = [self.p_D[0], self.p_D[1], self.p_B[0], self.p_B[1]]
+            # To override the horizontal mobile line
+            self.l_5 = [
+                self.p_A[0],
+                self.p_A[1],
+                self.p_B[0],
+                self.p_B[1],
+            ]
+        else:
+            # Rectangle
+            self.p_COLOR = (1, 1, 1, 1)
+            self.p_POS = (0, 0)
+            self.p_SIZE = (self.p_B[0] - self.p_A[0], 3)
+            # Perimeter lines
+            self.l_2 = [0, 0, 0, 0]
+            self.l_3 = [0, 0, 0, 0]
+            self.l_4 = [0, 0, 0, 0]
+            self.l_5 = [0, 0, 0, 0]
+
+        self.label_wid.text = f"[color=FFFFFF]Número de puntos en la recta: {int(Cx**10) if Cx < max_value else 'Infinitos'}"
 
         # Adding offset to draw points correctly
         self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
