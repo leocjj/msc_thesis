@@ -36,7 +36,7 @@
 #:set cap2_sec1 "2.1 De tres lados"
 #:set cap2_sec2 "2.2 Relaciones del triángulo"
 #:set cap2_sec3 "2.3 De cuatro lados"
-#:set cap2_sec4 "2.4 Superficies"
+#:set cap2_sec4 "2.4 Áreas y perímetros"
 #:set cap2_sec5 "2.5 Otros polígonos"
 #:set cap3      "3 - LÍNEAS CURVAS"
 #:set cap3_sec0 "3.0 Introducción"
@@ -117,13 +117,13 @@ RootWidget:
                 Spinner:
                     background_color: carousel_background_color
                     text: cap2
-                    values: cap2, cap2_sec0, cap2_sec1, cap2_sec2, cap2_sec3
+                    values: cap2, cap2_sec0, cap2_sec1, cap2_sec2, cap2_sec3, cap2_sec4
                     on_text: app.next_screen(self.text)
-                Spinner:
-                    background_color: carousel_background_color
-                    text: cap3
-                    values: cap3, cap3_sec0, cap3_sec1#, cap3_sec2, cap3_sec3
-                    on_text: app.next_screen(self.text)
+                #Spinner:
+                #    background_color: carousel_background_color
+                #    text: cap3
+                #    values: cap3, cap3_sec0, cap3_sec1#, cap3_sec2, cap3_sec3
+                #    on_text: app.next_screen(self.text)
                 #Spinner:
                 #    background_color: carousel_background_color
                 #    text: cap4
