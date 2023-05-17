@@ -66,6 +66,8 @@ class RootWidget(BoxLayout):
 
     m_0 = []
     m_1 = []
+    v_0 = ListProperty([])
+    v_1 = []
 
     container = ObjectProperty(None)
 
@@ -2240,6 +2242,7 @@ class RootWidget(BoxLayout):
         dy = round((self.p_D[1] - self.p_A[1]) / unit, 0)
         base = abs(bx - ax)
         height = abs(cy - ay)
+        side = sqrt((ax - dx) ** 2 + (ay - dy) ** 2)
         area = base * height
 
         # A lot of conditions to check the type of quadrangle
@@ -2248,13 +2251,25 @@ class RootWidget(BoxLayout):
             msg_tipo = "No hay polígono, solo es una línea recta."
         elif cx == base_length:
             if cy == base_length:
-                msg_tipo = f"Cuadrado. Área = {base} * {height} = {area}"
+                msg_tipo = (
+                    f"Cuadrado!  Área = {base} x {height} = {area} \n"
+                    + f"Perímetro = 2 x ({base} + {height}) = {2 * (base + height)}"
+                )
             else:
-                msg_tipo = f"Rectángulo. Área = {base} * {height} = {area}"
+                msg_tipo = (
+                    f"Rectángulo!  Área = {base} x {height} = {area} \n"
+                    + f"Perímetro = 2 x ({base} + {height}) = {2 * (base + height)}"
+                )
         elif abs(dx) == 5 and dy == 5:
-            msg_tipo = f"Rombo. Área = {base} * {height} = {area}"
+            msg_tipo = (
+                f"Rombo?  Área = {base} x {height} = {area} \n"
+                + f"Perímetro = 2 x ({base} + {side:.2f}) = {(2 * (base + side)):.2f}"
+            )
         else:
-            msg_tipo = f"Romboide. Área = {base} * {height} = {area}"
+            msg_tipo = (
+                f"Romboide!  Área = {base} x {height} = {area} \n"
+                + f"Perímetro = 2 x ({base} + {side:.2f}) = {(2 * (base + side)):.2f}"
+            )
 
         # Rectangle (area)
         self.p_POS = (self.p_A[0], self.p_A[1])
@@ -2263,7 +2278,7 @@ class RootWidget(BoxLayout):
         self.label_wid.text = (
             f"[color=D9A560]A({ax}, {ay})  [color=3465A4]B({bx}, {by})\
         [color=00FF00]C({cx}, {cy})  [color=FF0000]D({dx}, {dy})"
-            + "[color=FF0000]\n"
+            + "[color=FFFFFF]\n"
             + msg_tipo
         )
 
@@ -2272,3 +2287,244 @@ class RootWidget(BoxLayout):
         self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
         self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
         self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
+
+    def cap2_sec4_pag2(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        Cx = self.slider_x.value
+        Cy = self.slider_y.value
+
+        # Minimun between width and height of the canvas
+        l = min(self.width, self.height / 2)
+        # Unit of measure
+        unit = l / 20
+        base_length = 7
+        # Point bottom-left
+        self.p_A = (
+            self.width / 2 - base_length * unit,
+            self.height * 3 / 4 + 2 * unit - base_length * unit,
+        )
+        # Point bottom-right
+        self.p_B = (self.width / 2, self.height * 3 / 4 + 2 * unit - base_length * unit)
+        # Point top-left
+        self.p_C = (
+            self.width / 2 + Cx * unit,
+            self.height * 3 / 4 + (2 + Cy) * unit,
+        )
+        # Point top-right, at the same width as B, at 45°. In the center of the canvas
+        self.p_D = (
+            self.width / 2 - base_length * unit + Cx * unit,
+            self.height * 3 / 4 + (2 + Cy) * unit,
+        )
+        # Hight of the triangle
+        self.p_E = (self.p_B[0], self.p_C[1])
+
+        # Horizontal fixed line bottom
+        self.l_1 = [self.p_A[0], self.p_A[1], self.p_B[0], self.p_B[1]]
+        # Left line
+        self.l_2 = [self.p_A[0], self.p_A[1], self.p_C[0], self.p_C[1]]
+        # Right line
+        self.l_3 = [self.p_B[0], self.p_B[1], self.p_C[0], self.p_C[1]]
+        # Hight of the triangle
+        self.l_4 = [self.p_B[0], self.p_B[1], self.p_E[0], self.p_E[1]]
+        # Paralelogram left line
+        self.l_5 = [self.p_A[0], self.p_A[1], self.p_D[0], self.p_D[1]]
+        # Paralelogram top line
+        self.l_6 = [self.p_D[0], self.p_D[1], self.p_C[0], self.p_C[1]]
+
+        # Transforming points to compute more easily.
+        ax = round((self.p_A[0] - self.p_A[0]) / unit, 0)
+        ay = round((self.p_A[1] - self.p_A[1]) / unit, 0)
+        bx = round((self.p_B[0] - self.p_A[0]) / unit, 0)
+        by = round((self.p_B[1] - self.p_A[1]) / unit, 0)
+        cx = round((self.p_C[0] - self.p_A[0]) / unit, 0)  # Mobile point
+        cy = round((self.p_C[1] - self.p_A[1]) / unit, 0)  # Mobile point
+        dx = round((self.p_D[0] - self.p_A[0]) / unit, 0)
+        dy = round((self.p_D[1] - self.p_A[1]) / unit, 0)
+        base = abs(bx - ax)
+        height = abs(cy - ay)
+        side_left = sqrt((ax - cx) ** 2 + (ay - cy) ** 2)
+        side_right = sqrt((bx - cx) ** 2 + (by - cy) ** 2)
+        area = base * height / 2
+        perimeter = base + side_left + side_right
+
+        # A lot of conditions to check the type of quadrangle
+        msg_tipo = ""
+        if cy == by:
+            msg_tipo = "No hay polígono, solo es una línea recta."
+        else:
+            msg_tipo = (
+                f"Área = {base} x {height} / 2 = {area} \n"
+                + f"Perímetro = {base} + {side_left:.2f} + {side_right:.2f} = {perimeter:.2f}"
+            )
+
+        # Rectangle (area)
+        self.p_POS = (self.p_A[0], self.p_A[1])
+        self.p_SIZE = (self.p_B[0] - self.p_A[0], self.p_C[1] - self.p_B[1])
+
+        self.label_wid.text = (
+            f"[color=D9A560]A({ax}, {ay})  [color=3465A4]B({bx}, {by})\
+        [color=00FF00]C({cx}, {cy})  [color=FF0000]D({dx}, {dy})"
+            + "[color=FFFFFF]\n"
+            + "[color=FF0000]Triángulo! [color=FFFFFF]"
+            + msg_tipo
+        )
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+        self.p_B = (self.p_B[0] - offset, self.p_B[1] - offset)
+        self.p_C = (self.p_C[0] - offset, self.p_C[1] - offset)
+        self.p_D = (self.p_D[0] - offset, self.p_D[1] - offset)
+        self.p_E = (self.p_E[0] - offset, self.p_E[1] - offset)
+
+    def cap2_sec5_pag0(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        rot = self.slider_x.value  # Rotation of the polygon
+        vertices = self.slider_y.value  # Number of vertices of the polygon (3-20)
+
+        # Fixed point center
+        self.p_A = (self.width / 2, self.height * 3 / 4)
+
+        self.v_0 = []
+        istep = (pi * 2) / float(vertices)
+        fase = pi / 2 if vertices != 4 else pi / 4
+        for i in range(vertices):
+            x = self.p_A[0] + cos(istep * i + fase + rot) * self.height * 0.5 / 4
+            y = self.p_A[1] + sin(istep * i + fase + rot) * self.height * 0.5 / 4
+            self.v_0.extend([x, y])
+        # To close the polygon
+        self.v_0.extend([self.v_0[0], self.v_0[1]])
+
+        polygon_names = [
+            "",
+            "",
+            "",
+            "Triángulo equilátero",
+            "Cuadrado",
+            "Pentágono",
+            "Hexágono",
+            "Heptágono",
+            "Octágono",
+            "Eneágono",
+            "Decágono",
+        ]
+        self.label_wid.text = f"[color=FFFFFF]{polygon_names[vertices]}, tiene {vertices} lados (vertices)."
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+
+    def cap2_sec5_pag1(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        rot = self.slider_x.value  # Rotation of the polygon
+        vertices = (
+            self.slider_y.value
+        )  # Number of vertices of the polygon (4, 6, 8, 10)
+
+        # Fixed point center
+        self.p_A = (self.width / 2, self.height * 3 / 4)
+
+        self.v_0 = []
+        istep = (pi * 2) / float(vertices)
+        fase = pi / 2 if vertices != 4 else pi / 4
+        for i in range(vertices):
+            x = self.p_A[0] + cos(istep * i + fase + rot) * self.height * 0.5 / 4
+            y = self.p_A[1] + sin(istep * i + fase + rot) * self.height * 0.5 / 4
+            self.v_0.extend([x, y])
+        # To close the polygon
+        self.v_0.extend([self.v_0[0], self.v_0[1]])
+
+        polygon_names = [
+            "",
+            "",
+            "",
+            "",
+            "Cuadrado",
+            "",
+            "Hexágono",
+            "",
+            "Octágono",
+            "",
+            "Decágono",
+        ]
+
+        if vertices == 4:
+            self.l_1 = (self.v_0[0], self.v_0[1], self.v_0[4], self.v_0[5])
+            self.l_2 = (self.v_0[2], self.v_0[3], self.v_0[6], self.v_0[7])
+            self.l_3 = (0, 0, 0, 0)
+            self.l_4 = (0, 0, 0, 0)
+            self.l_5 = (0, 0, 0, 0)
+        elif vertices == 6:
+            self.l_1 = (self.v_0[0], self.v_0[1], self.v_0[6], self.v_0[7])
+            self.l_2 = (self.v_0[2], self.v_0[3], self.v_0[8], self.v_0[9])
+            self.l_3 = (self.v_0[4], self.v_0[5], self.v_0[10], self.v_0[11])
+            self.l_4 = (0, 0, 0, 0)
+            self.l_5 = (0, 0, 0, 0)
+        elif vertices == 8:
+            self.l_1 = (self.v_0[0], self.v_0[1], self.v_0[8], self.v_0[9])
+            self.l_2 = (self.v_0[2], self.v_0[3], self.v_0[10], self.v_0[11])
+            self.l_3 = (self.v_0[4], self.v_0[5], self.v_0[12], self.v_0[13])
+            self.l_4 = (self.v_0[6], self.v_0[7], self.v_0[14], self.v_0[15])
+            self.l_5 = (0, 0, 0, 0)
+        elif vertices == 10:
+            self.l_1 = (self.v_0[0], self.v_0[1], self.v_0[10], self.v_0[11])
+            self.l_2 = (self.v_0[2], self.v_0[3], self.v_0[12], self.v_0[13])
+            self.l_3 = (self.v_0[4], self.v_0[5], self.v_0[14], self.v_0[15])
+            self.l_4 = (self.v_0[6], self.v_0[7], self.v_0[16], self.v_0[17])
+            self.l_5 = (self.v_0[8], self.v_0[9], self.v_0[18], self.v_0[19])
+
+        self.label_wid.text = f"[color=FFFFFF]{polygon_names[vertices]}, tiene {vertices} lados (vertices)."
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
+
+    def cap2_sec5_pag2(self):
+        """Control sliders events"""
+        Clock.schedule_interval(self.update_points, 0.01)
+        rot = self.slider_x.value  # Rotation of the polygon
+        vertices = self.slider_y.value  # Number of vertices of the polygon (3-inf)
+        inf_vertices = self.slider_y.max  # 'infinite' points for horizontal line
+
+        # Fixed point center
+        self.p_A = (self.width / 2, self.height * 3 / 4)
+
+        self.v_0 = []
+        istep = (pi * 2) / float(vertices)
+        fase = pi / 2 if vertices != 4 else pi / 4
+        for i in range(vertices):
+            x = self.p_A[0] + cos(istep * i + fase + rot) * self.height * 0.5 / 4
+            y = self.p_A[1] + sin(istep * i + fase + rot) * self.height * 0.5 / 4
+            self.v_0.extend([x, y])
+        # To close the polygon
+        self.v_0.extend([self.v_0[0], self.v_0[1]])
+
+        polygon_names = [
+            "",
+            "",
+            "",
+            "Triángulo",
+            "Cuadrado",
+            "Pentágono",
+            "Hexágono",
+            "Heptágono",
+            "Octágono",
+            "Eneágono",
+            "Decágono",
+            "Endecágono",
+            "Dodecágono",
+            "Tridecágono",
+            "Tetradecágono",
+            "Pentadecágono",
+            "Hexadecágono",
+            "Heptadecágono",
+            "Octadecágono",
+            "Eneadecágono",
+            "Icoságono",
+        ]
+        polygon_name = polygon_names[vertices] if vertices < 20 else "Polígono"
+
+        self.label_wid.text = f"[color=FFFFFF]{polygon_name}, {vertices if vertices < inf_vertices else '¿Infinitos?'} lados (vertices)."
+
+        # Adding offset to draw points correctly
+        self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
