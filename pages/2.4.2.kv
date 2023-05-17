@@ -1,0 +1,126 @@
+#:kivy 2.1.0
+
+#:set this_file '2.4.2'
+
+#:set point_size 6
+#:set offset point_size / 2
+#:set line_width 1.1
+#:set line_width_2 1.4
+
+RootWidget:
+    # import container
+    container: container
+    label_wid: main_message
+    slider_x: x
+    slider_y: y
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        # fill the canvas
+        GridLayout:
+            rows: 2
+            orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
+
+            BoxLayout:  # Empty space
+                size_hint: (0.075, 0.075)  # Buttom-left
+            BoxLayout:  # Space for vertical (right) slider
+                size_hint: (0.075, 0.925)  # Top-left
+                Slider:
+                    id: y
+                    on_value: root.cap2_sec4_pag2()  # Call the code on event
+                    min: -10  # In 'units' from the function
+                    max: 6  # In 'units' from the function
+                    value: 0
+                    step: 1
+                    orientation: 'vertical'
+            BoxLayout:
+                size_hint: (1, 0.075)
+                Label:
+                    size_hint: (0.2, None)  # To leave 20% free to the left
+                Slider:
+                    id: x
+                    on_value: root.cap2_sec4_pag2()  # Call the code on event
+                    min: -10  # In 'units' from the function
+                    max: 10  # In 'units' from the function
+                    value: 0
+                    step: 1
+                    orientation: 'horizontal'
+                Label:
+                    size_hint: (0.2, None)    # To leave 20% free to the right
+
+            BoxLayout:  # Space for canvas
+                size_hint: (0.925, 0.925)  # Top-right
+                canvas:
+                    Color:
+                        rgb: gris_medio
+                    Rectangle:
+                        size: root.p_SIZE
+                        pos: root.p_POS
+
+                    Color:
+                        rgba: blanco
+                    Line:  # Hight of the triangle
+                        points: root.l_5
+                        width: line_width_2
+                    Line:  # Top of the paralelogram
+                        points: root.l_6
+                        width: line_width_2
+                    Color:
+                        rgba: verde
+                    Line:  # Hight of the triangle
+                        points: root.l_4
+                        width: line_width_2
+                    Color:
+                        rgba: rojo
+                    Line:  # Horizontal fixed line bottom
+                        points: root.l_1
+                        width: line_width_2
+                    Line:  # rotating line left
+                        points: root.l_2
+                        width: line_width_2
+                    Line:  # rotating line right
+                        points: root.l_3
+                        width: line_width_2
+ 
+                    Color:
+                        rgba: cafe_claro
+                    Ellipse:  # point bottom left
+                        pos: root.p_A
+                        size: point_size, point_size
+                    Color:
+                        rgba: azul
+                    Ellipse:  # point bottom right
+                        pos: root.p_B
+                        size: point_size, point_size
+                    Color:
+                        rgba: verde
+                    Ellipse:  # point top right
+                        pos: root.p_C
+                        size: point_size, point_size
+                    Color:
+                        rgba: rojo
+                    Ellipse:  # point top left
+                        pos: root.p_D
+                        size: point_size, point_size
+
+                Label:
+                    id: main_message
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+                    markup: True
+
+
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: notes_background_color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: rst_files_folder + this_file + ".rst"
