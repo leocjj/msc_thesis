@@ -1,6 +1,6 @@
 *Cap.2 Sec.4 Pag.1*
 
-Concepto de área
+Área y perímetro de un paralelogramo
 =========================================================
 
 El área de una figura plana es la medida de la región encerrada por la figura.
