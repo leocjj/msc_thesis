@@ -59,14 +59,14 @@ RootWidget:
                     Line:  # X-axis
                         points: root.width/10, root.height * 3 / 4, root.width*9/10, root.height * 3 / 4
                     Color:
-                        rgba: verde
-                    Ellipse:  # Mobile point
-                        pos: root.p_A
-                        size: point_size, point_size
-                    Color:
                         rgba: rojo
                     Ellipse:  # Origin point
                         pos: root.p_B
+                        size: point_size, point_size
+                    Color:
+                        rgba: verde
+                    Ellipse:  # Mobile point
+                        pos: root.p_A
                         size: point_size, point_size
                 Label:
                     id: main_message
