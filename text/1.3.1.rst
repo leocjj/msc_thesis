@@ -1,40 +1,53 @@
 *Cap.1 Sec.3 Pag.1*
 
 Concepto de ángulo
-======================================================
+===============================================================================
 
-Cuando dos rectas (o semirrectas) se intersectan, podemos describir la forma en que lo
-hacen con un concepto que llamaremos **ángulo**. Este es una medida de la 'abertura' o
-inclinación de una recta respecto a la otra. En el gráfico podemos observar los ángulos
-diferentes que se forman al girar la semirrecta blanca y la café. El **ángulo principal
-en color verde** (también llamado ángulo positivo) lo mediremos en el sentido contrario
-a las manecillas del reloj, es decir, en sentido antihorario.
-A medida que la semirrecta blanca gire en este sentido, el ángulo verde será mayor.
+Cuando dos rectas (o semirrectas) se intersectan, podemos describir la forma
+como lo hacen con un concepto que llamaremos **ángulo**. Este es una medida de
+la 'abertura' o inclinación de una recta respecto a la otra. En el gráfico
+podemos observar los diferentes ángulos que se forman al girar la semirrecta
+blanca y la café.
 
-El **ángulo rojo el cual llamaremos suplemento**, es la 'abertura' restante hasta encontrarnos
-de nuevo con la semirrecta café. De este modo vemos que a medida que el ángulo aumenta su 
-suplemento disminuye. Cuando la semirrecta blanca sigue girando se encuentra con la semirrecta
-café y allí el suplemento es cero ya que toda la abertura corresponde al ángulo principal.
+El **ángulo principal en color verde** (también llamado ángulo positivo) lo
+mediremos en el sentido contrario a las manecillas del reloj, es decir, en
+sentido antihorario. A medida que la semirrecta blanca gire en este sentido,
+el ángulo verde será mayor.
 
-Si seguimos girando la semirrecta blanca, el ángulo principal seguirá aumentando y podrá llegar
-a encontrarse nuevamente con la semirrecta café. Este ángulo corresponde a un valor de 360
-**grados sexagésimales** o 360° (`Consultar el concepto de grado sexagésimal`_).
+El **ángulo rojo, el cual llamaremos suplemento**, es la 'abertura' restante
+hasta encontrarnos de nuevo con la semirrecta café. De este modo vemos que a
+medida que el ángulo principal aumenta su suplemento disminuye. Cuando la
+semirrecta blanca sigue girando se encuentra con la semirrecta café y allí el
+suplemento es cero ya que toda la abertura corresponde al ángulo principal.
 
-Existen varias formas de medir los ángulos, una de las más comunes son los grados sexagesimales,
-es decir, que asignamos un valor de 360 grados al ángulo obtenido al girar la semirrecta blanca
-completamente hasta llegar al punto de partida. La mitad de este valor será entonces 180 grados
-y corresponderá al ángulo cuando su suplemento es cero.
+Si seguimos girando la semirrecta blanca, el ángulo principal seguirá
+aumentando y podrá llegar a encontrarse nuevamente con la semirrecta café.
+Este ángulo corresponde a un valor de 360 **grados sexagesimales** o 360°.
 
-Existe otro caso especial muy importante cuando el **ángulo y su suplemento son iguales**,
-entonces decimos que las semirrectas blanca y café son **perpendiculares**
-( `Consultar el concepto de líneas perpendiculares`_) y a los ángulos tanto al
-principal con su suplemento los llamamos **ángulos rectos**. Esto ocurre en dos casos, cuando valen
-90° (semirecta blanca hacia arriba) o cuando valen -90° (semirecta blanca hacia abajo).
+(`Consultar el concepto de grado sexagesimal`_).
 
-**Nota:** los ángulos negativos se miden en sentido horario para el ángulo principal y en sentido
-antihorario para el suplemento. Al sumar ángulos se debe tener en cuenta su signo, por lo tanto,
-al afirmar que dos ángulos son iguales, se debe tener en cuenta que deben ser iguales en valor
-absoluto y en signo. Por otro lado, al sumar dos ángulos de signo contrario, el
-resultado puede ser cero.
+*Grados sexagesimales*
+-------------------
+
+Existen varias formas de medir los ángulos, una de las más comunes son los
+grados sexagesimales, es decir, que asignamos un valor de 360 grados al ángulo
+obtenido al girar la semirrecta blanca completamente hasta llegar al punto de
+partida. La mitad de este valor será entonces 180 grados y corresponderá al
+ángulo cuando su suplemento es cero.
+
+Existe otro caso especial muy importante cuando el **ángulo y su suplemento son
+iguales**, entonces decimos que las semirrectas blanca y café son
+**perpendiculares** ( `Consultar el concepto de líneas perpendiculares`_) y a
+los ángulos tanto al principal con su suplemento los llamamos **ángulos
+rectos**. Esto ocurre en dos casos, cuando valen 90° (semirecta blanca hacia
+arriba) o cuando valen -90° (semirecta blanca hacia abajo). Cabe anotar que un
+ángulo de -90° es equivalente a un ángulo de 270°.
+
+**Nota:** los ángulos negativos se miden en sentido horario para el ángulo
+principal y en sentido antihorario para el suplemento. Al sumar ángulos se debe
+tener en cuenta su signo, por lo tanto, al afirmar que dos ángulos son iguales,
+se debe tener en cuenta que deben ser iguales en valor absoluto y en signo.
+Por otro lado, al sumar dos ángulos de signo contrario, el resultado puede ser
+cero.
 
 ------------------------

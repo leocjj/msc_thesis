@@ -1,44 +1,51 @@
 *Cap.2 Sec.4 Pag.0*
 
 Áreas y perímetros
-=========================================================
+===============================================================================
 
 En esta sección se estudiarán los conceptos de área y perímetro los cuales son
-fundamentales en la geometría. Se estudiarán además las fórmulas para calcular
-el área y perímetro de las figuras geométricas básicas: triángulos y paralelogramos.
+fundamentales en la Geometría. Se estudiarán además las fórmulas para calcular
+el área y perímetro de las figuras geométricas básicas: triángulos y
+paralelogramos.
 
-En la gráfica interactiva podemos iniciar desplazando el **control horizontal para
-construir una línea con base en dos puntos (rojos)** partiendo de unos pocos hasta
-tener infinitos puntos como se hizo en el capítulo 1. En este caso, la línea
-que se construye es un segmento de recta.
+En la gráfica interactiva podemos iniciar desplazando el **control horizontal
+para construir una línea con base en dos puntos (rojos)** partiendo de unos
+pocos hasta tener infinitos puntos como se hizo en el capítulo 1. En este caso,
+la línea que se construye es un segmento de recta.
 
-**Los puntos extremos** se grafican en rojo y en un tamaño mayor que los demás solo
-para efectos de visualización. `Recordemos que un punto no tiene dimensión!`_
+**Los puntos extremos** se grafican en rojo y en un tamaño mayor que los demás
+solo para efectos de visualización. `Recordemos que un punto no tiene dimensión!`_
 
-Si se desplaza el **control vertical**, se pueden desplazar verticalmente los puntos
-o el segmento de recta según sea el caso, si se tiene un número finito de puntos
-o un número infinito.
+Si se desplaza el **control vertical**, se pueden desplazar verticalmente los
+puntos o el segmento de recta según sea el caso, si se tiene un número finito
+de puntos o un número infinito.
+
+*Área*
+------
 
 Cuando el número de puntos de la línea es infinito y se desplaza el control
 vertical, se puede observar que **la línea va cubriendo completamente una parte
 de la pantalla, sin dejar espacios o huecos y decimos entonces que va formando
 un área.** En este caso, el área que se forma es un rectángulo.
 
-**Desde otro punto de vista** podemos decir que cada uno de los puntos del segmento
-de recta va construyendo una línea vertical por lo cual tendríamos infinitas líneas
-verticales alineadas de izquierda a derecha, que cubren completamente una parte
-de la pantalla.
+**Desde otro punto de vista** podemos decir que cada uno de los puntos del
+segmento de recta va construyendo una línea vertical por lo cual tendríamos
+infinitas líneas verticales alineadas de izquierda a derecha, que cubren
+completamente una parte de la pantalla.
+
+*Perímetro*
+-----------
 
 De esta forma también podemos ver que los **puntos exteriores** van a contruir
-segmentos de recta exteriores o lados de la figura (líneas rojas), es decir, que
-tienen puntos a un lado pero no al otro.
+segmentos de recta exteriores o lados de la figura (líneas rojas), es decir,
+que tienen puntos a un lado pero no al otro.
 
 Las líneas exteriores de la figura geométrica van a ser los lados de la figura
 y a la suma de sus longitudes la llamamos **perímetro**.
 
-En otras palabras, **un área** es una región del plano que está limitada por una(s)
-línea(s) cerrada(s), en nuestro caso, líneas rectas. **El perímetro** es la suma de
-las longitudes de las líneas que limitan el área.
+En otras palabras, **un área** es una región del plano que está limitada por
+una(s) línea(s) cerrada(s), en nuestro caso, líneas rectas. **El perímetro** es
+la suma de las longitudes de las líneas que limitan el área.
 
 `Es importante aclarar que el área y el perímetro son conceptos que se aplican
 a figuras geométricas planas, es decir, figuras que se encuentran en un plano

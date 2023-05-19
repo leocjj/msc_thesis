@@ -1,36 +1,52 @@
 *Cap.2 Sec.3 Pag.0*
 
 Conceptos
-=========================================================
+===============================================================================
 
-En esta sección se introducen los conceptos básicos de la geometría de polígonos llamados
-**cuadriláteros o cuadrángulos**, cuya característica principal es que tienen **cuatro
-aristas** o lados y **cuatro vértices** o esquinas.
+En esta sección se introducen los conceptos básicos de la Geometría de
+polígonos llamados **cuadriláteros o cuadrángulos**, cuya característica
+principal es que tienen **cuatro aristas** o lados y **cuatro vértices** o
+esquinas.
 
-Sin embargo, con esta definición no tenemos una guía de cómo unir los cuatro vertices con
-cuatro lados y podríamos tener de forma general dos opciones:
+Sin embargo, con esta definición no tenemos una guía de como unir los cuatro
+vértices con cuatro lados y podríamos tener de forma general dos opciones.
+
+*Cuadriláteros*
+---------------
 
 .. image:: ./images/2.3.0_complejos_simples.png
+    :align: center
+    :width: 480px
+    :height: 240px
 
-**Cuadriláteros complejos:** son aquellos que tienen lados que se cruzan entre sí (izquierda).
+**Cuadriláteros complejos:**
+    Son aquellos que tienen lados que se cruzan entre sí (izquierda).
 
-**Cuadriláteros simples:** son aquellos que tienen lados que no se cruzan entre sí (derecha).
+**Cuadriláteros simples:**
+    Son aquellos que tienen lados que no se cruzan entre sí (derecha).
 
-----
+*Cuadriláteros simples*
+-----------------------
 
-Ahora bien, si consideramos solo los **cuadriláteros simples**, es decir que sus lados no se
-cruzan entre sí, podemos tener dos opciones:
+Ahora bien, si consideramos solo los **cuadriláteros simples**, es decir que
+sus lados no se cruzan entre sí, podemos tener dos opciones:
 
 .. image:: ./images/2.3.0_convexos_concavos.png
+    :align: center
+    :width: 480px
+    :height: 240px
 
-**Cuadriláteros concavos:** son aquellos que tienen al menos un ángulo interno mayor a 180° (izquierda).
 
-**Cuadriláteros convexos:** son aquellos que tienen todos sus ángulos internos menores a 180° (derecha).
+**Cuadriláteros concavos:**
+    Son aquellos que tienen al menos un ángulo interno mayor a 180° (izquierda).
+
+**Cuadriláteros convexos:**
+    Son aquellos que tienen todos sus ángulos internos menores a 180° (derecha).
 
 ----
 
-Finalmente nos dedicaremos a estudiar los **cuadriláteros convexos**, que son los más
-importantes en la geometría euclidiana y que tienen la característica de que sus lados no
-se cruzan entre sí y sus ángulos internos son menores a 180°.
+Finalmente nos dedicaremos a estudiar los **cuadriláteros convexos**, que son
+los más importantes en la Geometría Euclidiana y que tienen la característica de
+que sus lados no se cruzan entre sí y sus ángulos internos son menores a 180°.
 
 ----

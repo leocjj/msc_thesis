@@ -1,73 +1,98 @@
 *Cap.2 Sec.2 Pag.1*
 
 Ángulos internos
-=========================================================
+===============================================================================
 
-Como ya hemos conceptualizado préviamente, para medir ángulos se utiliza comunmente grados
-sexagesimales, los cuales corresponden a la siguiente equivalencia:
+Como ya hemos conceptualizado préviamente, para medir ángulos se utiliza
+comúnmente grados sexagesimales, los cuales corresponden a la siguiente
+equivalencia:
 
 **360° = (ángulo que da una vuelta completa)**
 
 De esta forma podemos decir que:
 
-- 180° = (ángulo que da media vuelta)
-- 90°  = (ángulo que da un cuarto de vuelta)
-- 45°  = (ángulo que da un octavo de vuelta)
-- 30°  = (ángulo que da un doceavo de vuelta)
-- 1°   = (ángulo que da un trescientos sesentaavo de vuelta)
+    180° = (ángulo que da media vuelta)
 
--------------------
+    90°  = (ángulo que da un cuarto de vuelta)
 
-Sin embargo existe otra forma de medir ángulos, mediante radianes, los cuales corresponden
-a la siguiente equivalencia:
+    45°  = (ángulo que da un octavo de vuelta)
+
+    30°  = (ángulo que da un doceavo de vuelta)
+
+    1°   = (ángulo que da un trescientos sesentaavo de vuelta)
+
+*Radianes*
+----------
+
+Sin embargo existe otra forma de medir ángulos, mediante radianes, los cuales
+corresponden a la siguiente equivalencia:
 
 **360° = 2π radianes = (ángulo que da una vuelta completa) ~ 6.283185**
 
 De esta forma podemos decir que:
 
-- 180° = π     radianes = (ángulo que da media vuelta) ~ 3.141593
-- 90°  = π/2   radianes = (ángulo que da un cuarto de vuelta) ~ 1.570796
-- 45°  = π/4   radianes = (ángulo que da un octavo de vuelta) ~ 0.785398
-- 30°  = π/6   radianes = (ángulo que da un doceavo de vuelta) ~ 0.523599
-- 1°   = π/180 radianes = (ángulo que da un trescientos sesentaavo de vuelta) ~ 0.017453
+    180° = π     radianes = (ángulo que da media vuelta) ~ 3.141593
 
--------------------
+    90°  = π/2   radianes = (ángulo que da un cuarto de vuelta) ~ 1.570796
 
-En la gráfica interactiva se pueden apreciar las relaciones trigonométricas principales y
-los valores de los ángulos internos tanto en grados como en radianes entre paréntesis.
+    45°  = π/4   radianes = (ángulo que da un octavo de vuelta) ~ 0.785398
 
-Los ángulos se identifican por el color del lado opuesto, esto es,
-el ángulo rojo es el ángulo conformado por el cateto azul y la hipotenusa (amarilla),
-el ángulo azul es el ángulo conformado por el cateto rojo y la hipotenusa (amarilla) y
-el ángulo amarillo es el ángulo conformado por los dos catetos.
+    30°  = π/6   radianes = (ángulo que da un doceavo de vuelta) ~ 0.523599
 
--------------------
+    1°   = π/180 radianes = (ángulo que da un trescientos sesentaavo de vuelta) ~ 0.017453
 
-A continuación se presentan (sin demostración) algunas propiedades especiales que aplícan
-a todos los triángulos. Estas pueden ser visualizadas en esta página para triángulos
-rectángulos. En las siguientes secciones podrán ser visualidadas para triángulos en general,
+En la gráfica interactiva se pueden apreciar las relaciones trigonométricas
+principales y los valores de los ángulos internos tanto en grados como en
+radianes entre paréntesis.
+
+Los ángulos se identifican por el color del lado opuesto, esto es:
+
+    **El ángulo rojo** es el ángulo conformado por el cateto azul y la
+    hipotenusa (amarilla)
+
+    **El ángulo azul** es el ángulo conformado por el cateto rojo y la
+    hipotenusa (amarilla)
+
+    **El ángulo amarillo** es el ángulo conformado por los dos catetos.
+
+*Propiedades de los triángulos*
+-------------------------------
+
+A continuación se presentan (sin demostración) algunas propiedades especiales
+que aplícan a todos los triángulos. Estas pueden ser visualizadas en esta
+página para triángulos rectángulos.
+
+En las siguientes secciones podrán ser visualidadas para triángulos en general,
 es decir, no necesariamente rectángulos.
 
-**La suma de los ángulos interiores de un triángulo es siempre 180° (A + B + C = 180°).**
+    **La suma de los ángulos interiores de un triángulo es siempre 180°
+    (A + B + C = 180°).**
 
-- La suma de dos lados es siempre mayor que el tercer lado.
-- La resta de dos lados es siempre menor que el tercer lado.
-- El lado más largo es opuesto al ángulo más grande.
-- El lado más corto es opuesto al ángulo más pequeño.
+    La suma de dos lados es siempre mayor que el tercer lado.
 
-**Nota:** especialmente para los triángulos rectángulos, todos los ángulos internos son menores o iguales a 90°.
+    La resta de dos lados es siempre menor que el tercer lado.
 
+    El lado más largo es opuesto al ángulo más grande.
+
+    El lado más corto es opuesto al ángulo más pequeño.
+
+**Nota:** especialmente para los triángulos rectángulos, todos los ángulos internos
+son menores o iguales a 90°.
+
+*Ángulos más comunes*
 -------------------
 
 `Razones trigonométricas de los ángulos más comunes`_
 
-Leer la tabla de la siguiente forma: el seno de 0° es √0/2, el coseno de 30° es √3/2.
+Leer la tabla de la siguiente forma: el seno de 0° es √0/2, el coseno de 30° es
+√3/2.
 
 .. image:: ./images/2.2.1_sencostan.png
     :align: center
     :width: 480px
     :height: 280px
 
+*Cuestionario para recapitular*
 -------------------
 
 **A continuación unas preguntas para pensar un poco sobre la tabla anterior:**
@@ -78,13 +103,16 @@ Leer la tabla de la siguiente forma: el seno de 0° es √0/2, el coseno de 30°
 
 ¿Tienen alguna relación las secuencias del seno y del coseno?
 
-¿Cual es la secuencia para los valores de la **tangente** de los ángulos de la tabla?
+¿Cual es la secuencia para los valores de la **tangente** de los ángulos de la
+tabla?
 
-¿Tienen alguna relación la secuencia de la tangente con las secuencias del seno y del coseno?
+¿Tienen alguna relación la secuencia de la tangente con las secuencias del seno
+y del coseno?
 
-¿Cambiaría la tabla si los valores de los ángulos estuvieran dados en **radianes**?
-Verificar con la gráfica interactiva.
+¿Cambiaría la tabla si los valores de los ángulos estuvieran dados en
+**radianes**? Verificar con la gráfica interactiva.
 
-`Construir la tabla anterior con los valores simplificados, por ejemplo, √0/2 = 0`_)
+(`Construir la tabla anterior con los valores simplificados, por ejemplo, √0/2
+= 0`_)
 
 -------------------

@@ -1,32 +1,39 @@
 *Cap.1 Sec.0 Pag.3*
 
 Método de estudio recomendado
-======================================
+===============================================================================
 
-Cada página tiene por lo general, la siguiente estructura la cual se recomienda seguir
-en el orden presentado (primero el espacio de interacción y luego el espacio de lectura).
+Cada página tiene por lo general la siguiente estructura, la cual se recomienda
+seguir en el orden presentado (primero el espacio de interacción y luego el
+espacio de lectura).
 
-`Espacio de interacción`_
+Espacio de interacción
+----------------------
 
-En la **mitad superior de la pantalla** se presenta un espacio gráfico el cual contará con diferentes
-controles para interactuar con los objetos (geométricos) presentados.
+En la **mitad superior de la pantalla** se presenta un espacio gráfico el cual
+contará con diferentes controles para interactuar con los objetos geométricos
+presentados.
 
 Los controles pueden ser de varios tipos pero fundamentalmente lo que buscan es
-cambiar uno o más parámetros del gráfico y de esta forma interactuar con los objetos.
+cambiar uno o más parámetros del gráfico y de esta forma interactuar con los
+objetos.
 
-**Es el punto de partida de cada página**, donde el estudiante debe interactuar para
-ver cómo cambian los objetos, buscando entender los conceptos que se quiere presentar
-y revisando el texto dinámico que presenta información importante sobre estos.
+**Es en el punto de partida de cada página**, donde el estudiante debe
+interactuar para ver como cambian los objetos, buscando entender los conceptos
+que se quieren presentar y revisando el texto dinámico que presenta información
+importante sobre estos.
 
 Por ejemplo, al mover los controles a un valor de 90 (por ejemplo grados) podría
-mostrarse un texto y un valor de 180 otro diferente. Se recomienta intentar encontrar
-todos los casos posibles.
+mostrarse un texto y un valor de 180, osea otro diferente. Se recomienda
+intentar encontrar todos los casos posibles.
 
 
-`Espacio de lectura`_
+Espacio de lectura
+------------------
 
-Este segundo espacio en la **mitad inferior de la pantalla**, presenta un contenido que
-pretende presentar los objetos con los cuales se interactuó previamente, explicar las
-situaciones especiales y dar los conceptos importantes que refuerzan la actividad realizada.
+Este segundo espacio en la **mitad inferior de la pantalla**, muestra un 
+contenido que pretende presentar los objetos con los cuales se interactuó
+previamente, explicar las situaciones especiales y dar los conceptos
+importantes que refuerzan la actividad realizada.
 
 ------------------------

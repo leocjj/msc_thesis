@@ -1,25 +1,28 @@
 *Cap.1 Sec.3 Pag.0*
 
 Tipos de intersecciones entre dos rectas
-======================================================
+===============================================================================
 
-Dadas dos rectas arbitrarias podemos decir que existen tres formas en que
-se pueden intersectar entre sí, es decir, se cruzan y una pasa por encima de la otra.
-El lugar geométrico donde esto ocurre se le llama **intersección**
+Dadas dos rectas arbitrarias podemos decir que existen tres formas como se
+pueden intersectar entre sí, es decir, se cruzan y una pasa por encima de la
+otra. El lugar geométrico donde esto ocurre se le llama **intersección.**
+
 (`Consultar el concepto de intersección`_)
 
-En la gráfica podemos trasladar y girar (movimiento de rotación) la línea recta blanca
-alrededor del punto rojo, mientras la otra permanece estática.
-Podremos notar entonces tres tipos de situaciones:
+En la gráfica podemos trasladar y girar (movimiento de rotación) la línea recta
+blanca alrededor del punto rojo, mientras la otra permanece estática. Podremos
+notar entonces tres tipos de situaciones:
 
 1. Las rectas no tienen punto de intersección:
-    No se encuentran nunca ni siquiera en el infinito y se les llama **rectas paralelas**
-    (este concepto lo seguiremos trabajando en las siguientes secciones).
+    No se encuentran nunca ni siquiera en el infinito y se les llama **rectas
+    paralelas** (este concepto lo seguiremos trabajando en las siguientes
+    secciones).
 2. Las rectas se intersectan en todos sus infinitos puntos:
-    Una recta está completamente sobre la otra por lo cual podemos decir que dejaron de
-    ser dos rectas diferentes y ahora son la misma. 
+    Una recta está completamente sobre la otra por lo cual podemos decir que
+    dejaron de ser dos rectas diferentes y ahora son la misma. 
 3. Las rectas se intersectan en un solo punto:
-    Cuando dos rectas se intersectan pero no son la misma, es decir, no se intersectan en infinitos puntos,
-    solo se pueden intersectar en un solo punto (punto verde).
+    Cuando dos rectas se intersectan pero no son la misma, es decir, no se
+    intersectan en infinitos puntos, solo se pueden intersectar en un solo
+    punto (punto verde).
 
 ------------------------

@@ -1,43 +1,52 @@
 *Cap.2 Sec.1 Pag.1*
 
 Líneas importantes
-======================================================
+===============================================================================
 
-Independientemente del tipo de triángulo que se trate, existen unas líneas principales
-que se pueden trazar en un triángulo. 
+Independientemente del tipo de triángulo que se trate, existen unas líneas
+principales que se pueden trazar en un triángulo. 
 
-En la gráfica interactiva podemos desplazar el vértice superior del triángulo, tanto 
-vertical como horizontalmente, para construir diferentes tipos de triángulos.
-Tomamos como base el lado inferior del triángulo mostrado en la interfaz gráfica y el
-vertice superior para construir cuatro tipos de líneas principales, pero se puede tomar
-cualquier lado (y su vértice opuesto) del triángulo.
+En la gráfica interactiva podemos desplazar el vértice superior del triángulo,
+tanto vertical como horizontalmente, para construir diferentes tipos de
+triángulos. Tomamos como base el lado inferior del triángulo mostrado en la
+interfaz gráfica y el vértice superior para construir cuatro tipos de líneas
+principales, pero se puede tomar cualquier lado (y su vértice opuesto) del
+triángulo.
 
-En total se podrían trazar las cuatro líneas principales en cada uno de los tres lados del
-triángulo (para un total de 12 líneas principales) como veremos en las siguientes páginas.
+En total se podrían trazar las cuatro líneas principales en cada uno de los
+tres lados del triángulo (para un total de 12 líneas principales) como veremos
+en las siguientes páginas.
 
-Un concepto importante que debemos tener en cuenta es el punto medio de un segmento de
-recta o lado.
+Un concepto importante que debemos tener en cuenta es el punto medio de un
+segmento de recta o lado.
 
-**Punto medio**: es el punto que divide al segmento de recta en dos partes iguales.
-*En otras palabras*, la distancia desde el punto medio hasta el punto inicial del
-segmento de recta es igual a la distancia desde el punto medio hasta el punto final.
+**Punto medio**:
+    Es el punto que divide al segmento de recta en dos partes iguales.
+    *En otras palabras*, la distancia desde el punto medio hasta el punto
+    inicial del segmento de recta es igual a la distancia desde el punto medio
+    hasta el punto final.
 
----
 
-Ahora veremos los cuatro tipos de líneas importantes que se pueden trazar para cualquier
-triángulo dado:
+*Definiciones*
+-------------------
 
-**Mediatriz:** línea perpendicular a un lado y que pasa por el punto medio del lado
-(Ver línea azul).
+Ahora veremos los cuatro tipos de líneas importantes que se pueden trazar para
+cualquier triángulo dado.
 
-**Bisectriz:** es la línea que divide un ángulo en dos partes iguales.
-(Ver línea verde).
+**Mediatriz:**
+    Línea perpendicular a un lado y que pasa por el punto medio del lado (ver
+    línea azul).
 
-**Mediana:** línea que une el punto medio de un lado con el vértice opuesto
-(Ver línea roja).
+**Bisectriz:**
+    Es la línea que divide un ángulo en dos partes iguales (ver línea verde).
 
-**Altura:** línea perpendicular a un lado que pasa por el vértice opuesto
-(Ver línea café).
+**Mediana:**
+    Línea que une el punto medio de un lado con el vértice opuesto (Ver línea
+    roja).
+
+**Altura:**
+    Línea perpendicular a un lado que pasa por el vértice opuesto (Ver línea
+    café).
 
 ( `Consultar el concepto de triángulo rectángulo`_).
 

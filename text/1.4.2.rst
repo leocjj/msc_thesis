@@ -1,23 +1,28 @@
 *Cap.1 Sec.4 Pag.2*
 
 Concepto de triángulo
-======================================================
+===============================================================================
 
-Ahora que ya sabemos que es un polígono, podemos decir que un triángulo es un polígono de
-tres lados, el cual tiene tres vértices (los tres puntos de intersección) y tres ángulos
-internos.
+Ahora que ya sabemos que es un polígono, podemos decir que un triángulo es un
+polígono de tres lados, el cual tiene tres vértices (los tres puntos de
+intersección) y tres ángulos internos.
 
-Vamos a analizar que ocurre a medida que movemos tres puntos los cuales estamos uniendo
-con semirectas, es decir, una forma general del caso de la página anterior.
+Vamos a analizar que ocurre a medida que movemos tres puntos los cuales estamos
+uniendo con semirectas, es decir, una forma general del caso de la página
+anterior.
 
-**Si movemos únicamente el control central** (control horizontal), vemos que los tres puntos
-se encuentran sobre una misma línea recta, es decir, **son colineales** y en este caso no
-podemos hablar de un polígono, ya que **no existe una zona interior** delimitada por tres lados.
+**Si movemos únicamente el control central** (control horizontal), vemos que
+los tres puntos se encuentran sobre una misma línea recta, es decir, **son
+colineales** y en este caso no podemos hablar de un polígono, ya que **no
+existe una zona interior** delimitada por tres lados.
 
-**Si movemos el control derecho** (control vertical), vemos que inmediatamente podemos ver
-las tres rectas independientes y **se forma un triángulo**, el cual tiene tres lados, tres
-ángulos internos y tres vértices ( `Consultar el concepto de triángulo`_).
+**Si movemos el control derecho** (control vertical), vemos que inmediatamente
+podemos ver las tres rectas independientes y **se forma un triángulo**, el cual
+tiene tres lados, tres ángulos internos y tres vértices
 
-**En la siguiente sección profundiazaremos en el concepto de triángulo y de polígonos de más lados.**
+(`Consultar el concepto de triángulo`_).
+
+**En el siguiente capítulo profundizaremos en el concepto de triángulo y de
+polígonos de más lados.**
 
 ------------------------

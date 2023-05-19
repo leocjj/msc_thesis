@@ -1,103 +1,108 @@
 *Cap.2 Sec.2 Pag.3*
 
 Ley de los cosenos
-=========================================================
+===============================================================================
 
-Existe otra relación muy importante cuando se tiene un triángulo cualquiera (oblícuo),
-que se puede establecer entre lados y ángulos. Esta segunda relacion que veremos se conoce
-como ley de los cosenos.
+Existe otra relación muy importante cuando se tiene un triángulo cualquiera
+(oblícuo), que se puede establecer entre lados y ángulos. Esta segunda relación
+que veremos se conoce como ley de los cosenos.
 
-**La ley de los cosenos establece que en todo triángulo, la longitud de un lado al cuadrado
-es igual a la suma de los cuadrados de los otros dos lados menos el doble producto de estos
-dos lados por el coseno del ángulo opuesto al lado que se esta considerando.**
+**La ley de los cosenos establece que en todo triángulo, la longitud de un lado
+al cuadrado es igual a la suma de los cuadrados de los otros dos lados menos el
+doble producto de estos dos lados por el coseno del ángulo opuesto al lado que
+se esta considerando.**
 
 .. image:: ./images/2.2.3_ley_de_cosenos.png
    :align: center
    :width: 480px
    :height: 288px
 
-De David Weisman (Dweisman) - En-Wiki. Original description is/was here, Dominio público,
-https://commons.wikimedia.org/w/index.php?curid=2596911
+De David Weisman (Dweisman) - En-Wiki. Original description is/was here,
+Dominio público, https://commons.wikimedia.org/w/index.php?curid=2596911
 
 
-Donde 'a', 'b' y 'c' son las longitudes de los lados del triángulo y 'A', 'B' y 'C' son
-los ángulos opuestos a los lados respectivos.
+Donde 'a', 'b' y 'c' son las longitudes de los lados del triángulo y 'A', 'B' y
+'C' son los ángulos opuestos a los lados respectivos.
 
-De esta manera, si se tiene un triángulo cualquiera ABC, se pueden establecer las siguientes
-relaciones:
+De esta manera, si se tiene un triángulo cualquiera ABC, se pueden establecer
+las siguientes relaciones:
 
 .. image:: ./images/2.2.3_ley_de_cosenos_2.png
    :align: center
    :width: 300px
    :height: 144px
 
----------------------------------------------------------
 
-`Qúé ocurre cuando úno de los ángulos es recto, es decir, cuando tenemos el caso especial
-de un triángulo rectángulo?`__
+*Caso especial: triángulos rectángulos*
+---------------------------------------
 
-Como hemos visto anteriormente y así mismo puede comprobarse en la gráfica interactiva,
-el coseno de un angulo recto (90°) es cero, por lo tanto, la ley de los cosenos se reduce
-a la conocida relación del **teorema de Pitágoras**.
+`¿Qué ocurre cuándo uno de los ángulos es recto, es decir, cuando tenemos el
+caso especial de un triángulo rectángulo?`__
+
+Como hemos visto anteriormente y así mismo puede comprobarse en la gráfica
+interactiva, el coseno de un ángulo recto (90°) es cero, por lo tanto, la ley
+de los cosenos se reduce a la conocida relación del **teorema de Pitágoras**
+para triángulos rectángulos, donde el cuadrado de la hipotenusa es igual a la
+suma de los cuadrados de los catetos.
 
 .. image:: ./images/2.2.3_ley_de_cosenos_3.png
    :align: center
    :width: 180px
    :height: 170px
 
----------------------------------------------------------
 
-`Cuando usar la ley de los cosenos?`__
+*Usos*
+-------------------
 
-**Caso 1:** Cuando se conocen dos lados y el ángulo entre estos.
-En este caso se calcula el valor del tercer lado aplicando directamente la ley de los cosenos.
+`¿Cuándo usar la ley de los cosenos?`__
+   **Caso 1:**
+      Cuando se conocen **dos lados y el ángulo entre estos**. En este caso se calcula
+      el valor del tercer lado aplicando directamente la ley de los cosenos.
+   **Caso 2:**
+      Cuando se conocen **tres lados**. En este caso se despeja el coseno de un ángulo
+      y se aplica la función inversa del coseno llamada arcocoseno (`Consultar
+      función arcocoseno`__) para obtener el valor del ángulo.
 
-**Caso 2:** Cuando se conocen tres lados.
-En este caso se despeja el coseno de un ángulo y se aplica la función inversa del coseno
-llamada arcocoseno (`Consultar función arcocoseno`__) para obtener el valor del ángulo.
-
----------------------------------------------------------
-
-`Cuando usar el Teorema de Pitágoras?`__
-
-**Cuando tenemos un triángulo rectángulo y se conocen dos de sus lados**
+`¿Cuándo usar el Teorema de Pitágoras?`__
+   **Cuando tenemos un triángulo rectángulo y se conocen dos de sus lados**
 
 
----------------------------------------------------------
+*Resumen*
+-------------------
 
 `Resumen de las principales relaciones estudiadas en esta sección:`__
 
-**Dado un triangulo cualquiera con lados a, b, c y ángulos respectivamente opuestos A, B, C,
+**Dado un triángulo cualquiera con lados a, b, c y ángulos respectivamente opuestos A, B, C,
 se tienen las siguientes relaciones:**
 
-360° = 2π rad ~ 6.2832 rad
+   360° = 2π rad ~ 6.2832 rad
 
-A + B + C = 180° = π rad ~ 3.1416 rad
+   A + B + C = 180° = π rad ~ 3.1416 rad
 
-A + B > C         A + C > B                B + C > A
+   A + B > C         A + C > B                B + C > A
 
-A - B < C         A - C < B                B - C < A
+   A - B < C         A - C < B                B - C < A
 
-a  / sen(A) = b / sen(B) = c / sen(C)
+   a  / sen(A) = b / sen(B) = c / sen(C)
 
-a² = b² + c² - 2bc cos(A)
+   a² = b² + c² - 2bc cos(A)
 
-b² = a² + c² - 2ac cos(B)
+   b² = a² + c² - 2ac cos(B)
 
-c² = a² + b² - 2ab cos(C)
+   c² = a² + b² - 2ab cos(C)
 
 **Para el caso particular cuando C = 90° = π/2 rad ~ 1.5708 rad, es decir, para
 un triángulo rectángulo tenemos:**
 
-A + B = 90° = π/2 rad ~ 1.5708 rad
+   A + B = 90° = π/2 rad ~ 1.5708 rad
 
-sen(A) = cos(B) = a / c = cat. opuesto / hipotenusa
+   sen(A) = cos(B) = a / c = cat. opuesto / hipotenusa
 
-cos(A) = sen(B) = b / c = cat. adyacente / hipotenusa
+   cos(A) = sen(B) = b / c = cat. adyacente / hipotenusa
 
-tan(A) = cot(B) = a / b = cat. opuesto / cat. adyacente = sen(A) / cos(A)
+   tan(A) = cot(B) = a / b = cat. opuesto / cat. adyacente = sen(A) / cos(A)
 
-c² = a² + b²
+   c² = a² + b²
 
 +-----------------+-------+---------------+---------------+----------------+-------+
 |                 | 0°    | 30°           | 45°           | 60°            | 90°   |

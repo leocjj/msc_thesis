@@ -241,7 +241,7 @@ class RootWidget(BoxLayout):
             self.p_4 = (0, 0)
         else:
             self.p_4 = (intersect.x - offset, intersect.y - offset)
-            self.label_wid.text = f"Punto de intesección: ({(intersect.x - self.width/2 - offset):.1f}, {(intersect.y - self.height*3/4):.1f})"
+            self.label_wid.text = f"Punto de intersección: ({(intersect.x - self.width/2 - offset):.1f}, {(intersect.y - self.height*3/4):.1f})"
 
     def cap1_sec3_pag1(self):
         """Control sliders events"""
@@ -737,11 +737,11 @@ class RootWidget(BoxLayout):
         if abs(self.p_A[1] - self.p_C[1]) < 0.5:
             msg_lados_2 = ""
         elif lado_a == lado_b == lado_c:
-            msg_lados_2 = "Triangulo equilátero"
+            msg_lados_2 = "Triángulo equilátero"
         elif lado_a != lado_b and lado_a != lado_c and lado_b != lado_c:
-            msg_lados_2 = "Triangulo escaleno"
+            msg_lados_2 = "Triángulo escaleno"
         else:
-            msg_lados_2 = "Triangulo isóceles"
+            msg_lados_2 = "Triángulo isóceles"
 
         self.label_wid.text = (
             msg_angulos + "\n" + msg_angulos_2 + "\n" + msg_lados + "\n" + msg_lados_2
@@ -827,7 +827,7 @@ class RootWidget(BoxLayout):
             self.l_8[2] = self.p_F[0]
             self.l_8[3] = self.p_F[1]
 
-        self.label_wid.text = f"Ángulo del vertice superior: {ang_C:.0f}"
+        self.label_wid.text = f"Ángulo del vértice superior: {ang_C:.0f}"
 
         # Adding offset to draw points correctly
         self.p_A = (self.p_A[0] - offset, self.p_A[1] - offset)
@@ -1649,11 +1649,11 @@ class RootWidget(BoxLayout):
             if abs(self.p_A[1] - self.p_C[1]) < 0.5:
                 msg_lados_2 = ""
             elif lado_a == lado_b == lado_c:
-                msg_lados_2 = "Triangulo equilátero"
+                msg_lados_2 = "Triángulo equilátero"
             elif lado_a != lado_b and lado_a != lado_c and lado_b != lado_c:
-                msg_lados_2 = "Triangulo escaleno"
+                msg_lados_2 = "Triángulo escaleno"
             else:
-                msg_lados_2 = "Triangulo isóceles"
+                msg_lados_2 = "Triángulo isóceles"
 
             self.label_wid.text = msg_lados + "\n" + msg_lados_2
 
@@ -1994,7 +1994,7 @@ class RootWidget(BoxLayout):
         elif cx > dx and cy == dy:
             msg_tipo = "3 Simple, convexo, trapecio (lados AB y CD paralelos)"
         elif cx > bx and cy < by:
-            msg_tipo = "4 Simple, concavo, trapezoide (no hay lados paralelos)"
+            msg_tipo = "4 Simple, cóncavo, trapezoide (no hay lados paralelos)"
         # If the mobile point is in the horizontal line AB
         elif cy == by:
             if cx >= bx:
@@ -2018,13 +2018,13 @@ class RootWidget(BoxLayout):
             if cx <= bx and cy > by:
                 msg_tipo = "11 Complejo, rectas AD y BC se cruzan"
             else:
-                msg_tipo = "12 Simple, concavo, trapezoide (no hay lados paralelos)"
+                msg_tipo = "12 Simple, cóncavo, trapezoide (no hay lados paralelos)"
         # If the mobile point is in the diagonal line lower than 45° (with AD)
         elif cy - cx < 0 and cx < bx:
             if cy < by:
                 msg_tipo = "13 Complejo, rectas AB y CD se cruzan"
             else:
-                msg_tipo = "14 Simple, concavo, trapezoide (no hay lados paralelos)"
+                msg_tipo = "14 Simple, cóncavo, trapezoide (no hay lados paralelos)"
         else:
             msg_tipo = "15 Simple, convexo, trapezoide (no hay lados paralelos)"
 
@@ -2262,7 +2262,7 @@ class RootWidget(BoxLayout):
                 )
         elif abs(dx) == 5 and dy == 5:
             msg_tipo = (
-                f"Rombo?  Área = {base} x {height} = {area} \n"
+                f"¿Rombo?  Área = {base} x {height} = {area} \n"
                 + f"Perímetro = 2 x ({base} + {side:.2f}) = {(2 * (base + side)):.2f}"
             )
         else:

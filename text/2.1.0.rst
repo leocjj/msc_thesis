@@ -1,58 +1,80 @@
 *Cap.2 Sec.1 Pag.0*
 
 Tipos de triángulos
-======================================================
+===============================================================================
 
-Analízaremos los tipos de triángulos que existen, para ello, primero debemos tener claro
-los componentes de un triángulo como vimos en las definiciones anteriores:
-lados, vertices y ángulos.
+Analízaremos los tipos de triángulos que existen; para ello, primero debemos
+tener claro los componentes de un triángulo como vimos en las definiciones
+anteriores: lados, vértices y ángulos.
 
-- **Lado:** es cada uno de los segmentos que forman el triángulo.
-- **Vértice:** es cada uno de los puntos donde se unen dos lados del triángulo.
-- **Ángulo:** es la abertura entre dos lados del triángulo.
+- **Lado:**
+    Es cada uno de los segmentos que forman el triángulo.
+- **Vértice:**
+    Es cada uno de los puntos donde se unen dos lados del triángulo.
+- **Ángulo:**
+    Es la abertura entre dos lados del triángulo.
 
-En la gráfica interactiva podemos desplazar el vértice superior del triángulo, tanto 
-vertical como horizontalmente, para construir diferentes tipos de triángulos.
+En la gráfica interactiva podemos desplazar el vértice superior del triángulo,
+tanto vertical como horizontalmente, para construir diferentes tipos de
+triángulos.
 
-Resumiendo lo que podemos encontrar en la gráfica interactiva, tenemos que un triángulo
-se clasifica según sus lados y sus ángulos.
+Resumiendo lo que podemos encontrar en la gráfica interactiva, tenemos que un
+triángulo se clasifica según sus lados y sus ángulos.
 
-`Tipos de triángulos según sus lados:`_
 
-- **Triángulos agudos (acutángulos):** todos sus ángulos internos son agudos, es decir, menores a 90°.
+*Tipos de triángulos según sus lados*
+-------------------------------------
 
-- **Triángulos rectos (rectángulos):** uno de sus ángulos internos es recto, es decir, igual a 90°.
+- **Triángulos agudos (acutángulos):**
+    Todos sus ángulos internos son agudos, es decir, menores a 90°.
 
-- **Triángulos obtusos (obtusángulo):** uno de sus ángulos internos es obtuso, es decir, mayor a 90°.
+- **Triángulos rectos (rectángulos):** 
+    Uno de sus ángulos internos es recto, es decir, igual a 90°.
 
-`Tipos de triángulos según sus ángulos:`_
+- **Triángulos obtusos (obtusángulo):**
+    Uno de sus ángulos internos es obtuso, es decir, mayor a 90°.
 
-- **Triángulos equiláteros:** todos sus lados son iguales.
 
-- **Triángulos isósceles:** solo dos de sus lados son iguales.
+*Tipos de triángulos según sus ángulos*
+---------------------------------------
 
-- **Triángulos escalenos:** todos sus lados son diferentes.
+- **Triángulos equiláteros:**
+    Todos sus lados son iguales.
+
+- **Triángulos isósceles:**
+    Solo dos de sus lados son iguales.
+
+- **Triángulos escalenos:**
+    Todos sus lados son diferentes.
 
 
 .. image:: ./images/2.1.0_triangulos.png
 
 ( `Consultar el concepto de triángulo rectángulo`_).
 
----------------------------------------------------------
 
-A continuación se dejan como referencia algunas definiciones de ángulos que se pueden encontrar en un triángulo.
+*Definiciones*
+-------------------
+
+A continuación se dejan como referencias algunas definiciones de ángulos que se
+pueden encontrar en un triángulo.
 
 - **Ángulo recto:** es el ángulo que mide 90°.
 - **Ángulo agudo:** es el ángulo que mide menos de 90°.
 - **Ángulo obtuso:** es el ángulo que mide más de 90°.
 - **Ángulo llano:** es el ángulo que mide 180°.
 - **Ángulo completo:** es el ángulo que mide 360°.
-- **Ángulo exterior:** es el ángulo que se forma entre un lado del triángulo y la prolongación del lado adyacente.
+- **Ángulo exterior:** es el ángulo que se forma entre un lado del triángulo y
+  la prolongación del lado adyacente.
 - **Ángulo interior:** es el ángulo que se forma entre dos lados del triángulo.
-- **Ángulo opuesto:** es el ángulo que se forma entre un lado del triángulo y la prolongación del lado adyacente.
+- **Ángulo opuesto:** es el ángulo que se forma entre un lado del triángulo y
+  la prolongación del lado adyacente.
 - **Ángulo adyacente:** es el ángulo que se forma entre dos lados del triángulo.
-- **Ángulo complementario:** es el ángulo que sumado con otro ángulo da como resultado 90°.
-- **Ángulo suplementario:** es el ángulo que sumado con otro ángulo da como resultado 180°.
-- **Ángulo conjugado:** es el ángulo que sumado con otro ángulo da como resultado 360°.
+- **Ángulo complementario:** es el ángulo que sumado con otro ángulo da como
+  resultado 90°.
+- **Ángulo suplementario:** es el ángulo que sumado con otro ángulo da como
+  resultado 180°.
+- **Ángulo conjugado:** es el ángulo que sumado con otro ángulo da como
+  resultado 360°.
 
 ------------------------

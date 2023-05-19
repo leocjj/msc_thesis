@@ -1,25 +1,32 @@
 *Cap.2 Sec.1 Pag.4*
 
 Alturas - Ortocentro
-=========================================================
+===============================================================================
 
-Aquí veremos la tercera de las tres rectas notables de un triángulo: la altura.
+Aquí veremos la tercera de las tres rectas notables de un triángulo: **la
+altura.**
 
-`La altura de un triángulo es la recta perpendicular a un lado del triángulo que pasa por el
-vértice opuesto a dicho lado.`_
+*La altura*
+-----------
 
-Cuando trazamos las tres alguras de un triángulo, estas siempre se intersectan en un punto.
-Este punto se llama `ortocentro`_ del triángulo.
+`La altura de un triángulo es la recta perpendicular a un lado del triángulo
+que pasa por el vértice opuesto a dicho lado.`_
 
-No existe una circunferencia especial que pueda ser trazada teniendo como centro el ortocentro.
-Se grafica *solo por referencia*, una circunferencia con centro en el ortocentro y radio
-igual a la mayor distancia entre el ortocentro y los puntos de intesección de las alturas
-con sus lados perpendiculares.
+*Ortocentro*
+------------
 
-El ortocentro y los puntos de intesección de las alturas con sus lados perpendiculares
-pueden estar dentro, fuera o sobre el triángulo.
+Cuando trazamos las tres alturas de un triángulo, estas siempre se intersectan
+en un punto. Este punto se llama `ortocentro`_ del triángulo.
 
-**Todas las propiedades aquí mencionadas se pueden comprobar con la figura interactiva y
-aplican para cualquier triángulo.**
+No existe una circunferencia especial que pueda ser trazada teniendo como
+centro el ortocentro. Se grafica *solo por referencia*, una circunferencia con
+centro en el ortocentro y radio igual a la mayor distancia entre el ortocentro
+y los puntos de intersección de las alturas con sus lados perpendiculares.
+
+El ortocentro y los puntos de intersección de las alturas con sus lados
+perpendiculares pueden estar dentro, fuera o sobre el triángulo.
+
+**Todas las propiedades aquí mencionadas se pueden comprobar con la gráfica
+interactiva y aplican para cualquier triángulo.**
 
 -------------------

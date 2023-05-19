@@ -1,19 +1,23 @@
 *Cap.2 Sec.3 Pag.2*
 
 Paralelogramos
-=========================================================
+===============================================================================
 
-Los paralelogramos_ a su vez se clasifican de acuerdo al número de lados iguales y según
-el número de ángulos iguales. En la gráfica interactiva pueden identificarse los
-siguientes casos:
+Los paralelogramos_ a su vez se clasifican de acuerdo al número de lados
+iguales y según el número de ángulos iguales. En la gráfica interactiva pueden
+identificarse los siguientes casos.
 
-  **Romboide**: lados opuestos iguales y ángulos opuestos iguales.
+  **Romboide**:
+    Lados opuestos iguales y ángulos opuestos iguales.
   
-  **Rombo**: 4 lados iguales y ángulos opuestos iguales.
+  **Rombo**:
+    4 lados iguales y ángulos opuestos iguales.
   
-  **Rectángulo**: lados iguales 2 a 2 y 4 ángulos iguales.
+  **Rectángulo**:
+    Lados iguales 2 a 2 y 4 ángulos iguales.
   
-  **Cuadrado**: 4 lados iguales y 4 ángulos iguales.
+  **Cuadrado**:
+    4 lados iguales y 4 ángulos iguales.
 
 .. image:: ./images/2.3.0_paralelogramos.png
     :align: center

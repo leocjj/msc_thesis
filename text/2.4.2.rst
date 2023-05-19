@@ -1,38 +1,52 @@
 *Cap.2 Sec.4 Pag.2*
 
 Área y perímetro de un triángulo
-=========================================================
+===============================================================================
 
 Ahora veremos como calcular el área y el perímetro de un triángulo.
 
-El área de un triángulo se calcula multiplicando la base por la altura y dividiendo
-el resultado entre dos.
-Por qué? Porque un triángulo se puede ver como la mitad de un rectángulo con la
-misma base y altura.
+El área de un triángulo se calcula multiplicando la base por la altura y
+dividiendo el resultado entre dos. ¿Por qué? Porque un triángulo se puede ver
+como la mitad de un rectángulo con la misma base y altura.
 
 En la gráfica interactiva podemos ver los siguientes elementos:
 
-- **La base del triángulo** (línea roja horizontal abajo) es el segmento de recta que va de un vértice (punto amarillo abajo a la izquierda) a otro (punto azul abajo a la derecha) y que es la misma base del rectángulo gris.
+- La base del triángulo (línea roja horizontal abajo):
+    Es el segmento de recta que va de un vértice (punto amarillo abajo a la
+    izquierda) a otro (punto azul abajo a la derecha) y que es la misma base
+    del rectángulo gris.
 
-- **La altura del triángulo** (línea verde vertical) es el segmento de recta que va desde un vértice de la base (punto azul abajo a la derecha) hasta el punto de intersección con la altura del rectángulo gris.
+- La altura del triángulo (línea verde vertical):
+    Es el segmento de recta que va desde un vértice de la base (punto azul 
+    abajo a la derecha) hasta el punto de intersección con la altura del
+    rectángulo gris.
 
-- **Los lados del triángulo** (líneas rojo inclinadas) son los segmentos de recta que van desde cada vértice de la base hasta el vertice superior (punto verde).
+- Los lados del triángulo (líneas rojo inclinadas):
+    Son los segmentos de recta que van desde cada vértice de la base hasta el
+    vértice superior (punto verde).
 
 - **Paralelogramo** formado por las siguientes líneas:
 
-    - Base del triángulo
+    - **Base del triángulo**
     
-    - Uno de los lados inclinados del triángulo (arbitrariamente se escogió el derecho, podría igualmente escogerse el izquierdo)
+    - Uno de los lados inclinados del triángulo:
+        Arbitrariamente se escogió el derecho, podría igualmente escogerse el
+        izquierdo.
     
-    - Línea blanca lateral (inclinada), la cual es paralela y de igual longitud que el lado inclinado del triángulo.
+    - Línea blanca lateral (inclinada):
+        La cual es paralela y de igual longitud que el lado inclinado del
+        triángulo.
 
-    - Línea blanca superior (horizontal), la cual es paralela y de igual longitud a la base del triángulo
+    - Línea blanca superior (horizontal):
+        La cual es paralela y de igual Longitud a la base del triángulo.
 
 Con estas cuatro líneas unidas, por definición, tenemos un paralelogramo del
 cual podemos fácilmente comprobar (usando la gráfica interactiva) que su área
 se divide en dos partes iguales, dos triángulos semejantes (iguales).
 
-- **Rectángulo** con área igual al paralelogramo formado por la base del triángulo, uno de sus lados inclinados, la línea blanca lateral y la línea blanca superior.
+    - **Rectángulo**
+        Con área igual al paralelogramo formado por la base del triángulo, uno de
+        sus lados inclinados, la línea blanca lateral y la línea blanca superior.
 
 ----
 
@@ -41,11 +55,14 @@ esta última es el producto de la base por la altura.
 
 Tenemos entonces que el **área del triángulo es:**
 
-**Area = (Base * Altura) / 2**
+    **Area = (Base * Altura) / 2**
 
 ----
 
-El perímetro de un triángulo es la suma de las longitudes de sus tres lados.
+El perímetro de un triángulo es la suma de las longitudes de sus tres lados:
+
+    **Perímetro = a + b + c**
+
 
 En la gráfica interactiva podemos ver que el perímetro del triángulo es igual
 a la suma de las longitudes de dos lados del paralelogramo y una diagonal

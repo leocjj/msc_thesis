@@ -1,17 +1,18 @@
 *Cap.2 Sec.2 Pag.2*
 
 Ley de los senos
-=========================================================
+===============================================================================
 
-Cuando se tiene un triángulo cualquiera (oblícuo), es decir no necesariamente rectángulo,
-se puede establecer una relacion entre los lados y los ángulos opuestos a ellos.
-Esta relacion se conoce como ley de los senos.
+Cuando se tiene un triángulo cualquiera (oblícuo), es decir no necesariamente
+rectángulo, se puede establecer una relación entre los lados y los ángulos
+opuestos a ellos. Esta relación se conoce como ley de los senos.
 
-**La ley de los senos establece que en todo triángulo, la razon entre la longitud de un lado
-y el seno del ángulo opuesto a el, es igual para los tres lados.**
+**La ley de los senos establece que en todo triángulo, la razón entre la
+longitud de un lado y el seno del ángulo opuesto a el, es igual para los tres
+lados.**
 
-De esta manera, si se tiene un triángulo cualquiera ABC, se puede establecer la siguiente
-relacion:
+De esta manera, si se tiene un triángulo cualquiera ABC, se puede establecer la
+siguiente relación:
 
 .. image:: ./images/2.2.2_ley_de_senos.png
    :align: center
@@ -20,22 +21,26 @@ relacion:
 
 Tomado de: https://commons.wikimedia.org/wiki/File:Ley_de_los_senos.svg
 
-Donde 'a', 'b' y 'c' son las longitudes de los lados del triángulo y 'A', 'B' y 'C' son
-los ángulos opuestos a los lados respectivos.
+Donde 'a', 'b' y 'c' son las longitudes de los lados del triángulo y 'A', 'B' y
+'C' son los ángulos opuestos a los lados respectivos.
 
-En otras palabras, la relación lado sobre seno del ángulo opuesto es una constante y es
-igual al diámetro de la circunferencia circunscrita al triángulo (a/sen(A) = 2R = D).
+En otras palabras, la relación lado sobre seno del ángulo opuesto es una
+constante y es igual al diámetro de la circunferencia circunscrita al triángulo
+(a/sen(A) = 2R = D).
 
----------------------------------------------------------
+*Usos*
+------
 
-`Cuando usar la ley de los senos?`__
+`¿Cuándo usar la ley de los senos?`__
 
-**Caso 1:** Cuando se conocen dos lados y el ángulo opuesto a uno de estos.
-En este caso se despeja el seno del ángulo opuesto al lado que falta y se aplica la función
-inversa del seno llamada arcoseno (`Consultar función arcoseno`__) para obtener el valor
-del ángulo.
+**Caso 1:**
+   Cuando se conocen **dos lados y el ángulo opuesto** a uno de estos.
+   En este caso se despeja el seno del ángulo opuesto al lado que falta y se
+   aplica la función inversa del seno llamada arcoseno (`Consultar función
+   arcoseno`__) para obtener el valor del ángulo.
 
-**Caso 2:** Cuando se conocen dos ángulos y el lado opuesto a uno de estos.
-En este caso se despeja el lado opuesto que se tiene como incógnita.
+**Caso 2:**
+   Cuando se conocen **dos ángulos y el lado opuesto** a uno de estos.
+   En este caso se despeja el lado opuesto que se tiene como incógnita.
 
 ---------------------------------------------------------

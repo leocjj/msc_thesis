@@ -1,21 +1,24 @@
 *Cap.2 Sec.3 Pag.1*
 
 Cuadrángulos
-=========================================================
+===============================================================================
 
-Clasificaremos los `cuadrángulo convexos`_ (o simplemente cuadriláteros de aquí en adelante),
-de acuerdo a sus lados y ángulos internos. En la gráfica interactiva pueden identificarse los
-siguientes casos:
+Clasificaremos los `cuadrángulo convexos`_ (o simplemente cuadrángulos o 
+cuadriláteros de aquí en adelante), de acuerdo a sus lados y ángulos internos.
+En la gráfica interactiva pueden identificarse los siguientes casos.
 
-  **Trapezoide**: no tiene ningún lado paralelo a otro.
+  Trapezoide:
+    No tiene ningún lado paralelo a otro.
 
-  **Trapecio**: solo tiene dos de sus lados paralelos.
+  Trapecio:
+    Solo tiene dos de sus lados paralelos.
 
-  **Paralelogramo**: los lados opuestos son paralelos (paralelos 2 a 2)
+  Paralelogramo:
+    Los lados opuestos son paralelos (paralelos 2 a 2).
 
-Adicionalmente se pueden identificar otros casos como:
+También se pueden identificar otros casos en la gráfica interativa, como:
 
-  **Cuadrángulo concavo**: tiene al menos un ángulo interno mayor a 180°.
+  **Cuadrángulo cóncavo**: tiene al menos un ángulo interno mayor a 180°.
 
   **Cuadrángulo complejo**: dos de sus lados se cruzan.
 

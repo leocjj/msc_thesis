@@ -1,31 +1,42 @@
 *Cap.1 Sec.2 Pag.2*
 
 Segmentos, semirrectas y rectas
-======================================================
+===============================================================================
 
 Teniendo el concepto intuitivo de línea recta, ahora podemos decir que dados
-dos puntos (en este caso rojo y verde) se puede trazar una línea recta entre estos,
-lo cual nos lleva al primer postulado de Euclides (`Consultar el concepto de postulado`_).
-
+dos puntos (en este caso rojo y verde) se puede trazar una línea recta entre
+estos, lo cual nos lleva al primer postulado de Euclides (`Consultar el
+concepto de postulado`_).
 
 *Postulado 1*
 -------------------
-    Los postulados nos dicen lo que podemos hacer dado que sabemos cómo hacerlo, en este caso, podemos:
+    Los postulados nos dicen lo que podemos hacer dado que sabemos como
+    hacerlo, en este caso, podemos:
 
     **"Trazar una recta desde todo punto hacia todo punto."**
 
 *Interpretación*
 -------------------
-* Dados dos puntos arbitrarios, entiéndase dos puntos diferentes, se puede siempre trazar una (y solo una) línea recta entre estos.
+* Dados dos puntos arbitrarios, entiéndase dos puntos diferentes, se puede
+  siempre trazar una (y solo una) línea recta entre estos.
 
-* Los puntos deben ser diferentes por el hecho de que si fueran el mismo, es decir, el punto de inicio igual al punto final, no habría opción de que existiera puntos entre estos dos ya que son el mismo y caeríamos en la definición 1 (punto).
+* Los puntos deben ser diferentes por el hecho de que si fueran el mismo, es
+  decir, el punto de inicio igual al punto final, no habría opción de que
+  existiera puntos entre estos dos ya que son el mismo y caeríamos en la
+  definición 1 (punto).
 
-* Si solo tuvieramos un punto dado, podríamos trazar infinitas líneas que inicien y terminen en dicho punto pero en este caso todas serían líneas curvas, es decir, no serían líneas rectas.
+* Si solo tuviéramos un punto dado, podríamos trazar infinitas líneas que
+  inicien y terminen en dicho punto, pero en este caso todas serían líneas
+  curvas, es decir, no serían líneas rectas.
 
 
-Si ahora tomamos cualquiera de los dos puntos (rojo o verde) y los desplazamos a cualquier otro lugar, podríamos seguir trazando líneas rectas entre los dos puntos, pero cada una sería diferente a la anterior.
+Si ahora tomamos cualquiera de los dos puntos (rojo o verde) y los desplazamos
+a cualquier otro lugar, podríamos seguir trazando líneas rectas entre los dos
+puntos, pero cada una sería diferente a la anterior.
 
-Este movimiento de un punto, llamado traslación, podría seguirse indefinidamente (e imaginariamente) hasta el infinito en cualquier dirección, con lo cual tenemos el segundo postulado.
+Este movimiento de un punto, llamado traslación, podría seguirse
+indefinidamente (e imaginariamente) hasta el infinito en cualquier dirección,
+con lo cual tenemos el segundo postulado.
 
 *Postulado 2*
 -------------------
@@ -33,8 +44,14 @@ Este movimiento de un punto, llamado traslación, podría seguirse indefinidamen
 
 *Interpretación*
 -------------------
-* Podemos trasladar uno o los dos puntos que utilizamos para trazar una línea recta, a cualquier lugar, incluso hasta el infinito (`Consultar el concepto de infinito en el plano`_).
+* Podemos trasladar uno o los dos puntos que utilizamos para trazar una línea
+  recta, a cualquier lugar, incluso hasta el infinito (`Consultar el concepto
+  de infinito en el plano`_).
 
-* La traslación podemos hacerla tan pequeña como queramos, por lo cual se dice que se puede realizar de forma continua, es decir, no hay saltos bruscos entre una posible posición y la siguiente ya que entre dos posiciones dadas podríamos siempre escoger una posición intermedia (`Consultar los conceptos de discreto y continuo`_).
+* La traslación podemos hacerla tan pequeña como queramos, por lo cual se dice
+  que se puede realizar de forma continua, es decir, no hay saltos bruscos
+  entre una posible posición y la siguiente, ya que entre dos posiciones dadas
+  podríamos siempre escoger una posición intermedia (`Consultar los conceptos
+  de discreto y continuo`_).
 
 -------------------

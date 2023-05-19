@@ -1,40 +1,54 @@
 *Cap.1 Sec.2 Pag.0*
 
 Concepto intuitivo
-======================================================
+===============================================================================
 
-En el gráfico interactivo podemos ver un punto rojo, uno verde y una serie de puntos
-blancos. A medida que desplazamos el slider, el número de puntos blancos aumenta y el
-espacio entre cada uno se hace menor. Llega un momento en que la cantidad de puntos
-es tan grande que es muy difícil poder ver cada punto de manera individual.
+En el gráfico interactivo podemos ver un punto rojo, uno verde y una serie de
+puntos blancos. A medida que desplazamos el slider, el número de puntos blancos
+aumenta y el espacio entre cada uno se hace menor. Llega un momento cuando la
+cantidad de puntos es tan grande que es muy difícil poder ver cada punto de
+manera individual.
 
-Si este proceso lo seguimos imaginariamente hasta llegar a infinitos puntos blancos,
-podríamos decir que 'justo' al lado de un punto se encuentra el otro sin haber espacio entre estos.
+Si este proceso lo seguimos imaginariamente hasta llegar a infinitos puntos
+blancos, podríamos decir que 'justo' al lado de un punto se encuentra el otro
+sin haber espacio entre estos.
 
-Este **segúndo concepto** es fundamental para todas las contrucciones geométricas que
-veremos. El **concepto de línea** lo podemos aproximar con algunas analogías de nuestra
-vida diaria. Podemos decir que una línea es:
+Este **segundo concepto** es fundamental para todas las contrucciones
+geométricas que veremos. El **concepto de línea** lo podemos aproximar con
+algunas analogías de nuestra vida diaria. Podemos decir que una línea es:
 
-* Un hilo extremadamente fino que sostenemos de cada extremo con una mano, del cual no podemos medir su espesor pero sabemos cuanto mide de largo.
-* Un cable de energía que vemos a la distancia y cuelga de una torre a otra. No podemos especificar cuanto tiene de espesor, pero si podemos ver desde que parte de una torre sale y hasta que parte de la otra torre llega.
+* Un hilo extremadamente fino que sostenemos de cada extremo con una mano,
+  del cual no podemos medir su espesor pero sabemos cuanto mide de largo.
+* Un cable de energía que vemos a la distancia y cuelga de una torre a otra.
+  No podemos especificar cuanto tiene de espesor, pero si podemos ver desde
+  que parte de una torre sale y hasta que parte de la otra torre llega.
 
-Ahora podemos revizar la segúnda definición de Euclides:
+Ahora podemos revisar la segunda definición de Euclides:
 
 *Definición 2*
 -------------------
-    **"Un línea es una lóngitud sin anchura."**
+    **"Un línea es una longitud sin anchura."**
 
 *Interpretación*
 -------------------
-* Podemos decir entonces que la línea es lá **mínima expresión geométrica posible que solo tiene longitud**, no tiene ancho, ni altura por estar compuesta por una serie de puntos consecutivos sin espacio entre estos.
+* Podemos decir entonces que la línea es la **mínima expresión geométrica
+  posible que solo tiene longitud**, no tiene anchura, ni altura por estar
+  compuesta por una serie de puntos consecutivos sin espacio entre estos.
 
 (`Consultar el concepto de longitud`_).
 
-* Su ancho no puede ser medido de ninguna forma y lo representamos con la mínima expresión visible, en este caso en la pantalla sería un pixel de ancho. En otras palabras podríamos decir que **el ancho de una línea es de un punto**.
+* Su anchura no puede ser medida de ninguna forma y la representamos con la
+  mínima expresión visible; en este caso en la pantalla sería un pixel de
+  ancho. En otras palabras podríamos decir que **la anchura de una línea es de
+  un punto**.
 
-* Como vimos en el gráfico interactivo donde estamos simulando la creación de infinitos puntos unos al lado de otros, desde un punto inicial a un punto final, a esta construcción le llamamos línea y de esta podemos decir que inicia en el punto rojo (o verde) y termina el verde (o rojo).
+* Como vimos en el gráfico interactivo donde estamos simulando la creación de
+  infinitos puntos unos al lado de otros, desde un punto inicial a un punto
+  final, a esta construcción le llamamos línea y de esta podemos decir que
+  inicia en el punto rojo (o verde) y termina en el verde (o rojo).
 
-Para finalizar podemos facilmente intuir que una línea inicia con un punto y termina con un punto. Esto lo dice Euclides en su tercera definición:
+Para finalizar podemos facilmente intuir que una línea inicia con un punto y
+termina con un punto. Esto lo dice Euclides en su tercera definición:
 
 *Definición 3*
 -------------------
@@ -42,8 +56,12 @@ Para finalizar podemos facilmente intuir que una línea inicia con un punto y te
 
 *Interpretación*
 -------------------
-* En este momento ya debe ser claro que una línea inicia en un punto, termina en otro punto y entre estos tiene infinitos puntos
+* En este momento ya debe ser claro que una línea inicia en un punto, termina
+  en otro punto y entre estos tiene infinito número puntos.
 
-Nota_: Los puntos extremos (los de inicio y fin), no son diferentes a los demás, por definición todos los puntos son iguales. En la gráfica interactiva se representan un poco más grandes y en un color diferentes a los puntos intermedios solo para tener el efecto visual y poderlos diferenciar.
+Nota_: Los puntos extremos (los de inicio y fin), no son diferentes a los
+demás; por definición todos los puntos son iguales. En la gráfica interactiva
+se representan un poco más grandes y en un color diferente a los puntos
+intermedios, solo para tener el efecto visual y poderlos diferenciar.
 
 ------------------------

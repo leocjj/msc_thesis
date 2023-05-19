@@ -1,20 +1,21 @@
 *Cap.1 Sec.1 Pag.0*
 
 Concepto intuitivo
-======================================================
+===============================================================================
 
-Euclides escribió una serie de libros llamados *Elementos*, de donde tomaremos algunos
-apartes del libro I para acompañar los conceptos prácticos con una base histórica y
-comprender mejor de donde viene la geometría que estudiamos hoy en dia
-(`Consultar cuáles son los trece libros de los Elementos de Euclides`_).
+Euclides escribió una serie de libros llamados *Elementos*, de donde tomaremos
+algunos apartes del libro I para acompañar los conceptos prácticos con una
+base histórica y comprender mejor de donde viene la Geometría que estudiamos
+hoy en dia (`Consultar los trece libros de los Elementos de Euclides`_)
 
-Tomaremos sus 23 definiciones, 5 postulados y 9 nociones comunes para tener unas báses
-que nos permitan comprender temas más avanzados, siembre partiendo de lo más sencillo
-para contruir conceptos cada vez más complejos y entender de donden vienen.
+Existen 23 definiciones, 5 postulados y 9 nociones comunes de las cuales usaremos
+algunas de estas como bases que nos permitan comprender temas más avanzados,
+siempre partiendo de lo más sencillo para contruir conceptos cada vez más
+complejos y entender de donden vienen.
 
-El **primer concepto** y el más fundamental de todos es el **concepto de punto**, del cual
-podemos dar varias aproximaciones según nuestra experiencia diaria. Podemos decir que
-un punto es:
+El **primer concepto** y el más fundamental de todos es el **concepto de
+punto**, del cual podemos dar varias aproximaciones según nuestra experiencia
+diaria. Podemos decir que un punto es:
 
 * La marca que deja la punta de un lapiz sobre un papel si lo dejo caer verticalmente.
 * La perforación de una aguja muy delgada sobre un papel.
@@ -22,7 +23,7 @@ un punto es:
 
 (`Desarrollar otra definición intuitiva de punto`_).
 
-Sin embargo definiciones así no nos ayudan a comprender el concepto mátemático ni a 
+Sin embargo definiciones así no nos ayudan a comprender el concepto matemático ni a 
 construir otros conceptos con base en estos.
 
 Volvamos al gráfico interactivo (mitad superior de la pantalla) en donde por medio del
@@ -39,11 +40,12 @@ De esta forma ya podríamos tratar de entender la primera definición de Euclide
 
 *Interpretación*
 -------------------
-    Podemos decir entonces que un punto es lá mínima expresión geométrica posible, no
-    tiene ancho, ni largo, ni altura. No puede ser medido de ninguna forma pero si
-    podemos ubicarlo, podemos decír en donde se encuentra y de allí surgen sus 
-    diferentes **representaciones**. Veremos dos en las siguientes páginas.
+    Podemos decir entonces que un punto es la mínima expresión geométrica
+    posible porque no tiene ancho, largo ni altura. No puede ser medido de
+    ninguna forma pero si podemos ubicarlo, podemos decír en donde se encuentra
+    y de allí surgen sus diferentes **representaciones**.
+    Veremos dos en las siguientes páginas.
 
-(`Consultar el concepto de representaciones matemáticas`_).
+(`Consultar el concepto de representaciones Matemáticas`_).
 
 ------------------------

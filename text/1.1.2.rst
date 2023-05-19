@@ -1,33 +1,53 @@
 *Cap.1 Sec.1 Pag.2*
 
 Representación 2
-======================================================
+===============================================================================
 
-Ahora sabemos que no podemos medir un punto de ninguna forma pero si podemos ubicarlo.
-Entonces como veremos a continuación, podemos representar un punto con números los cuales
-pueden representar su ubicación en una hoja, en la pantalla del celular o de un computador.
+Ahora sabemos que no podemos medir un punto de ninguna forma pero si podemos
+ubicarlo. Entonces como veremos a continuación, podemos representar un punto
+con números los cuales pueden representar su ubicación en una hoja, en la
+pantalla del celular o de un computador.
 
-Al igual que podemos ubicar la dirección de una casa en una ciudad de forma muy clara,
-cuando se especifican al menos dos números (y/o nombres), así podemos asignarle dos números
-a la ubicación de un punto en el papel o la pantalla a lo que llamaremos un **plano**. 
+Al igual que podemos ubicar la dirección de una casa en una ciudad de forma muy
+clara, cuando se especifican al menos dos números (y/o nombres), así podemos
+asignarle dos números a la ubicación de un punto en el papel o en la pantalla
+a lo que llamaremos un **plano**. 
 
-(`Consultar el concepto de plano en geometría`_).
+(`Consultar el concepto de plano en Geometría`_).
 
-Si a este plano le colocamos un **origen** o punto de referencia, en este caso el punto rojo,
-punto de intersección de las dos líneas blancas, podríamos dar una valor relativo de la
-ubicación del punto verde especificando cuanto nos hemos desplazado hacia un lado u otro.
+Si a este plano le colocamos un **origen** o punto de referencia, en este caso
+el punto rojo, punto de intersección de las dos líneas blancas, podríamos dar
+una valor relativo de la ubicación del punto verde especificando cuanto nos
+hemos desplazado hacia un lado u otro.
 
 
 *Interpretación*
 -------------------
-#. Esta **representación** de un punto implica dar dos números cuando hablamos del plano, los cuales hacen referencia a la hubicación relativa a un punto que llamaremos origen.
-#. Recíprocamente, a cada par de numeros ordenados, es decir, que tienen un orden específico, le corresponde un único punto en el plano.
-#. Existen varias formas de asignar este par de números de forma única (ya que recordemos que un punto se debe poder ubicar sin ambigüedad), pero nos enfocaremos específicamente en la más común, las coordenadas cartesianas y las veremos en la sección 1.3.
+* Esta **representación** de un punto implica dar dos números cuando hablamos
+  del plano, los cuales hacen referencia a la ubicación relativa a un punto
+  que llamaremos origen.
+* Recíprocamente, a cada par de números ordenados, es decir, que tienen un
+  orden específico, le corresponde un único punto en el plano.
+* Existen varias alternativas de asignar este par de números de forma única
+  (ya que recordemos que un punto se debe poder ubicar sin ambigüedad), pero
+  nos enfocaremos específicamente en la más común, las coordenadas cartesianas
+  y las veremos en la sección 1.3.
 
 (`Consultar el concepto de coordenadas cartesianas`_).
 
-`Nota importante`_: se debe tener en cuenta siempre, que un objeto matemático es abstracto, es una contrucción mental, una idea, el cual tiene ciertas propiedades y operaciones. Debe diferenciarse de sus representaciones que como hemos visto, un mismo objeto puede tener varias pero estas no son el objeto en si.
+*Nota importante*
+-------------------
+**Se debe tener en cuenta siempre, que un objeto matemático es abstracto, osea
+que es una contrucción mental, una idea, el cual tiene ciertas propiedades y
+operaciones y debe diferenciarse de sus varias representaciones que puede
+tener, las cuales no son el objeto en si.**
 
-**Como analogía** de esto, podemos decir que el concepto de dinero es un concepto económico, pero su uso se puede dar de formas muy variadas: en monedas, en billetes, en tarjetas de crédito, en divisas, en inversiones, etc. De esta forma podremos utilizar el dinero (concepto único) por medio de diferentes representaciones las cuales NO son el dinero en sí, pero cada una tiene ciertas propiedades y nos permite usarlo de diferentes formas (operaciones).
+**Como analogía** de esto, podemos decir que el concepto de dinero es un
+concepto económico, pero su uso se puede dar de formas muy variadas: en
+monedas, en billetes, en tarjetas de crédito, en divisas, en inversiones, etc.
+De esta forma podremos utilizar el dinero (concepto único) por medio de
+diferentes representaciones las cuales NO son el dinero en sí, pero cada una
+tiene ciertas propiedades y nos permite usarlo de diferentes formas
+(operaciones).
 
 ------------------------

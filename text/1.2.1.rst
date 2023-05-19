@@ -1,36 +1,39 @@
 *Cap.1 Sec.2 Pag.1*
 
 Concepto intuitivo de rectitud
-======================================================
+===============================================================================
 
-Cuantas líneas se pueden trazar entre el punto rojo y el punto verde?
-En la gráfica interactiva podemos ver una gran variedad y sin embargo,
-pueden haber muchas más si no nos limitaramos el tamaño de la pantall.
-En realidad existen infinitas líneas!!!
+¿Cuántas líneas se pueden trazar entre el punto rojo y el punto verde?
+En la gráfica interactiva podemos ver una gran variedad y, sin embargo, pueden
+haber muchas más si no nos limitáramos al tamaño de la pantalla. En realidad
+existen infinitas líneas que pueden ser trazadas entre dos puntos.
 
-Podemos imaginarnos una cuerda de longitud infinita la cual sujetamos en
-dos puntos (rojo y verde) y que podemos tensionarla o distensionarla a volundad.
-De todas las posibles formas que pueda tener la cuerda de esta forma,
-hay una muy especial y ocurre cuando tensionamos la cuerda al máximo
-sin romperla. En esta situación, la longitud de la cuerda será la más
-corta posible entre los dos punto. A esta forma la llamaremos **línea recta**. 
+Podemos imaginarnos una cuerda de longitud infinita, la cual sujetamos en dos
+puntos (rojo y verde) y que podemos tensionarla o distensionarla a volundad.
+De todas las posibles formas que pueda tomar la cuerda, hay una muy especial y
+ocurre cuando tensionamos la cuerda al máximo sinromperla. En esta situación,
+la longitud de la cuerda será la más corta posible entre los dos puntos. A esta
+forma la llamaremos **línea recta**. 
 
-Ahora podemos revizar la segúnda definición de Euclides:
+Ahora podemos revisar la segunda definición de Euclides:
 
 *Definición 4*
 -------------------
-    **"Una recta es la que yace por igual respecto de los puntos que están en ella."**
+    **"Una recta es la que yace por igual respecto de los puntos que están en
+    ella."**
 
 *Interpretación*
 -------------------
-* Esta definición puede ser considerada una de las más ambigüas, sin embargo, podemos extraer de forma muy intuitiva el intento de decir que la línea no se desvía ni a un lado ni a otro a medida que es trazada.
+* Esta definición puede ser considerada una de las más ambiguas, sin embargo,
+  podemos extraer de forma muy intuitiva el intento de decir que la línea no se
+  desvía ni a un lado ni a otro a medida que es trazada.
 
-El concepto de curvatura es estudiado formalmente en cursos de cálculo pero
+El concepto de curvatura es estudiado formalmente en cursos de Cálculo pero
 podemos decir que es una medida de la concavidad o tendencia de una línea a
-encontrarse consigo misma si se prolonga lo suficiente. Por otro lado podemos
-decir que una línea recta nunca se encontraría consigo misma si es prolongada
-lo suficiente aunque esto es más una propiedad y no es una definición como veremos
-en la siguiente página.
+encontrarse consigo misma si se prolonga lo suficiente con la misma concavidad
+a ambos lados. Por otro lado podemos decir que una línea recta nunca se
+encontraría consigo misma si es prolongada lo suficiente aunque esto es más una
+propiedad y no es una definición como veremos en la siguiente página.
 
 (`Consultar el concepto de línea recta`_).
 

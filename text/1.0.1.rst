@@ -1,27 +1,34 @@
 *Cap.1 Sec.0 Pag.1*
 
 Recomendaciones iniciales
-=============================
+===============================================================================
 
-- Realizar el estudio de los contenidos presentados de forma secuencial, debido a que estos tienen una interrelación directa y de forma progresiva.
+- Realizar el estudio de los contenidos presentados de forma secuencial, debido
+  a que estos tienen una interrelación directa y de forma progresiva.
 
-- Esta aplicación es una ayuda didactica al proceso de aprendizaje, por lo cual el estudiante debe tener la responsabilidad de usarla adecuadamente de forma complementaria a un curso formal de matemáticas, geometría, dibujo de ingeniería o similares.
+- Esta aplicación es una ayuda didáctica al proceso de aprendizaje, por lo cual
+  el estudiante debe tener la responsabilidad de usarla adecuadamente de forma
+  complementaria a un curso formal de Matemáticas, Geometría, dibujo de
+  ingeniería o similares.
 
-- A lo largo de los capítulos, secciones y páginas en los cuales están divididos los contenidos, se proponen temas, conceptos, nombres, ideas o actividades que pueden realizarse de forma complementaria y opcional. Se presentarán de la siguiente forma:  (`Actividad...`_).
+- A lo largo de los capítulos, secciones y páginas en los cuales están
+  divididos los contenidos, se proponen temas, conceptos, nombres, ideas o
+  actividades que pueden realizarse de forma complementaria y opcional. Se
+  verán con diferente color en la siguiente forma: (`Actividad...`_).
 
 
 Geometría
 ==================
 
-La definición de esta rama de la matemática, una de las más antiguas junto con la Aritmética, 
-se dará de forma natural con el desarrollo de la propuesta presentada en esta aplicación
-(`Consultar qué son los Elementos de Euclides`_)
+La definición de esta rama de la Matemática, una de las más antiguas junto con
+la Aritmética, se dará de forma natural con el desarrollo de la propuesta
+presentada en esta aplicación (`Consultar qué son los Elementos de Euclides`_).
 
 Es por esto que se omite intencionalmente una definición formal 
-(`Intentar dar una definición de Geometría al final de cáda capítulo`_) y esta podrá
-darse por parte del profesor de considerarse necesaria.
+(`Intentar dar una definición de Geometría al final de cada capítulo`_) y esta
+podrá darse por parte del Profesor de considerarse necesaria.
 
-Es el principal interés en este punto poder presentar al estudiante, la forma de trabajo
-recomenda y cómo explorar el contenido de los capítulos.
+Es el principal interés en este punto poder presentar al estudiante, la forma
+de trabajo recomendada y como explorar el contenido de los capítulos.
 
 ------------------------

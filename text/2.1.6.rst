@@ -1,30 +1,40 @@
 *Cap.2 Sec.1 Pag.6*
 
 Recta de Euler
-=========================================================
+===============================================================================
 
-Ahora es donde vemos la magia de la geometría, ya que con las herramientas que
-hemos visto podemos apreciar muchas propiedades de los triángulos. En este caso, vamos a
-comprobar gráficamente que la recta de Euler pasa por tres puntos importantes de un
-triángulo: el circuncentro (punto rojo), el ortocentro (punto verde) y el baricentro (punto azul).
+Ahora es donde vemos la magia de la Geometría, ya que con las herramientas que
+hemos visto podemos apreciar muchas propiedades de los triángulos. En este
+caso, vamos a comprobar gráficamente que la recta de Euler pasa por tres puntos
+importantes de un triángulo: **el circuncentro (punto rojo), el ortocentro
+(punto verde) y el baricentro (punto azul).**
 
 `La recta de Euler es una recta que pasa por el circuncentro, el ortocentro y el baricentro.`_
 
-Y que pasó con el incentro (punto blanco)? Bueno, el incentro no siempre está sobre la
-recta de Euler, pero sí en algunos casos.
+**¿Y que pasó con el incentro (punto blanco)?**
 
-**A continuación unas preguntas para pensar un poco con la ayuda de la gráfica interactiva:**
+El incentro no siempre está sobre la recta de Euler, pero sí en algunos casos.
+
+*Cuestionario para recapitular*
+--------------------------------
+
+**A continuación unas preguntas para pensar un poco con la ayuda de la gráfica
+interactiva:**
 
 ¿En qué casos el incentro también está sobre la recta de Euler?
 
-¿En qué casos el circuncentro, el ortocentro, el baricentro y el incentro son el mismo punto?
+¿En qué casos el circuncentro, el ortocentro, el baricentro y el incentro son
+el mismo punto?
 
-¿En qué casos el circuncentro, el ortocentro, el baricentro y el incentro están todos al interior del triángulo?
+¿En qué casos el circuncentro, el ortocentro, el baricentro y el incentro están
+todos en el interior del triángulo?
 
-¿En qué casos el circuncentro, el ortocentro, el baricentro y el incentro están todos al exterior del triángulo?
+¿En qué casos el circuncentro, el ortocentro, el baricentro y el incentro están
+todos en el exterior del triángulo?
 
 ¿En qué casos el circuncentro y el ortocentro están sobre el triángulo?
 
-¿Puede el circuncentro estar al interior del triángulo mientras en el exterior? ¿Y viceversa?
+¿Puede el circuncentro estar en el interior del triángulo mientras el
+ortocentro está en el exterior? ¿Y viceversa?
 
 -------------------
