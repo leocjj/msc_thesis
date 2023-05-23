@@ -24,7 +24,7 @@ Tesis_ de_ Grado_
 
 **Email:** leonardocj@gmail.com
 
-**Fecha:** 2023-05-17
+**Fecha:** 2023-05-23
 
 **Revisión:** beta 0.6.0
 
