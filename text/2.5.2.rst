@@ -3,5 +3,42 @@
 ¿Infinitos lados?
 ===============================================================================
 
+Finalizando este capítulo, vamos a ver un ejemplo de cómo se puede usar el
+concepto intuitivo de infinito para entender una nueva figura geométrica: el
+círculo.
 
----
+El círculo es una figura geométrica que se define como el conjunto de puntos
+que están a una distancia fija de un punto dado, llamado
+**centro (punto rojo)**.
+La distancia fija entre el centro y cualquier punto del círculo se llama
+**radio (ver línea azúl)**.
+
+Si prolonamos la línea azul hasta el otro extremo del polígono (ver línea café)
+obtenemos una línea recta que divide el polígono en dos partes iguales.
+Cuando tenemos un círculo, a esta línea se le llama **diámetro**.
+La longitud del diámetro (d) es el doble de la longitud del radio (r).
+
+----
+
+Nota:
+    El círculo es una figura geométrica que no tiene lados, pero que al igual
+    que los polígonos cerrados, tiene un perímetro y un área.
+
+A continuación las fórmulas para calcularlos:
+
+.. image:: ./images/2.5.2_circulo.png
+    :align: center
+    :width: 480px
+    :height: 240px
+
+
+----
+
+Aquí concluímos (por ahora) nuestro estudio de la Geometría Euclidiana básica,
+después de haber visto conceptos de punto, línea, ángulo, polígono y círculo
+y sus propiedades desde un punto de vista intuitivo e interactivo, con la
+esperanza de que el estudiante continúe su estudio con el mismo placer con el
+que fue desarrollada esta aplicación.
+
+----
+
