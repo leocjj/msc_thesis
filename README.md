@@ -41,13 +41,13 @@ Install kivy (Cross platform Python library for mobile development of applicatio
 
 ```sh
     conda install kivy -c conda-forge  # Or use kivy=2.1.0 instead just kivy
-    conda install black # Optional for code styling
+    conda install black  # Optional for code styling
 ```
 
 Test kivy
 
 ```
-    python C:\Users\lcalderon\AppData\Local\miniconda3\envs\kivy\share\kivy-examples\demo\showcase\main.py
+    python C:\Users\<user>\AppData\Local\miniconda3\envs\kivy\share\kivy-examples\demo\showcase\main.py
 ```
 
 ## **Deployment requirements (Ubuntu)**
@@ -59,15 +59,19 @@ Install buildozer (only in Linux or WSL)
 ```
     pip install buildozer
     pip install --upgrade Cython==0.29.19 virtualenv
+
+    # Install Android SDK
 ```
 
 Run buildozer
 
 ```sh
     cd <project_folder>
-    buildozer init
-    # Update data in buildozer.spec
-    nano buildozer.spec
+    buildozer init  # Create buildozer.spec file, only the first time.
+    nano buildozer.spec  # Update data in buildozer.spec
+
+    # Instalar Android Studio
+    # https://developer.android.com/studio/install
 
     # Option 1
     # Plug in your android device by USB cable and run:
@@ -80,7 +84,7 @@ Run buildozer
 ```
 
 ```sh
-    # Instalar Android Studio y seguir los siguientes pasos SOLO la primera vez:
+    # Seguir los siguientes pasos SOLO la primera vez:
     # https://developer.android.com/studio/publish/app-signing.html#generate-key
     export P4A_RELEASE_KEYALIAS=upload
     export P4A_RELEASE_KEYALIAS_PASSWD=12345678
