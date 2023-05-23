@@ -63,3 +63,4 @@ cuadrados (2cm x 2cm = 4cm²)
 Se mide en unidades lineales, por ejemplo, si se tiene un cuadrado de 2 cm de
 lado, el perímetro del cuadrado es 8 cm (2cm + 2cm + 2cm + 2cm = 8cm)
 
+----
