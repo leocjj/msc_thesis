@@ -3,5 +3,63 @@
 Otros polígonos regulares
 ===============================================================================
 
+En esta última sección veremos otros polígonos regulares, es decir, polígonos
+que tienen todos sus lados iguales y todos sus ángulos iguales.
 
----
+Para el caso del triángulo tenemos que un **triángulo equilátero** es un
+triángulo que tiene todos sus lados iguales y todos sus ángulos iguales. En la
+gráfica interactiva se muestra un triángulo equilátero cuando el control
+vertical está en la posición inferior. Este es el primer ejemplo de un polígono
+regular.
+
+El segúndo caso de póligo regular sería un **cuadrilátero regular**, es decir,
+un cuadrilátero que tiene todos sus lados iguales y todos sus ángulos iguales,
+esta es la definición de un **cuadrado**. En la gráfica interactiva se muestra
+un cuadrilátero regular cuando el control vertical se desplaza a la segunda
+posición de abajo hacia arriba.
+
+El tercer caso de polígono regular sería un **pentágono regular**, es decir, un
+polígono de cinco lados que tiene todos sus lados iguales y todos sus ángulos
+iguales. En la gráfica interactiva se muestra un pentágono regular cuando el
+control vertical se desplaza a la tercera posición de abajo hacia arriba.
+
+Si continuamos aumentando el número de lados, siempre manteniendo la condición
+de que todos los lados sean iguales y todos los ángulos sean iguales,
+obtenemos:
+
+Hexágono regular:
+    polígono de seis lados.
+Heptágono regular:
+    polígono de siete lados.
+Octágono regular:
+    polígono de ocho lados.
+Eneágono regular:
+    polígono de nueve lados.
+Decágono regular:
+    polígono de diez lados.
+
+**Los polígonos regulares de más de diez lados se nombran de la siguiente manera
+(los veremos en las siguientes páginas):**
+
+Hendecágono regular:
+    polígono de once lados.
+Dodecágono regular:
+    polígono de doce lados.
+Tridecágono regular:
+    polígono de trece lados.
+Tetradecágono regular:
+    polígono de catorce lados.
+Pentadecágono regular:
+    polígono de quince lados.
+Hexadecágono regular:
+    polígono de dieciséis lados.
+Heptadecágono regular:
+    polígono de diecisiete lados.
+Octadecágono regular:
+    polígono de dieciocho lados.
+Eneadecágono regular:
+    polígono de diecinueve lados.
+Icoságono regular:
+    polígono de veinte lados.
+
+----
