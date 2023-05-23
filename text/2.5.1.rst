@@ -3,5 +3,22 @@
 Centro de un polígono regular
 ===============================================================================
 
+Existe un punto muy especial cuando hablamos de polígonos regulares, y es el
+**centro del polígono (punto rojo)**. Este punto es el centro de simetría del
+polígono, y es el punto de intersección de todas las diagonales del polígono
+regular cuando este tiene un número par de lados.
 
----
+Cuando el polígono tiene un número impar de lados, el centro del polígono es el
+punto de intersección de las diagonales que parten de un vértice y que llegan
+al púnto medio del lado opuesto.
+
+Vemos en la gráfica interactiva, que el centro del polígono regular es el punto
+de intersección de las diagonales del polígono con número de lados pares, es
+decir, las líneas que unen dos vértices opuestos del polígono.
+
+**¡Para el caso del triángulo equilátero, el centro del polígono es igual al
+circuncentro, al ortocentro, al incentro y al baricentro del triángulo!
+¿Por qué?**
+
+
+----
