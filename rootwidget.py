@@ -2499,6 +2499,20 @@ class RootWidget(BoxLayout):
         # To close the polygon
         self.v_0.extend([self.v_0[0], self.v_0[1]])
 
+        # Radius of the polygon
+        self.l_1 = (self.v_0[0], self.v_0[1], self.p_A[0], self.p_A[1])
+
+        # Diameter of the polygon
+        if vertices % 2 == 0:
+            self.l_2 = (
+                self.v_0[vertices],
+                self.v_0[vertices + 1],
+                self.p_A[0],
+                self.p_A[1],
+            )
+        else:
+            self.l_2 = (0, 0, 0, 0)
+
         polygon_names = [
             "",
             "",
