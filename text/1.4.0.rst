@@ -15,7 +15,8 @@ nunca las veremos intersectarse entre si, por lo tanto no podemos definir
 ángulos entre ellas.
 
 Si desplazamos primero el control de la derecha (control vertical) podremos
-**desplazar la recta blanca** hacia arriba y hacia abajo donde veremos que las
+**desplazar la recta blanca** hacia arriba y hacia abajo, según se puede
+apreciar por el desplazamiento verde sobre la misma, donde veremos que las
 rectas siguen siendo paralelas.
 
 Cuando utilizamos el control central (control horizontal) podremos **girar la
