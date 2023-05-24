@@ -4,25 +4,28 @@
 ===============================================================================
 
 Finalizando este capítulo, vamos a ver un ejemplo de cómo se puede usar el
-concepto intuitivo de infinito para entender una nueva figura geométrica: el
-círculo.
+concepto intuitivo de infinito para entender una nueva figura geométrica: la
+circunferencia.
 
-El círculo es una figura geométrica que se define como el conjunto de puntos
-que están a una distancia fija de un punto dado, llamado
+La circunferencia es una figura geométrica que se define como el conjunto de
+puntos que están a una distancia fija de un punto dado, llamado
 **centro (punto rojo)**.
-La distancia fija entre el centro y cualquier punto del círculo se llama
-**radio (ver línea azúl)**.
+
+La distancia fija entre el centro y cualquier punto de la circunferencia se
+llama **radio (ver línea azúl)**.
 
 Si prolonamos la línea azul hasta el otro extremo del polígono (ver línea café)
 obtenemos una línea recta que divide el polígono en dos partes iguales.
-Cuando tenemos un círculo, a esta línea se le llama **diámetro**.
-La longitud del diámetro (d) es el doble de la longitud del radio (r).
+Cuando tenemos una circunferencia, a esta línea (línea azul más línea café) se
+le llama **diámetro**. Por lo tanto podemos notar que la longitud del diámetro
+(d) es el doble de la longitud del radio (r).
 
 ----
 
 Nota:
-    El círculo es una figura geométrica que no tiene lados, pero que al igual
-    que los polígonos cerrados, tiene un perímetro y un área.
+    La circunferencia es una figura geométrica que no tiene lados, pero que al
+    igual que los polígonos cerrados, tiene un perímetro y un área llamada
+    **círculo**.
 
 A continuación las fórmulas para calcularlos:
 
@@ -35,10 +38,10 @@ A continuación las fórmulas para calcularlos:
 ----
 
 Aquí concluímos (por ahora) nuestro estudio de la Geometría Euclidiana básica,
-después de haber visto conceptos de punto, línea, ángulo, polígono y círculo
-y sus propiedades desde un punto de vista intuitivo e interactivo, con la
-esperanza de que el estudiante continúe su estudio con el mismo placer con el
-que fue desarrollada esta aplicación.
+después de haber visto conceptos de punto, línea, ángulo, polígono y
+circunferencia y sus propiedades desde un punto de vista intuitivo e
+interactivo, con la esperanza de que el estudiante continúe su estudio con el
+mismo placer con el que fue desarrollada esta aplicación.
 
 ----
 
