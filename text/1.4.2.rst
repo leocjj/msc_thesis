@@ -8,7 +8,7 @@ polígono de tres lados, el cual tiene tres vértices (los tres puntos de
 intersección) y tres ángulos internos.
 
 Vamos a analizar que ocurre a medida que movemos tres puntos los cuales estamos
-uniendo con semirectas, es decir, una forma general del caso de la página
+uniendo con semirrectas, es decir, una forma general del caso de la página
 anterior.
 
 **Si movemos únicamente el control central** (control horizontal), vemos que
