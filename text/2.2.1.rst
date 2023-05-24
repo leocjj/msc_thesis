@@ -3,7 +3,7 @@
 Ángulos internos
 ===============================================================================
 
-Como ya hemos conceptualizado préviamente, para medir ángulos se utiliza
+Como ya hemos conceptualizado previamente, para medir ángulos se utiliza
 comúnmente grados sexagesimales, los cuales corresponden a la siguiente
 equivalencia:
 
