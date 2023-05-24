@@ -39,8 +39,8 @@ Existe otro caso especial muy importante cuando el **ángulo y su suplemento son
 iguales**, entonces decimos que las semirrectas blanca y café son
 **perpendiculares** ( `Consultar el concepto de líneas perpendiculares`_) y a
 los ángulos tanto al principal con su suplemento los llamamos **ángulos
-rectos**. Esto ocurre en dos casos, cuando valen 90° (semirecta blanca hacia
-arriba) o cuando valen -90° (semirecta blanca hacia abajo). Cabe anotar que un
+rectos**. Esto ocurre en dos casos, cuando valen 90° (semirrecta blanca hacia
+arriba) o cuando valen -90° (semirrecta blanca hacia abajo). Cabe anotar que un
 ángulo de -90° es equivalente a un ángulo de 270°.
 
 **Nota:** los ángulos negativos se miden en sentido horario para el ángulo
