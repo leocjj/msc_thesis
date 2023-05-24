@@ -8,30 +8,34 @@ algunos apartes del libro I para acompañar los conceptos prácticos con una
 base histórica y comprender mejor de donde viene la Geometría que estudiamos
 hoy en dia (`Consultar los trece libros de los Elementos de Euclides`_)
 
-Existen 23 definiciones, 5 postulados y 9 nociones comunes de las cuales usaremos
-algunas de estas como bases que nos permitan comprender temas más avanzados,
-siempre partiendo de lo más sencillo para contruir conceptos cada vez más
-complejos y entender de donden vienen.
+Existen 23 definiciones, 5 postulados y 9 nociones comunes de las cuales
+usaremos algunas de estas como bases que nos permitan comprender temas más
+avanzados, siempre partiendo de lo más sencillo para contruir conceptos cada
+vez más complejos y entender de donden vienen.
 
 El **primer concepto** y el más fundamental de todos es el **concepto de
 punto**, del cual podemos dar varias aproximaciones según nuestra experiencia
 diaria. Podemos decir que un punto es:
 
-* La marca que deja la punta de un lapiz sobre un papel si lo dejo caer verticalmente.
+* La marca que deja la punta de un lapiz sobre un papel si lo dejo caer
+  verticalmente.
 * La perforación de una aguja muy delgada sobre un papel.
-* Es lo que obtenemos al imprimir un caracter 'punto' del teclado en el tamaño de letra más pequeño posible.
+* Es lo que obtenemos al imprimir un caracter 'punto' del teclado en el tamaño
+  de letra más pequeño posible.
 
 (`Desarrollar otra definición intuitiva de punto`_).
 
-Sin embargo definiciones así no nos ayudan a comprender el concepto matemático ni a 
-construir otros conceptos con base en estos.
+Sin embargo definiciones así no nos ayudan a comprender el concepto matemático
+ni a construir otros conceptos con base en estos.
 
-Volvamos al gráfico interactivo (mitad superior de la pantalla) en donde por medio del
-slider (control deslizante) podemos cambiar el tamaño del objeto blanco que vemos
-(más adelante lo definiremos el concepto de *círculo*) hasta reducirlo a su mínima expresión
-visible en la pantalla (técnicamente sería un pixel).
+Volvamos al gráfico interactivo (mitad superior de la pantalla) en donde por
+medio del slider (control deslizante) podemos cambiar el tamaño del objeto
+blanco que vemos (más adelante definiremos el concepto de *círculo*) hasta
+reducirlo a su mínima expresión visible en la pantalla (técnicamente sería un
+pixel).
 
-De esta forma ya podríamos tratar de entender la primera definición de Euclides:
+De esta forma ya podríamos tratar de entender la primera definición de
+Euclides:
 
 
 *Definición 1*
