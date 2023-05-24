@@ -72,9 +72,9 @@ Otra forma de verlo es la siguiente:
     :height: 180px
 
 Partiendo de un romboide (líneas azules en la figura de la izquierda),
-contruimos dos triángulos rectángulos (ver líneas rojas en la figura de la
+construimos dos triángulos rectángulos (ver líneas rojas en la figura de la
 izquierda) y por los conceptos vistos en el capítulo anterior, sabemos que los
-ángulos internos (no rectos) de los dos triángulos son igulaes y al tener la
+ángulos internos (no rectos) de los dos triángulos son iguales y al tener la
 misma longitud la hipotenusa, los triángulos son congruentes (iguales).
 
 Por lo tanto, el área de cada uno de los triángulos es igual y finalmente
