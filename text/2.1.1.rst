@@ -45,8 +45,10 @@ cualquier triángulo dado.
     roja).
 
 **Altura:**
-    Línea perpendicular a un lado que pasa por el vértice opuesto (Ver línea
-    café).
+    Línea perpendicular a uno de los lados y que pasa por el vértice opuesto
+    (Ver línea café vertical). En este caso se dibuja una lína auxiliar
+    (ver línea café horizontal) la cual es la prolongación del lado base, para
+    poder trazar la altura.
 
 ( `Consultar el concepto de triángulo rectángulo`_).
 
