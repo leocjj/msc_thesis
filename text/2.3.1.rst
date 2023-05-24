@@ -16,7 +16,7 @@ En la gráfica interactiva pueden identificarse los siguientes casos.
   Paralelogramo:
     Los lados opuestos son paralelos (paralelos 2 a 2).
 
-También se pueden identificar otros casos en la gráfica interativa, como:
+También se pueden identificar otros casos en la gráfica interactiva, como:
 
   **Cuadrángulo cóncavo**: tiene al menos un ángulo interno mayor a 180°.
 
