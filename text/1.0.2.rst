@@ -33,11 +33,11 @@ Páginas
 
     Por lo general, **cada sección contiene varias páginas** a través de las
     cuales se puede navegar usando las flechas izquierda (ir a la página
-    anterior) y derecha (ir a la página siguiente) **en la parte inferior**
+    anterior) y derecha (ir a la página siguiente) **en la parte superior**
     derecha de la pantalla.
 
-    En el borde inferior central aparecerá en todo momento la sección y la
-    página que se encuentre desplegada, con el fin de ubicarse rápidamente en
-    los contenidos.
+    Al inicio del texto de cada página aparecerá un mensaje indicando el
+    capítulo, la sección y la página actual.  Por ejemplo, en esta página
+    aparace **Cap. 1 Sec. 0 Pag.2** al comienzo de este texto.
 
 ------------------------
