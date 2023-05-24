@@ -193,9 +193,9 @@ class RootWidget(BoxLayout):
         ):
             self.label_wid.text = "Esto es un punto, no se puede trazar una recta."
         elif slider_left != self.slider_y1.min and slider_right == self.slider_y2.max:
-            self.label_wid.text = "Semirecta: es infinita a la derecha"
+            self.label_wid.text = "semirrecta: es infinita a la derecha"
         elif slider_left == self.slider_y1.min and slider_right != self.slider_y2.max:
-            self.label_wid.text = "Semirecta: es infinita a la izquierda"
+            self.label_wid.text = "semirrecta: es infinita a la izquierda"
         elif slider_left != self.slider_y1.min and slider_right != self.slider_y2.max:
             self.label_wid.text = "Segmento (de recta): es finito"
 
