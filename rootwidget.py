@@ -1761,10 +1761,10 @@ class RootWidget(BoxLayout):
             msg_3 = f"[color=3465A4]  A: 0  [color=FF0000]B: 0  [color=D9A560]C: 0"
         elif -0.05 < x < 0.05:
             msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}   x/d: {x/d:.4f}   y/x: ~"
-            msg_3 = f"[color=3465A4]  A: {degrees(asin(x/d)):.2f}° ({asin(x/d):.4f})  [color=FF0000]B: {degrees(asin(y/d)):.2f}° ({asin(y/d):.4f})  [color=D9A560]C: 90° ({(pi/2):.4f})"
+            msg_3 = f"[color=3465A4]  A: {degrees(asin(x/d)):.1f}° ({asin(x/d):.2f})  [color=FF0000]B: {degrees(asin(y/d)):.1f}° ({asin(y/d):.2f})  [color=D9A560]C: 90° ({(pi/2):.2f})"
         else:
             msg_2 = f"[color=FFFFFF]  y/d: {y/d:.4f}   x/d: {x/d:.4f}   y/x: {y/x:.4f}"
-            msg_3 = f"[color=3465A4]  A: {degrees(asin(x/d)):.2f}° ({asin(x/d):.4f})  [color=FF0000]B: {degrees(asin(y/d)):.2f}° ({asin(y/d):.4f})  [color=D9A560]C: 90° ({(pi/2):.4f})"
+            msg_3 = f"[color=3465A4]  A: {degrees(asin(x/d)):.1f}° ({asin(x/d):.2f})  [color=FF0000]B: {degrees(asin(y/d)):.1f}° ({asin(y/d):.2f})  [color=D9A560]C: 90° ({(pi/2):.2f})"
         self.label_wid.text = msg_1 + "\n" + msg_2 + "\n" + msg_3
         """
         +-----------------+-------+-------+-------+-------+-------+
