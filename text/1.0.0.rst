@@ -3,11 +3,11 @@
 Virtual Euclides
 ===============================================================================
 
-El principal objetivo de esta aplicación es **mejorar el proceso aprendizaje de
-la Geometría aplicada**, principalmente en estudiantes de ingeniería, para lo
-cual se implementó una **metodología constructivista basada en la interacción
-virtual** de objetos geométricos usando la funcionalidad de touch screen de los
-dispositivos modernos.
+El principal objetivo de esta aplicación es **mejorar el proceso de aprendizaje
+de la Geometría aplicada**, principalmente en estudiantes de ingeniería, para
+lo cual se implementó una **metodología constructivista basada en la
+interacción virtual** de objetos geométricos, usando la funcionalidad de touch
+screen de los dispositivos modernos.
 
 En resumen, esta metodología brinda al estudiante objetos gráficos que puede
 manipular para obtener diferentes resultados, los cuales son explicados en cada
@@ -19,7 +19,7 @@ llegar a la construcción de **superficies**.
 Propuesta
 ---------
 
-Con esta aplicacióno se pretende, entre otras:
+Con esta aplicacióno se pretende, entre otras cosas:
 
 - Realizar un **proceso constructivista de objetos geométricos** basado en un
   proceso visual interactivo en plataformas móviles.
@@ -29,11 +29,11 @@ Con esta aplicacióno se pretende, entre otras:
   medios tradicionales de una forma estática y contemplativa, versus una nueva
   forma dinámica e interactiva.
 - **Aplicar una metodología de aprendizaje** que permite diferenciarla por un
-  lado con aplicaciones que solo brindan un listado de fórmulas y/o calculadoras
-  de objetos geométricos, o que solo muestran los conceptos con texto e imagenes
-  estáticas. Incluso una combinación de estos dos tipos de aplicación no permite
-  un aprendizaje desde la construcción del conocimiento, sino solo una
-  apropiación de ideas no siempre conexas.
+  lado con aplicaciones que solo brindan un listado de fórmulas y/o
+  calculadoras de objetos geométricos, o que solo muestran los conceptos con
+  texto e imágenes estáticas. Incluso una combinación de estos dos tipos de
+  aplicaciones no permite un aprendizaje desde la construcción del
+  conocimiento, sino solo una apropiación de ideas no siempre conexas.
 
 
 Código abierto
