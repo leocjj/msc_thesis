@@ -3,7 +3,7 @@
 Cuadrángulos
 ===============================================================================
 
-Clasificaremos los `cuadrángulo convexos`_ (o simplemente cuadrángulos o 
+Clasificaremos los `cuadrángulos convexos`_ (o simplemente cuadrángulos o 
 cuadriláteros de aquí en adelante), de acuerdo a sus lados y ángulos internos.
 En la gráfica interactiva pueden identificarse los siguientes casos.
 
