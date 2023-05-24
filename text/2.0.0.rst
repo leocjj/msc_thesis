@@ -9,7 +9,7 @@ medida que las rotábamos.
 
 En esta sección vamos a profundizar en sus propiedades y herramientas
 Matemáticas basadas en esta figura geométrica, para luego continuar con los
-polígonos de 4 lados, superficies planas y otros tipos de polígonos.
+polígonos de 4 lados, áreas y otros tipos de polígonos.
 
 Es importante iniciar esta sección con algunas definiciones que nos lleven
 hasta la definición de polígono, ya que este es la base para construcciones
@@ -40,7 +40,7 @@ analítica entre otras.
 
 `Ángulo`_:
     Es la abertura entre dos rectas que se cortan en un punto común o dos
-    semi-rectas que tienen un punto común.
+    semi-rectas que tienen un punto extremo común.
 
 .. image:: ./images/2.0.1.png
    :align: center
@@ -51,7 +51,7 @@ analítica entre otras.
 ----------------------------
 
 `Figura geométrica`_:
-    Composición de elementos geométricos como puntos y líneas.
+    Composición de elementos geométricos como puntos y líneas (rectas o curvas).
 
 `Lado de una figura geométrica`_:
     Es cada uno de los segmentos de línea que forman una figura geométrica.
