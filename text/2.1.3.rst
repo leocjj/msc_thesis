@@ -9,9 +9,8 @@ bisectriz.**
 *Bisectriz*
 -----------
 
-La bisectriz de un ángulo es la recta que divide a dicho ángulo en dos ángulos
-iguales. En el caso de un triángulo, `la bisectriz de un ángulo es la recta que
-divide a dicho ángulo en dos ángulos iguales`_.
+`La bisectriz de un ángulo es la recta que divide a dicho ángulo en dos ángulos
+iguales.`_.
 
 *Incentro*
 ----------
@@ -23,7 +22,7 @@ intersectan en un punto. Este punto se llama `incentro`_ del triángulo.
 -------------------------
 
 La circunferencia que es tangente a los tres lados de un triángulo se llama
-`circunferencia inscrita`_ y tiene como centro el incentro del triángulo. Esto
+`circunferencia inscrita`_ y tiene como centro, el incentro del triángulo. Esto
 quiere decir que la distancia desde el incentro hasta el punto más cercano de
 cualquiera de los lados del triángulo, es igual.
 
