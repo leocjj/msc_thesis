@@ -37,7 +37,7 @@ hemos desplazado hacia un lado u otro.
 
 *Nota importante*
 -------------------
-**Se debe tener en cuenta siempre, que un objeto matemático es abstracto, osea
+**Se debe tener en cuenta siempre, que un objeto matemático es abstracto, o sea
 que es una contrucción mental, una idea, el cual tiene ciertas propiedades y
 operaciones y debe diferenciarse de sus varias representaciones que puede
 tener, las cuales no son el objeto en si.**
