@@ -45,6 +45,6 @@ parte del alcance del presente trabajo:
 -------
  
 **RECUERDA**
-    Seguir el orden propuesto, repasar cada sección y ... divertirte aprendiendo!
+    !Seguir el orden propuesto, repasar cada sección y ... divertirte aprendiendo!
 
 ------------------------
