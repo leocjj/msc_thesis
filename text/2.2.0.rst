@@ -9,8 +9,8 @@ los triángulos en el caso más general (triángulos oblicuángulos). Para esto
 primero debemos definir algunos conceptos básicos.
 
 - **Triángulo rectángulo:**
-    Triángulo que tiene un ángulo recto (90°). En otras palabras, tiene un lado
-    perpendicular a otro.
+    Triángulo que tiene un ángulo recto (90°). En otras palabras, tiene uno de
+    sus lados perpendicular a otro.
 - **Lado opuesto a un ángulo:**
     El lado que no forma parte del ángulo.
 - **Lado adyacente a un ángulo:**
@@ -18,7 +18,7 @@ primero debemos definir algunos conceptos básicos.
 - **Relación:**
     Proporción entre dos cantidades. Lo podemos entender como la división entre
     dos números, en este caso, entre las longitudes de dos lados de un
-    triángulo la cual llamaremos **relación trigonométrica**.
+    triángulo a la cual llamaremos **relación trigonométrica**.
 - **Hipotenusa:**
     Lado opuesto al ángulo recto en un triángulo rectángulo. En la gráfica
     interactiva corresponde a la línea (lado) café (d).
@@ -31,30 +31,30 @@ primero debemos definir algunos conceptos básicos.
 -------------------
 
 Para las siguientes definiciones tomaremos como referencia el ángulo conformado
-por el cateto 'x' y la hipotenusa 'd' al cual llamaremos ángulo alfa.
+por el cateto 'x' y la hipotenusa 'd' al cual llamaremos **ángulo alfa**.
 
 **Nota:** las mismas relaciones se pueden construir también con el ángulo
 conformado por el cateto 'y' y la hipotenusa 'd' al cual podríamos llamar
-ángulo beta.
+**ángulo beta**.
 
 `Veamos las relaciones principales que podemos construir con los lados de un
 triángulo rectángulo:`_
 
 - Cateto 'y' sobre hipotenusa 'd':
-    Razón trigonométrica llamada **seno del ángulo** alfa.
+    Razón trigonométrica llamada **seno del ángulo alfa**.
 - Cateto 'x' sobre hipotenusa 'd':
-    Razón trigonométrica llamada **coseno del ángulo** alfa.
+    Razón trigonométrica llamada **coseno del ángulo alfa**.
 - Cateto 'y' sobre cateto 'x':
-    Razón trigonométrica llamada **tangente del ángulo** alfa.
+    Razón trigonométrica llamada **tangente del ángulo alfa**.
 
 `También existen las relaciones inversas:`_
 
 - Hipotenusa 'd' sobre cateto 'y':
-    Razón trigonométrica llamada **cosecante del ángulo** alfa.
+    Razón trigonométrica llamada **cosecante del ángulo alfa**.
 - Hipotenusa 'd' sobre cateto 'x' sobre:
-    Razón trigonométrica llamada **secante del ángulo** alfa.
+    Razón trigonométrica llamada **secante del ángulo alfa**.
 - Cateto 'x' sobre cateto 'y':
-    Razón trigonométrica llamada **cotangente del ángulo** alfa.
+    Razón trigonométrica llamada **cotangente del ángulo alfa**.
 
 *Resumen*
 -------------------
