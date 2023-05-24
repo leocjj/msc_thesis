@@ -15,9 +15,8 @@ mediatriz.**
 *Mediatriz*
 -----------
 
-La mediatriz de un segmento es la recta perpendicular a dicho segmento que pasa
-por su punto medio. En el caso de un triángulo, `la mediatriz de un lado es la
-recta perpendicular a dicho lado que pasa por su punto medio`_.
+`La mediatriz de un segmento (o lado) es la recta perpendicular a dicho segmento
+que pasa por su punto medio.`_.
 
 *Circuncentro*
 --------------
@@ -27,6 +26,13 @@ intersectan en un punto. Este punto se llama `circuncentro`_ del triángulo.
 
 *Circunferencia circunscrita*
 -----------------------------
+
+**Nota:** en esta página y las siguientes de la presente sección se usan los
+conceptos de circunferencia, radio y centro los cuales se explican en la
+sección 2.5. Si el lector no está familiarizado con estos conceptos, puede
+omitirlos y seguir con la lectura, ya que no son necesarios para entender los
+demás conceptos. Se puede repasar la lectura de esta sección después de haber
+leído la sección 2.5.
 
 La circunferencia que pasa por los tres vértices de un triángulo se llama
 `circunferencia circunscrita`_ y tiene como centro el circuncentro del
