@@ -47,7 +47,7 @@ Ahora podemos revisar la segunda definición de Euclides:
   final, a esta construcción le llamamos línea y de esta podemos decir que
   inicia en el punto rojo (o verde) y termina en el verde (o rojo).
 
-Para finalizar podemos facilmente intuir que una línea inicia con un punto y
+Para finalizar podemos fácilmente intuir que una línea inicia con un punto y
 termina con un punto. Esto lo dice Euclides en su tercera definición:
 
 *Definición 3*
