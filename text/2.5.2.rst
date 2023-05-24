@@ -14,7 +14,7 @@ puntos que están a una distancia fija de un punto dado, llamado
 La distancia fija entre el centro y cualquier punto de la circunferencia se
 llama **radio (ver línea azúl)**.
 
-Si prolonamos la línea azul hasta el otro extremo del polígono (ver línea café)
+Si prolongamos la línea azul hasta el otro extremo del polígono (ver línea café)
 obtenemos una línea recta que divide el polígono en dos partes iguales.
 Cuando tenemos una circunferencia, a esta línea (línea azul más línea café) se
 le llama **diámetro**. Por lo tanto podemos notar que la longitud del diámetro
