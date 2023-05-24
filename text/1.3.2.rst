@@ -35,7 +35,7 @@ A la longitud de este camino le llamaremos
 
 Si a cada punto le asignamos una ubicación usando coordenadas (x, y) como ya
 hemos visto, podemos calcular las dos distancias (Euclidiana y Manhattan) con
-las siguientes fórmulas teniendo encuenta los puntos P y Q con coordenadas
+las siguientes fórmulas, teniendo en cuenta los puntos P y Q con coordenadas
 (x1, y1) y (x2, y2) respectivamente.
 
 .. image:: ./images/distance_formula.jpg
