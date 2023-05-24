@@ -59,22 +59,22 @@ triángulo se clasifica según sus lados y sus ángulos.
 A continuación se dejan como referencias algunas definiciones de ángulos que se
 pueden encontrar en un triángulo.
 
-- **Ángulo recto:** es el ángulo que mide 90°.
-- **Ángulo agudo:** es el ángulo que mide menos de 90°.
-- **Ángulo obtuso:** es el ángulo que mide más de 90°.
-- **Ángulo llano:** es el ángulo que mide 180°.
-- **Ángulo completo:** es el ángulo que mide 360°.
-- **Ángulo exterior:** es el ángulo que se forma entre un lado del triángulo y
+- **Ángulo agudo:** ángulo que mide menos de 90°.
+- **Ángulo recto:** ángulo que mide 90°.
+- **Ángulo obtuso:** ángulo que mide más de 90°.
+- **Ángulo llano:** ángulo que mide 180°.
+- **Ángulo completo:** ángulo que mide 360°.
+- **Ángulo exterior:** ángulo que se forma entre un lado del triángulo y
   la prolongación del lado adyacente.
-- **Ángulo interior:** es el ángulo que se forma entre dos lados del triángulo.
-- **Ángulo opuesto:** es el ángulo que se forma entre un lado del triángulo y
-  la prolongación del lado adyacente.
-- **Ángulo adyacente:** es el ángulo que se forma entre dos lados del triángulo.
-- **Ángulo complementario:** es el ángulo que sumado con otro ángulo da como
+- **Ángulo interior:** ángulo que se forma entre dos lados del triángulo.
+- **Ángulo adyacente a un lado:** ángulo que se forma con el lado mencionado.
+- **Ángulo opuesto a un lado:** ángulo que no se forma con el lado mencionado,
+  es decir, el ángulo que no es adyacente al lado.
+- **Ángulo complementario:** ángulo que sumado con otro ángulo da como
   resultado 90°.
-- **Ángulo suplementario:** es el ángulo que sumado con otro ángulo da como
+- **Ángulo suplementario:** ángulo que sumado con otro ángulo da como
   resultado 180°.
-- **Ángulo conjugado:** es el ángulo que sumado con otro ángulo da como
+- **Ángulo conjugado:** ángulo que sumado con otro ángulo da como
   resultado 360°.
 
 ------------------------
