@@ -1,6 +1,6 @@
 *Cap.1 Sec.2 Pag.0*
 
-Concepto intuitivo
+Concepto intuitivo de línea
 ===============================================================================
 
 En el gráfico interactivo podemos ver un punto rojo, uno verde y una serie de
