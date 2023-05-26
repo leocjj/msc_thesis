@@ -1,6 +1,6 @@
 *Cap.2 Sec.4 Pag.0*
 
-Áreas y perímetros
+Conceptos de área y perímetro
 ===============================================================================
 
 En esta sección se estudiarán los conceptos de área y perímetro los cuales son
