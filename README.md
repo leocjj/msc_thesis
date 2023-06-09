@@ -1,4 +1,21 @@
-# msc_thesis
+# Virtual Euclides
+
+## **Description**
+
+This project is a mobile application that allow the users to visualize and
+interact with geometric 2D objects. The application is developed using Kivy,
+a Python framework, which allows the application to be deployed on Android,
+iOS, Windows or Linux devices. The application is designed to be used as a
+complement for an introductory course of Euclidean Geometry or similar
+subjects.
+
+The teacher can use it to explain the initial concepts of Geometry and the
+students can use the application to visualize and interact with the objects.
+
+This is part of the thesis project for the Master degree in Teaching
+Mathematics at the Universidad Tecnológica de Pereira (UTP).
+
+![Alt text](https://leocjj.github.io/sticker.png"sticker")
 
 ## **Development requirements (Ubuntu)**
 
