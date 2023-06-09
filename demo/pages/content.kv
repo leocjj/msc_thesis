@@ -1,0 +1,142 @@
+#:kivy 2.1.0
+
+#:set point_size 6
+#:set offset point_size / 2
+#:set line_width_1 1.1
+#:set line_width_3 1.3
+
+RootWidget:
+    # import container
+    container: container
+    label_wid: main_message
+    slider_x: x
+    slider_y: y
+
+    # fill the container
+    BoxLayout:
+        id: container
+        orientation: 'vertical'
+        padding: 0
+        spacing: 3
+
+        # fill the canvas
+        GridLayout:
+            rows: 2
+            orientation: 'bt-rl' # Slider needs to be specified first, but display order can be changed
+
+            BoxLayout:  # Empty space
+                size_hint: (0.075, 0.075)  # Buttom-left
+            BoxLayout:  # Space for vertical (right) slider
+                size_hint: (0.075, 0.925)  # Top-left
+                Slider:
+                    id: y
+                    on_value: root.cap2_sec1_pag3()  # Call the code on event
+                    min: -0.7
+                    max: 0.7
+                    value: 0
+                    step: 0.001
+                    orientation: 'vertical'
+            BoxLayout:
+                size_hint: (1, 0.075)
+                Label:
+                    size_hint: (0.2, None)  # To leave 20% free to the left
+                Slider:
+                    id: x
+                    on_value: root.cap2_sec1_pag3()  # Call the code on event
+                    min: -0.7
+                    max: 0.7
+                    value: 0
+                    step: 0.001
+                    orientation: 'horizontal'
+                Label:
+                    size_hint: (0.2, None)    # To leave 20% free to the right
+            BoxLayout:  # Space for canvas
+                size_hint: (0.925, 0.925)  # Top-right
+                canvas:
+                    Color:
+                        rgba: cafe_claro
+                    Line:  # Horizontal fixed line bottom
+                        points: root.l_1
+                        width: line_width_3
+                    Color:
+                        rgba: azul
+                    Line:  # rotating line left
+                        points: root.l_2
+                        width: line_width_3
+                    Color:
+                        rgba: rojo
+                    Line:  # rotating line right
+                        points: root.l_3
+                        width: line_width_3
+ 
+                    Color:
+                        rgba: rojo
+                    Ellipse:  # Vertex point left
+                        pos: root.p_A
+                        size: point_size, point_size
+                    Color:
+                        rgba: azul
+                    Ellipse:  # Vertex point right
+                        pos: root.p_B
+                        size: point_size, point_size
+                    Color:
+                        rgba: cafe_claro
+                    Ellipse:  # Vertex point top
+                        pos: root.p_C
+                        size: point_size, point_size
+
+                    Color:
+                        rgba: rojo
+                    Ellipse:  # For the intersection point
+                        pos: root.p_D
+                        size: point_size, point_size
+                    Line:  # Bisectrix line
+                        points: root.l_4
+                        dash_length: 5
+                        dash_offset: 10
+                    Color:
+                        rgba: azul
+                    Ellipse:  # For the intersection point
+                        pos: root.p_E
+                        size: point_size, point_size
+                    Line:  # Bisectrix line
+                        points: root.l_5
+                        dash_length: 5
+                        dash_offset: 10
+                    Color:
+                        rgba: cafe_claro
+                    Ellipse:  # For the intersection point
+                        pos: root.p_F
+                        size: point_size, point_size
+                    Line:  # Bisectrix line
+                        points: root.l_6
+                        dash_length: 5
+                        dash_offset: 10
+ 
+                    Color:
+                        rgba: blanco
+                    Ellipse:  # Incenter
+                        pos: root.p_G
+                        size: point_size, point_size
+
+                    Color:
+                        rgba: gris
+                    Line:  # Inscrite circunference
+                        circle: root.c_1
+
+                Label:
+                    id: main_message
+                    text_size: self.size
+                    halign: 'center'
+                    valign: 'top'
+                    markup: True
+
+
+        RstDocument:
+            canvas.before:
+                Color:
+                    rgba: notes_background_color
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            source: "text/content.rst"
