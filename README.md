@@ -15,7 +15,9 @@ students can use the application to visualize and interact with the objects.
 This is part of the thesis project for the Master degree in Teaching
 Mathematics at the Universidad Tecnológica de Pereira (UTP).
 
-![Alt text](https://leocjj.github.io/sticker.png"sticker")
+<p align="center">
+  <img src="https://leocjj.github.io/logo_utp_small.png" alt="Sticker">
+</p>
 
 ## **Development requirements (Ubuntu)**
 
