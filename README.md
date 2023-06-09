@@ -1,6 +1,5 @@
-<p stile="text-align: center;">
-  <h1> Virtual Euclides </h1>
-</p>
+# Virtual Euclides
+
 <p align="center">
   <img src="https://leocjj.github.io/app_icon.png" alt="icon">
 </p>
