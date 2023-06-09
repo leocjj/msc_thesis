@@ -1,4 +1,9 @@
-# Virtual Euclides
+<p stile="text-align: center;">
+  <h1> Virtual Euclides </h1>
+</p>
+<p align="center">
+  <img src="https://leocjj.github.io/app_icon.png" alt="icon">
+</p>
 
 ## **Description**
 
@@ -16,7 +21,7 @@ This is part of the thesis project for the Master degree in Teaching
 Mathematics at the Universidad Tecnológica de Pereira (UTP).
 
 <p align="center">
-  <img src="https://leocjj.github.io/logo_utp_small.png" alt="Sticker">
+  <img src="https://leocjj.github.io/logo_utp_small.png" alt="UTP">
 </p>
 
 ---
