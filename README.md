@@ -23,7 +23,7 @@ Mathematics at the Universidad Tecnológica de Pereira (UTP).
   <img src="https://leocjj.github.io/logo_utp_small.png" alt="UTP">
 </p>
 
-The Android version is already published here:
+The Android version is already published in Google Play Store:
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=co.edu.utp.virtualeuclides">
