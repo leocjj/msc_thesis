@@ -40,10 +40,10 @@ version = 0.6.1
 #source.include_patterns = assets/*,images/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
-#source.exclude_exts = spec
+source.exclude_exts = thesis.pdf
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests, bin, venv
+source.exclude_dirs = bin, .buildozer, .vscode, backs, media
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
